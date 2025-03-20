@@ -19,7 +19,7 @@ const siteMetadata = {
   stickyNav: false,
   analytics: {
     googleAnalytics: {
-      googleAnalyticsId: 'G-XXXXXXXXXX', // Add your GA ID if applicable
+      googleAnalyticsId: 'G-YJL81SYBRR',
     },
   },
   search: {
