@@ -14,8 +14,8 @@ const projectsData: Project[] = [
     href: '/blog/news-1p-ads', // Placeholder, article to be created
   },
   {
-    title: '国際物流プラットフォームのフロントエンド刷新',
-    description: `国際物流プラットフォームのフロントエンドアーキテクチャを刷新。
+    title: '国際物流プラットフォームの刷新',
+    description: `国際物流プラットフォームのフルスタックアーキテクチャを刷新。
     UX/UIの改善と技術スタックの最適化を実施し、よりスケーラブルなシステムへ。`,
     imgSrc: '/static/images/container-ship.png',
     href: '/blog/logistics-redesign', // Placeholder, article to be created
