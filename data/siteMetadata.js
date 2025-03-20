@@ -8,13 +8,13 @@ const siteMetadata = {
   language: 'ja',
   theme: 'system', // system, dark or light
   siteUrl: 'https://deltaquest.co.jp',
-  siteRepo: 'https://github.com/your-repo',
+  siteRepo: 'https://github.com/KevinBulme/delta-quest',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/social-banner.png`,
   email: 'info@deltaquest.co.jp',
-  github: 'https://github.com/deltaquest',
-  x: 'https://twitter.com/deltaquest',
-  linkedin: 'https://www.linkedin.com/company/deltaquest',
+  // github: 'https://github.com/deltaquest',
+  // x: 'https://twitter.com/deltaquest',
+  // linkedin: 'https://www.linkedin.com/company/deltaquest',
   locale: 'ja-JP',
   stickyNav: false,
   analytics: {
