@@ -7,20 +7,18 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'メディア向け1st Party Ads開発',
+    description: `米国市場向けの1st Party Adsシステムの設計と実装をリード。
+    高速な広告配信システムの構築とパフォーマンス最適化を担当。`,
+    imgSrc: '/static/images/billboard.png',
+    href: '/blog/media-1p-ads',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: '国際物流プラットフォームの刷新',
+    description: `国際物流プラットフォームのフルスタックアーキテクチャを刷新。
+    UX/UIの改善と技術スタックの最適化を実施し、よりスケーラブルなシステムへ。`,
+    imgSrc: '/static/images/container-ship.png',
+    href: '/blog/logistics-redesign',
   },
 ]
 
