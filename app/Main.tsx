@@ -43,9 +43,9 @@ export default function Home() {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && <p className="text-gray-500 dark:text-gray-400">投稿がありません。</p>}
           {posts.map((post) => {
-            const { path, date, title, summary } = post
+            const { slug, date, title, summary } = post
             return (
-              <li key={path} className="py-6">
+              <li key={slug} className="py-6">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
@@ -57,7 +57,7 @@ export default function Home() {
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                          <Link href={`/blog/${path}`} className="text-gray-900 dark:text-gray-100">
+                          <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
                             {title}
                           </Link>
                         </h2>
@@ -67,7 +67,7 @@ export default function Home() {
                       </div>
                       <div className="text-base leading-6 font-medium">
                         <Link
-                          href={`/blog/${path}`}
+                          href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                         >
                           続きを読む →
