@@ -66,15 +66,6 @@ export default function LaserTagPage() {
           </a>
         </p>
       </section>
-
-      <footer className="mt-20 text-center text-sm text-gray-500 dark:text-gray-400">
-        <p>
-          👨‍💻 ITサービスをご希望の方は{' '}
-          <Link href="/" className="underline hover:text-gray-900 dark:text-gray-100">
-            メインサイトへ
-          </Link>
-        </p>
-      </footer>
     </main>
   )
 }
