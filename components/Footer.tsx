@@ -8,6 +8,11 @@ import SocialIcon from '@/components/social-icons'
 export default function Footer() {
   const pathname = usePathname()
   const isLaserTag = pathname.startsWith('/laser-tag')
+  const isLegal = pathname.startsWith('/legal') && pathname !== '/legal'
+
+  if (isLegal) {
+    return null
+  }
 
   return (
     <footer>

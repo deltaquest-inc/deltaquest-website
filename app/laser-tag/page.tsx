@@ -1,5 +1,4 @@
 import { genPageMetadata } from 'app/seo'
-import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata = genPageMetadata({
