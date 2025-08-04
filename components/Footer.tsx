@@ -4,11 +4,12 @@ import { usePathname } from 'next/navigation'
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import { isLegalSubpage, isLaserTagPage } from '@/utils/routeHelpers'
 
 export default function Footer() {
   const pathname = usePathname()
-  const isLaserTag = pathname.startsWith('/laser-tag')
-  const isLegal = pathname.startsWith('/legal') && pathname !== '/legal'
+  const isLaserTag = isLaserTagPage(pathname)
+  const isLegal = isLegalSubpage(pathname)
 
   if (isLegal) {
     return null
