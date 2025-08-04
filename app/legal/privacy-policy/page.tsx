@@ -36,8 +36,8 @@ export default function PrivacyPolicy() {
             </li>
             <li>
               You can limit personalised ads via your device settings or partner links in{' '}
-              <a href="#6" className="text-blue-600 hover:underline dark:text-blue-400">
-                Section 6
+              <a href="#7" className="text-blue-600 hover:underline dark:text-blue-400">
+                Section 7
               </a>
               .
             </li>
@@ -47,8 +47,8 @@ export default function PrivacyPolicy() {
             </li>
             <li>
               Need help? Contact our DPO{' '}
-              <a href="#16" className="text-blue-600 hover:underline dark:text-blue-400">
-                (see Section 16)
+              <a href="#17" className="text-blue-600 hover:underline dark:text-blue-400">
+                (see Section 17)
               </a>
               .
             </li>
@@ -87,12 +87,8 @@ export default function PrivacyPolicy() {
           </p>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li>
-              <strong>Gameplay activity</strong> - level attempts, session length, in-app purchases,
-              ads viewed.
-            </li>
-            <li>
               <strong>Device and usage</strong> - advertising ID (GAID / IDFA), coarse IP (region
-              only), device model, OS version, screen resolution, language, crash logs.
+              only), device model, OS version, screen resolution, language.
             </li>
           </ul>
         </div>
@@ -142,27 +138,7 @@ export default function PrivacyPolicy() {
                     </a>
                   </td>
                 </tr>
-                <tr>
-                  <td className="border border-gray-300 p-2 dark:border-gray-600">
-                    Firebase Analytics and Crashlytics
-                  </td>
-                  <td className="border border-gray-300 p-2 dark:border-gray-600">
-                    Analytics and crashes
-                  </td>
-                  <td className="border border-gray-300 p-2 dark:border-gray-600">
-                    App events, device info
-                  </td>
-                  <td className="border border-gray-300 p-2 dark:border-gray-600">
-                    <a
-                      href="https://support.google.com/firebase/answer/6318039"
-                      target="_blank"
-                      rel="noopener"
-                      className="text-blue-600 hover:underline dark:text-blue-400"
-                    >
-                      link
-                    </a>
-                  </td>
-                </tr>
+
                 <tr>
                   <td className="border border-gray-300 p-2 dark:border-gray-600">Expo</td>
                   <td className="border border-gray-300 p-2 dark:border-gray-600">
@@ -200,20 +176,45 @@ export default function PrivacyPolicy() {
             <li>
               <strong>Serve ads and measure their performance</strong> (consent where required).
             </li>
-            <li>
-              <strong>Analyse gameplay</strong> to balance levels and fix bugs (legitimate
-              interest).
-            </li>
-            <li>
-              <strong>Prevent fraud and ensure fair play</strong> (legitimate interest).
-            </li>
           </ul>
         </div>
 
-        {/* 5. Ad Personalisation Choices */}
+        {/* 5. Future Features */}
         <div className="mb-8">
           <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="5">
-            5. Ad Personalisation Choices
+            5. Future Features
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300">
+            We may add the following features in future updates:
+          </p>
+          <ul className="mt-2 space-y-2 text-gray-700 dark:text-gray-300">
+            <li>
+              <strong>In-app privacy controls</strong> - A toggle within the game to control ad
+              personalisation.
+            </li>
+            <li>
+              <strong>Fraud prevention systems</strong> - Additional measures to ensure fair play
+              and prevent cheating.
+            </li>
+            <li>
+              <strong>Enhanced analytics</strong> - More detailed gameplay analysis to improve user
+              experience.
+            </li>
+            <li>
+              <strong>Gameplay activity tracking</strong> - Level attempts, session length, in-app
+              purchases, and ads viewed.
+            </li>
+          </ul>
+          <p className="mt-4 text-gray-700 dark:text-gray-300">
+            When these features are implemented, we will update this policy and notify users through
+            in-app announcements or on our website.
+          </p>
+        </div>
+
+        {/* 6. Ad Personalisation Choices */}
+        <div className="mb-8">
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="6">
+            6. Ad Personalisation Choices
           </h2>
           <ol className="space-y-4 text-gray-700 dark:text-gray-300">
             <li>
@@ -243,17 +244,17 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 6. Legal Bases */}
+        {/* 7. Legal Bases */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="6">
-            6. Legal Bases (EEA and UK)
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="7">
+            7. Legal Bases (EEA and UK)
           </h2>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li>
               <strong>Consent</strong> - personalised advertising.
             </li>
             <li>
-              <strong>Legitimate interests</strong> - analytics, fraud prevention, game operation.
+              <strong>Legitimate interests</strong> - game operation and improvement.
             </li>
             <li>
               <strong>Performance of contract</strong> - delivering gameplay and in-app purchases
@@ -262,10 +263,10 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
 
-        {/* 7. Data Retention */}
+        {/* 8. Data Retention */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="7">
-            7. Data Retention
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="8">
+            8. Data Retention
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             Raw analytics logs are kept by our partners for no longer than 24 months (shorter if
@@ -275,10 +276,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 8. Region-Specific Disclosures */}
+        {/* 9. Region-Specific Disclosures */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="8">
-            8. Region-Specific Disclosures
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="9">
+            9. Region-Specific Disclosures
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             <strong>Brazil (LGPD):</strong> You have rights to access, correct or delete your data.
@@ -294,10 +295,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 9. International Data Transfers */}
+        {/* 10. International Data Transfers */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="9">
-            9. International Data Transfers
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="10">
+            10. International Data Transfers
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             We are headquartered in Japan. Where partners transfer data outside the EEA or UK, they
@@ -305,10 +306,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 10. California Privacy Rights */}
+        {/* 11. California Privacy Rights */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="10">
-            10. California Privacy Rights (CCPA and CPRA)
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="11">
+            11. California Privacy Rights (CCPA and CPRA)
           </h2>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li>
@@ -323,10 +324,10 @@ export default function PrivacyPolicy() {
           </ul>
         </div>
 
-        {/* 11. Children's Privacy */}
+        {/* 12. Children's Privacy */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="11">
-            11. Children's Privacy
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="12">
+            12. Children's Privacy
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             The Game is directed to users aged 12 plus. We do not knowingly collect personal data
@@ -337,10 +338,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 12. Security Measures */}
+        {/* 13. Security Measures */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="12">
-            12. Security Measures
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="13">
+            13. Security Measures
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             We follow industry-standard practices, including TLS 1.2 plus for data in transit and
@@ -351,10 +352,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 13. Your Rights */}
+        {/* 14. Your Rights */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="13">
-            13. Your Rights and How to Exercise Them
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="14">
+            14. Your Rights and How to Exercise Them
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             Depending on your location you may request access, correction, deletion, restriction or
@@ -371,10 +372,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 14. Changes to Policy */}
+        {/* 15. Changes to Policy */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="14">
-            14. Changes to This Policy
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="15">
+            15. Changes to This Policy
           </h2>
           <p className="text-gray-700 dark:text-gray-300">
             We may update this policy from time to time. Material changes will be announced in-app
@@ -382,10 +383,10 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* 15. Contact Us */}
+        {/* 16. Contact Us */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="15">
-            15. Contact Us
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="16">
+            16. Contact Us
           </h2>
           <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-800">
             <p className="text-gray-700 dark:text-gray-300">
@@ -411,10 +412,10 @@ export default function PrivacyPolicy() {
           </div>
         </div>
 
-        {/* 16. Glossary */}
+        {/* 17. Glossary */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="16">
-            16. Glossary
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="17">
+            17. Glossary
           </h2>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li>
