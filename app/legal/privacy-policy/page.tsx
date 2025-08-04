@@ -60,7 +60,9 @@ export default function PrivacyPolicy() {
 
         {/* 1. Scope */}
         <div className="mb-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">1. Scope</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="1">
+            1. Scope
+          </h2>
           <p className="text-gray-700 dark:text-gray-300">
             This policy explains how DeltaQuest, Inc. ("<strong>we</strong>", "<strong>us</strong>",
             "<strong>our</strong>") collects, uses and shares data when you play{' '}
