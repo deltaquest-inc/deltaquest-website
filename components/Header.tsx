@@ -9,12 +9,14 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
-import { isLegalSubpage, isLaserTagPage } from '@/utils/routeHelpers'
+import { isLegalSubpage, isLaserTagPage, isSupportGamePage } from '@/utils/routeHelpers'
 
 const Header = () => {
   const pathname = usePathname()
-  const hideNav = isLaserTagPage(pathname) || isLegalSubpage(pathname)
+  const hideNav =
+    isLaserTagPage(pathname) || isLegalSubpage(pathname) || isSupportGamePage(pathname)
   const isLegalSubpageFlag = isLegalSubpage(pathname)
+  const isSupportGamePageFlag = isSupportGamePage(pathname)
 
   let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
   if (siteMetadata.stickyNav) {
@@ -23,7 +25,7 @@ const Header = () => {
 
   return (
     <header className={headerClass}>
-      {isLegalSubpageFlag ? (
+      {isLegalSubpageFlag || isSupportGamePageFlag ? (
         <div className="flex items-center justify-between">
           <div className="mr-3">
             <Image src={logoImg} alt="Logo" className="h-30 w-30 object-contain" />

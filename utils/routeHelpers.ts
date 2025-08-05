@@ -18,4 +18,13 @@ export const isLegalSubpage = (pathname: string): boolean => {
  */
 export const isLaserTagPage = (pathname: string): boolean => {
   return pathname.startsWith('/laser-tag')
-} 
+}
+
+/**
+ * Checks if the current path is a support game page
+ * @param pathname - The current pathname
+ * @returns true if it's a support game page
+ */
+export const isSupportGamePage = (pathname: string): boolean => {
+  return pathname.startsWith('/support-game')
+}
