@@ -2,6 +2,7 @@ import { genPageMetadata } from 'app/seo'
 import Link from 'next/link'
 import { allBlogs } from 'contentlayer/generated'
 import { formatDate } from 'pliny/utils/formatDate'
+import LinkButton from '@/components/LinkButton'
 
 export const metadata = genPageMetadata({
   title: 'ホーム',
@@ -21,18 +22,8 @@ export default function Home() {
           デルタクエスト株式会社は、最先端のITサービスを提供する企業です。フロントエンド開発、Next.js/React、SEO最適化、クラウドインフラ構築など、ビジネスの成長をサポートします。
         </p>
         <div className="flex space-x-4">
-          <Link
-            href="/services"
-            className="rounded-md bg-blue-600 px-4 py-2 text-lg font-medium text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
-          >
-            サービスを見る
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-md border border-blue-600 px-4 py-2 text-lg font-medium text-blue-600 hover:bg-blue-100 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-800"
-          >
-            お問い合わせ
-          </Link>
+          <LinkButton href="/services" label="サービスを見る" isPrimary={true} />
+          <LinkButton href="/contact" label="お問い合わせ" isPrimary={false} />
         </div>
       </div>
 
