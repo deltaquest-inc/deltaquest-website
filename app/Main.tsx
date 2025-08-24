@@ -1,16 +1,30 @@
+'use client'
 import { genPageMetadata } from 'app/seo'
 import Link from 'next/link'
 import { allBlogs } from 'contentlayer/generated'
-import { formatDate } from 'pliny/utils/formatDate'
 import LinkButton from '@/components/LinkButton'
+import { motion } from 'framer-motion'
+import BlogCard from '@/components/BlogCard'
 
 export const metadata = genPageMetadata({
   title: 'ホーム',
   description: '最先端のITソリューションを提供するデルタクエスト株式会社。',
 })
-
+const blogContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+const blogCardVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+}
 export default function Home() {
-  const posts = allBlogs.slice(0, 5) // Display latest 5 posts
+  const posts = allBlogs.slice(0, 5)
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -28,51 +42,32 @@ export default function Home() {
       </div>
 
       <div className="pt-10">
-        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
+        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100 pb-12">
           最新のブログ記事
         </h2>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <motion.ul
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          variants={blogContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {!posts.length && <p className="text-gray-500 dark:text-gray-400">投稿がありません。</p>}
           {posts.map((post) => {
             const { slug, date, title, summary } = post
             return (
-              <li key={slug} className="py-6">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">投稿日</dt>
-                      <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                          <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                            {title}
-                          </Link>
-                        </h2>
-                        <p className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </p>
-                      </div>
-                      <div className="text-base leading-6 font-medium">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                        >
-                          続きを読む →
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
+              <motion.li key={slug} variants={blogCardVariants}>
+                <BlogCard
+                  title={title}
+                  summary={summary || ''}
+                  date={date}
+                  slug={slug}
+                />
+              </motion.li>
             )
           })}
-        </ul>
+        </motion.ul>
         {posts.length > 0 && (
-          <div className="flex justify-end text-base leading-6 font-medium">
+          <div className="flex justify-end text-base leading-6 font-medium mt-2.5">
             <Link
               href="/blog"
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
