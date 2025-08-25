@@ -13,12 +13,12 @@ type BlogCardProps = {
 const BlogCard = ({ title, summary, date, slug }: BlogCardProps) => {
   return (
     <motion.div
-      className="rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-800 transition-transform duration-300 hover:scale-105"
+      className="overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 hover:scale-105 dark:bg-gray-800"
       whileHover={{ y: -5 }}
     >
       <Link href={`/blog/${slug}`} className="block p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">{title}</h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+        <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-gray-100">{title}</h3>
+        <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
           <time dateTime={date}>{formatDate(date)}</time>
         </p>
         <p className="text-gray-700 dark:text-gray-300">{summary}</p>

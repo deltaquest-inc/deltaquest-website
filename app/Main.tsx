@@ -42,11 +42,11 @@ export default function Home() {
       </div>
 
       <div className="pt-10">
-        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100 pb-12">
+        <h2 className="pb-12 text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
           最新のブログ記事
         </h2>
         <motion.ul
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 gap-8 md:grid-cols-2"
           variants={blogContainerVariants}
           initial="hidden"
           animate="visible"
@@ -56,18 +56,13 @@ export default function Home() {
             const { slug, date, title, summary } = post
             return (
               <motion.li key={slug} variants={blogCardVariants}>
-                <BlogCard
-                  title={title}
-                  summary={summary || ''}
-                  date={date}
-                  slug={slug}
-                />
+                <BlogCard title={title} summary={summary || ''} date={date} slug={slug} />
               </motion.li>
             )
           })}
         </motion.ul>
         {posts.length > 0 && (
-          <div className="flex justify-end text-base leading-6 font-medium mt-2.5">
+          <div className="mt-2.5 flex justify-end text-base leading-6 font-medium">
             <Link
               href="/blog"
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
