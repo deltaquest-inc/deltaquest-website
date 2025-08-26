@@ -1,15 +1,30 @@
+'use client'
 import { genPageMetadata } from 'app/seo'
 import Link from 'next/link'
 import { allBlogs } from 'contentlayer/generated'
-import { formatDate } from 'pliny/utils/formatDate'
+import LinkButton from '@/components/LinkButton'
+import { motion } from 'framer-motion'
+import BlogCard from '@/components/BlogCard'
 
 export const metadata = genPageMetadata({
   title: 'ホーム',
   description: '最先端のITソリューションを提供するデルタクエスト株式会社。',
 })
-
+const blogContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+const blogCardVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+}
 export default function Home() {
-  const posts = allBlogs.slice(0, 5) // Display latest 5 posts
+  const posts = allBlogs.slice(0, 5)
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -21,67 +36,33 @@ export default function Home() {
           デルタクエスト株式会社は、最先端のITサービスを提供する企業です。フロントエンド開発、Next.js/React、SEO最適化、クラウドインフラ構築など、ビジネスの成長をサポートします。
         </p>
         <div className="flex space-x-4">
-          <Link
-            href="/services"
-            className="rounded-md bg-blue-600 px-4 py-2 text-lg font-medium text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
-          >
-            サービスを見る
-          </Link>
-          <Link
-            href="/contact"
-            className="rounded-md border border-blue-600 px-4 py-2 text-lg font-medium text-blue-600 hover:bg-blue-100 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-800"
-          >
-            お問い合わせ
-          </Link>
+          <LinkButton href="/services" label="サービスを見る" isPrimary={true} />
+          <LinkButton href="/contact" label="お問い合わせ" isPrimary={false} />
         </div>
       </div>
 
       <div className="pt-10">
-        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
+        <h2 className="pb-12 text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
           最新のブログ記事
         </h2>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <motion.ul
+          className="grid grid-cols-1 gap-8 md:grid-cols-2"
+          variants={blogContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {!posts.length && <p className="text-gray-500 dark:text-gray-400">投稿がありません。</p>}
           {posts.map((post) => {
             const { slug, date, title, summary } = post
             return (
-              <li key={slug} className="py-6">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">投稿日</dt>
-                      <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                          <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                            {title}
-                          </Link>
-                        </h2>
-                        <p className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </p>
-                      </div>
-                      <div className="text-base leading-6 font-medium">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                        >
-                          続きを読む →
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
+              <motion.li key={slug} variants={blogCardVariants}>
+                <BlogCard title={title} summary={summary || ''} date={date} slug={slug} />
+              </motion.li>
             )
           })}
-        </ul>
+        </motion.ul>
         {posts.length > 0 && (
-          <div className="flex justify-end text-base leading-6 font-medium">
+          <div className="mt-2.5 flex justify-end text-base leading-6 font-medium">
             <Link
               href="/blog"
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
