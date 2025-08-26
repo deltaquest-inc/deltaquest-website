@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import * as process from 'node:process'
 
 const formVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -69,7 +70,7 @@ const ContactForm = () => {
             animate="visible"
             exit="exit"
             variants={formVariants}
-            action="https://formsubmit.co/emire.haouas@deltaquest.co.jp"
+            action={`https://formsubmit.co/${process.env.FORMSUBMIT_CONTACT_EMAIL}`}
             method="POST"
             onSubmit={handleSubmit}
             className="space-y-6"

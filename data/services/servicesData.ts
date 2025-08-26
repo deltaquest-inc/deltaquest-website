@@ -2,7 +2,7 @@ export const servicesData = [
   {
     title: 'フロントエンド開発',
     description: 'モダンなWebアプリケーションを構築し、ユーザー体験を向上',
-    icon: '💻', // Exemple d'icône
+    icon: '💻',
   },
   {
     title: 'Next.js/ReactによるWebソリューション',
