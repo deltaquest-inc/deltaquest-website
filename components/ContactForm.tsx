@@ -126,7 +126,7 @@ const ContactForm = () => {
             <div>
               <button
                 type="submit"
-                className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 inline-flex cursor-pointer justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white shadow-sm focus:ring-2 focus:ring-offset-2 focus:outline-none"
               >
                 送信
               </button>
