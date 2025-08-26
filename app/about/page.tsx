@@ -1,4 +1,6 @@
 import { genPageMetadata } from 'app/seo'
+import ServiceCard from '@/components/ServiceCard'
+import { servicesData } from '@/data/services/servicesData'
 
 export const metadata = genPageMetadata({
   title: '会社概要',
@@ -81,17 +83,16 @@ export default function About() {
         <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
           主要サービス
         </h2>
-        <ul>
-          <li>フロントエンド開発 - モダンなWebアプリケーションを構築し、ユーザー体験を向上</li>
-          <li>Next.js/ReactによるWebソリューション - 高性能なWebサイトやアプリケーションを開発</li>
-          <li>
-            SEO & パフォーマンス最適化 - 検索エンジン最適化とサイト高速化でビジネスの可視性を向上
-          </li>
-          <li>CI/CD導入支援 - 継続的インテグレーションとデリバリーを最適化し、開発の効率を向上</li>
-          <li>
-            クラウドインフラ設計 - AWSやGCPを活用したスケーラブルなシステムアーキテクチャを設計
-          </li>
-        </ul>
+        <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {servicesData.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
