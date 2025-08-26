@@ -25,7 +25,9 @@ const ContactForm = () => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: new URLSearchParams(formData as unknown as URLSearchParams).toString(),
+        body: new URLSearchParams(
+          Object.entries(Object.fromEntries(formData)).map(([k, v]) => [k, String(v)])
+        ).toString(),
       })
 
       if (response.ok) {
