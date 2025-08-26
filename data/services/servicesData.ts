@@ -24,4 +24,9 @@ export const servicesData = [
     description: 'AWSやGCPを活用したスケーラブルなシステムアーキテクチャを設計',
     icon: '☁️',
   },
+  {
+    title: 'AIコンサルティング',
+    description: 'AI活用による業務自動化の導入支援',
+    icon: '🤖',
+  },
 ]
