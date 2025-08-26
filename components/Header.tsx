@@ -1,7 +1,8 @@
 'use client'
 import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-
+import NavLink from './NavLink'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import logoImg from '@/data/logo.png'
@@ -11,20 +12,29 @@ import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import { isLegalSubpage, isLaserTagPage, isSupportGamePage } from '@/utils/routeHelpers'
 
+const headerVariants = {
+  initial: { y: -100, opacity: 0 },
+  animate: { y: 0, opacity: 1, transition: { duration: 0.8, delay: 0.5 } },
+}
+
 const Header = () => {
   const pathname = usePathname()
   const hideNav =
     isLaserTagPage(pathname) || isLegalSubpage(pathname) || isSupportGamePage(pathname)
   const isLegalSubpageFlag = isLegalSubpage(pathname)
   const isSupportGamePageFlag = isSupportGamePage(pathname)
-
   let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
 
   return (
-    <header className={headerClass}>
+    <motion.header
+      className={headerClass}
+      variants={headerVariants}
+      initial="initial"
+      animate="animate"
+    >
       {isLegalSubpageFlag || isSupportGamePageFlag ? (
         <div className="flex items-center justify-between">
           <div className="mr-3">
@@ -59,13 +69,7 @@ const Header = () => {
             {headerNavLinks
               .filter((link) => link.href !== '/')
               .map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="hover:text-primary-500 dark:hover:text-primary-400 m-1 font-medium text-gray-900 dark:text-gray-100"
-                >
-                  {link.title}
-                </Link>
+                <NavLink key={link.title} href={link.href} title={link.title} />
               ))}
           </div>
           <SearchButton />
@@ -78,7 +82,7 @@ const Header = () => {
           <ThemeSwitch />
         </div>
       )}
-    </header>
+    </motion.header>
   )
 }
 
