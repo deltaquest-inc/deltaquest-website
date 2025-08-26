@@ -70,7 +70,7 @@ const ContactForm = () => {
             animate="visible"
             exit="exit"
             variants={formVariants}
-            action={`https://formsubmit.co/${process.env.FORMSUBMIT_CONTACT_EMAIL}`}
+            action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_CONTACT_EMAIL}`}
             method="POST"
             onSubmit={handleSubmit}
             className="space-y-6"
