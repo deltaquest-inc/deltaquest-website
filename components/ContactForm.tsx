@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import * as process from 'node:process'
 
 const formVariants = {
   hidden: { opacity: 0, y: 20 },
