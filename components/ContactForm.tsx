@@ -10,9 +10,11 @@ const formVariants = {
 
 const ContactForm = () => {
   const [isSent, setIsSent] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setErrorMessage(null)
 
     const form = e.target as HTMLFormElement
     const formData = new FormData(form)
@@ -33,10 +35,10 @@ const ContactForm = () => {
           setIsSent(false)
         }, 3000)
       } else {
-        console.error('Form submission failed')
+        setErrorMessage('フォームの送信に失敗しました。もう一度お試しください。')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      setErrorMessage('フォームの送信中にエラーが発生しました。')
     }
   }
 
@@ -122,7 +124,9 @@ const ContactForm = () => {
 
             <input type="hidden" name="_next" value="/contact-success" />
             <input type="hidden" name="_captcha" value="false" />
-
+            {errorMessage && (
+              <div className="mb-4 text-red-600 dark:text-red-400">{errorMessage}</div>
+            )}
             <div>
               <button
                 type="submit"
