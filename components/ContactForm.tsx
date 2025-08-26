@@ -11,6 +11,7 @@ const formVariants = {
 const ContactForm = () => {
   const [isSent, setIsSent] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const formAction = `https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_CONTACT_EMAIL}`
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -73,7 +74,7 @@ const ContactForm = () => {
             animate="visible"
             exit="exit"
             variants={formVariants}
-            action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_CONTACT_EMAIL}`}
+            action={formAction}
             method="POST"
             onSubmit={handleSubmit}
             className="space-y-6"
