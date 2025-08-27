@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
               DeltaQuest, Inc. プライバシーポリシー
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              <strong>施行日:</strong> 2025年8月27日
+              <strong>施行日:</strong> 2025年9月3日
             </p>
           </div>
 
@@ -485,7 +485,7 @@ export default function PrivacyPolicy() {
                 DeltaQuest, Inc. Privacy Policy
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                <strong>Effective Date:</strong> 27 August 2025
+                <strong>Effective Date:</strong> 3 September 2025
               </p>
             </div>
 
