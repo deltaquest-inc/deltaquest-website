@@ -1,4 +1,7 @@
 import { genPageMetadata } from 'app/seo'
+import ServiceCard from '@/components/ServiceCard'
+import { servicesData } from '@/data/services/servicesData'
+import WhyDeltaQuest from '@/components/WhyDQ'
 
 export const metadata = genPageMetadata({
   title: 'サービス',
@@ -8,13 +11,13 @@ export const metadata = genPageMetadata({
 export default function Services() {
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+      <div className="space-y-2 pt-12 pb-12 text-center md:space-y-5">
         <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
           サービス
         </h1>
       </div>
 
-      <div className="prose dark:prose-dark max-w-none pt-10 pb-8 dark:text-gray-400">
+      <div className="prose dark:prose-dark max-w-none pt-12 pb-16 dark:text-gray-400">
         <p>
           デルタクエスト株式会社は、最先端のIT技術を活用し、お客様のビジネス課題を解決するための高品質なITサービスを提供します。
           フロントエンド開発からクラウドインフラの最適化まで、幅広いニーズに対応可能です。
@@ -23,58 +26,38 @@ export default function Services() {
         <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
           提供するITサービス
         </h2>
-        <ul>
-          <li>
-            <strong className="text-gray-900 dark:text-gray-100">フロントエンド開発:</strong>{' '}
-            高速で直感的なWebアプリケーションの開発
-          </li>
-          <li>
-            <strong className="text-gray-900 dark:text-gray-100">Next.js / React 開発:</strong>{' '}
-            高性能なモダンWebサイトやアプリの構築
-          </li>
-          <li>
-            <strong className="text-gray-900 dark:text-gray-100">SEO最適化:</strong>{' '}
-            Webサイトの検索エンジン最適化（SEO）とパフォーマンス向上
-          </li>
-          <li>
-            <strong className="text-gray-900 dark:text-gray-100">CI/CDパイプライン構築:</strong>{' '}
-            DevOpsを活用した開発プロセスの自動化
-          </li>
-          <li>
-            <strong className="text-gray-900 dark:text-gray-100">クラウドインフラ設計:</strong>{' '}
-            AWSやGCPを活用したスケーラブルなシステム構築
-          </li>
-          <li>
-            <strong className="text-gray-900 dark:text-gray-100">
-              パフォーマンスチューニング:
-            </strong>{' '}
-            Webアプリの速度・UX改善
-          </li>
-        </ul>
+        <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {servicesData.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
+          ))}
+        </div>
 
-        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
-          なぜデルタクエスト？
-        </h2>
-        <p>
-          私たちは最先端の技術と豊富な経験を活かし、お客様のニーズに最適なソリューションを提供します。
-          高品質な開発とスピーディな対応で、プロジェクト成功をサポートします。
-        </p>
+        <WhyDeltaQuest />
       </div>
 
-      <div className="pt-10">
-        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
-          ご相談・お問い合わせ
-        </h2>
-        <p className="text-gray-500 dark:text-gray-400">
-          ご興味のある方は、お気軽にお問い合わせください。
-        </p>
-        <div className="mt-4">
+      <div className="relative mt-16 flex flex-col items-center">
+        <div className="relative w-full max-w-md rounded-3xl bg-white/70 p-8 text-center shadow-xl shadow-blue-200 backdrop-blur-lg dark:bg-gray-800/70 dark:shadow-blue-800">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            ご相談・お問い合わせ
+          </h2>
+          <p className="mt-2 text-gray-600 dark:text-gray-300">
+            ご興味のある方は、お気軽にお問い合わせください。
+          </p>
+
           <a
             href="/contact"
-            className="rounded-md bg-blue-600 px-4 py-2 text-lg font-medium text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+            className="mt-6 inline-block rounded-xl bg-blue-600 px-6 py-3 text-lg font-medium text-white shadow-lg transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
           >
             お問い合わせはこちら
           </a>
+
+          <div className="shadow-[0_10px_30px_rgba(59,130,246,0.3)] dark:shadow-[0_10px_30px_rgba(99,102,241,0.4)]"></div>
+          <div className="shadow-[0_10px_30px_rgba(59,130,246,0.3)] dark:shadow-[0_10px_30px_rgba(99,102,241,0.4)]"></div>
         </div>
       </div>
     </div>
