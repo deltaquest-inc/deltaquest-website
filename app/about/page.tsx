@@ -1,6 +1,7 @@
 import { genPageMetadata } from 'app/seo'
 import ServiceCard from '@/components/ServiceCard'
 import { servicesData } from '@/data/services/servicesData'
+import CEOMessageBubble from '@/components/CEOMessageBubble'
 
 export const metadata = genPageMetadata({
   title: '会社概要',
@@ -70,19 +71,13 @@ export default function About() {
         <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
           代表メッセージ
         </h2>
-        <p>
-          「テクノロジーの力で、企業が市場で競争力を持つためのサポートをしたい。私たちは、フロントエンド開発とシステム設計の専門知識を活かし、
-          企業がスケーラブルで持続可能な成長を遂げるための支援を行っています。」
-        </p>
-        <p>
-          <strong className="text-gray-900 dark:text-gray-100">
-            ケヴィン・ブルメ, デルタクエスト株式会社 代表
-          </strong>
-        </p>
 
-        <h2 className="text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
+        <CEOMessageBubble />
+
+        <h2 className="mt-12 text-2xl leading-8 font-bold tracking-tight text-gray-900 dark:text-gray-100">
           主要サービス
         </h2>
+
         <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {servicesData.map((service, index) => (
             <ServiceCard
