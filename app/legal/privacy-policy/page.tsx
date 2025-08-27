@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
               DeltaQuest, Inc. プライバシーポリシー
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              <strong>施行日:</strong> 2025年8月4日
+              <strong>施行日:</strong> 2025年8月27日
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
                 ）は広告を表示し、ゲームを改善するためにゲームプレイを測定します。
               </li>
               <li>
-                広告・分析パートナー（下記に記載）は広告ID、デバイス詳細、ゲームプレイイベントを受信します。
+                広告・分析パートナー（下記に記載）は広告ID、デバイス詳細、ゲームプレイイベントおよびクラッシュログを受信します。
               </li>
               <li>
                 デバイス設定または
@@ -104,7 +104,7 @@ export default function PrivacyPolicy() {
             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
               <li>
                 <strong>デバイスと使用状況</strong> - 広告ID（GAID /
-                IDFA）、大まかなIP（地域のみ）、デバイスモデル、OSバージョン、画面解像度、言語。
+                IDFA）、大まかなIP（地域のみ）、デバイスモデル、OSバージョン、画面解像度、言語、クラッシュログ。
               </li>
             </ul>
           </div>
@@ -165,6 +165,27 @@ export default function PrivacyPolicy() {
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
                       <a
                         href="https://expo.dev/privacy"
+                        target="_blank"
+                        rel="noopener"
+                        className="text-blue-600 hover:underline dark:text-blue-400"
+                      >
+                        リンク
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      Firebase Analytics and Crashlytics
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      分析とクラッシュ
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      アプリイベント、デバイス情報、クラッシュログ
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      <a
+                        href="https://support.google.com/firebase/answer/6318039"
                         target="_blank"
                         rel="noopener"
                         className="text-blue-600 hover:underline dark:text-blue-400"
@@ -464,7 +485,7 @@ export default function PrivacyPolicy() {
                 DeltaQuest, Inc. Privacy Policy
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                <strong>Effective Date:</strong> 4 August 2025
+                <strong>Effective Date:</strong> 27 August 2025
               </p>
             </div>
 
@@ -480,12 +501,12 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   Advertising and analytics partners (listed below) receive an advertising ID,
-                  device details and gameplay events.
+                  device details, gameplay events and crash logs.
                 </li>
                 <li>
                   You can limit personalised ads via your device settings or partner links in{' '}
-                  <a href="#en-7" className="text-blue-600 hover:underline dark:text-blue-400">
-                    Section 7
+                  <a href="#en-6" className="text-blue-600 hover:underline dark:text-blue-400">
+                    Section 6
                   </a>
                   .
                 </li>
@@ -537,7 +558,7 @@ export default function PrivacyPolicy() {
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>
                   <strong>Device and usage</strong> - advertising ID (GAID / IDFA), coarse IP
-                  (region only), device model, OS version, screen resolution, language.
+                  (region only), device model, OS version, screen resolution, language, crash logs.
                 </li>
               </ul>
             </div>
@@ -599,6 +620,27 @@ export default function PrivacyPolicy() {
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
                         <a
                           href="https://expo.dev/privacy"
+                          target="_blank"
+                          rel="noopener"
+                          className="text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          link
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        Firebase Analytics and Crashlytics
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        Analytics and crashes
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        App events, device info, crash logs
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        <a
+                          href="https://support.google.com/firebase/answer/6318039"
                           target="_blank"
                           rel="noopener"
                           className="text-blue-600 hover:underline dark:text-blue-400"
