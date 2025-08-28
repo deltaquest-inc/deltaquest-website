@@ -70,70 +70,71 @@ export default function ListLayoutWithTags({
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 
   return (
-    <>
-      <div>
-        <div className="pt-6 pb-6">
-          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-            {title}
-          </h1>
-        </div>
-        <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen max-w-[280px] min-w-[280px] flex-wrap overflow-auto rounded-sm bg-gray-50 pt-5 shadow-md sm:flex dark:bg-gray-900/70 dark:shadow-gray-800/40">
-            <div className="px-6 py-4">
-              {pathname.startsWith('/blog') ? (
-                <h3 className="text-primary-500 font-bold uppercase">All Posts</h3>
-              ) : (
-                <Link
-                  href={`/blog`}
-                  className="hover:text-primary-500 dark:hover:text-primary-500 font-bold text-gray-700 uppercase dark:text-gray-300"
-                >
-                  All Posts
-                </Link>
-              )}
-              <ul>
-                {sortedTags.map((t) => {
-                  return (
-                    <li key={t} className="my-3">
-                      {decodeURI(pathname.split('/tags/')[1]) === slug(t) ? (
-                        <h3 className="text-primary-500 inline px-3 py-2 text-sm font-bold uppercase">
-                          {`${t} (${tagCounts[t]})`}
-                        </h3>
-                      ) : (
-                        <Link
-                          href={`/tags/${slug(t)}`}
-                          className="hover:text-primary-500 dark:hover:text-primary-500 px-3 py-2 text-sm font-medium text-gray-500 uppercase dark:text-gray-300"
-                          aria-label={`View posts tagged ${t}`}
-                        >
-                          {`${t} (${tagCounts[t]})`}
-                        </Link>
-                      )}
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          </div>
-          <div>
-            <ul className="space-y-6">
-              {displayPosts.map((post, index) => (
-                <BlogListCard
-                  key={post.path}
-                  title={post.title}
-                  summary={post.summary ?? ''}
-                  date={post.date}
-                  slug={post.slug}
-                  tags={post.tags}
-                  index={index}
-                />
-              ))}
-            </ul>
+    <div>
+      <div className="pt-6 pb-6">
+        <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+          {title}
+        </h1>
+      </div>
 
-            {pagination && pagination.totalPages > 1 && (
-              <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+      <div className="flex sm:space-x-24">
+        <div className="hidden max-h-screen max-w-[280px] min-w-[280px] flex-col overflow-auto rounded-2xl bg-white/70 p-6 shadow-lg shadow-blue-200 backdrop-blur-md sm:flex dark:bg-gray-800/70 dark:shadow-blue-800">
+          <div className="mb-6 px-2">
+            {pathname === '/blog' ? (
+              <h3 className="block text-lg font-bold text-[#111827] uppercase dark:text-gray-100">
+                All Posts
+              </h3>
+            ) : (
+              <Link
+                href="/blog"
+                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block text-lg font-bold uppercase transition-colors"
+              >
+                All Posts
+              </Link>
             )}
           </div>
+
+          <ul className="flex flex-col gap-3">
+            {sortedTags.map((tag) => {
+              const isActive = pathname === `/tags/${slug(tag)}`
+              return (
+                <li key={tag}>
+                  <Link
+                    href={`/tags/${slug(tag)}`}
+                    className={`inline-block rounded-xl px-3 py-2 text-sm font-medium uppercase transition-all duration-200 ${
+                      isActive
+                        ? 'bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-white'
+                        : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'
+                    }`}
+                  >
+                    {tag} ({tagCounts[tag]})
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+
+        <div className="flex-1">
+          <ul className="space-y-6">
+            {displayPosts.map((post, index) => (
+              <BlogListCard
+                key={post.path}
+                title={post.title}
+                summary={post.summary ?? ''}
+                date={post.date}
+                slug={post.slug}
+                tags={post.tags}
+                index={index}
+              />
+            ))}
+          </ul>
+
+          {pagination && pagination.totalPages > 1 && (
+            <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+          )}
         </div>
       </div>
-    </>
+    </div>
   )
 }

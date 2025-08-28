@@ -16,15 +16,7 @@ type BlogListCardProps = {
 const BlogListCard = ({ title, summary, date, slug, tags, index = 0 }: BlogListCardProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.6 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{
-        y: -8,
-        scale: 1.03,
-        transition: { type: 'spring', stiffness: 500, damping: 25 },
-      }}
+      whileHover={{ x: -5 }}
       className="flex cursor-pointer flex-col justify-between rounded-2xl bg-white/70 p-6 shadow-lg shadow-blue-200 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:shadow-blue-300 dark:bg-gray-800/70 dark:shadow-blue-800"
       onClick={() => (window.location.href = `/blog/${slug}`)}
     >
