@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { formatDate } from 'pliny/utils/formatDate'
 import Tag from './Tag'
+import siteMetadata from '@/data/siteMetadata'
 
 type BlogListCardProps = {
   title: string
@@ -30,7 +31,7 @@ const BlogListCard = ({ title, summary, date, slug, tags, index = 0 }: BlogListC
       </div>
 
       <p className="mt-auto text-xs text-gray-500 dark:text-gray-400">
-        <time dateTime={date}>{formatDate(date)}</time>
+        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
       </p>
     </motion.div>
   )

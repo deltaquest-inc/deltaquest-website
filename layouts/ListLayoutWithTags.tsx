@@ -121,7 +121,7 @@ export default function ListLayoutWithTags({
               <BlogListCard
                 key={post.path}
                 title={post.title}
-                summary={post.summary ?? ''}
+                summary={post.summary ?? 'No summary available.'}
                 date={post.date}
                 slug={post.slug}
                 tags={post.tags}
