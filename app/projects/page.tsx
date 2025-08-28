@@ -1,6 +1,7 @@
 import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
+
 import { genPageMetadata } from 'app/seo'
+import ProjectsList from '@/components/ProjectsList'
 
 export const metadata = genPageMetadata({
   title: 'ポートフォリオ',
@@ -19,23 +20,12 @@ export default function Projects() {
         </p>
       </div>
       <div className="container py-12">
-        {projectsData.length === 0 ? (
-          <p className="text-gray-500 dark:text-gray-400">
-            現在、表示するプロジェクトはありません。
-          </p>
-        ) : (
-          <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
-              <Card
-                key={d.title}
-                title={d.title}
-                description={d.description}
-                imgSrc={d.imgSrc}
-                href={d.href}
-              />
-            ))}
-          </div>
-        )}
+        <ProjectsList
+          projects={projectsData.map((project) => ({
+            ...project,
+            href: project.href ?? '#',
+          }))}
+        />
       </div>
     </div>
   )
