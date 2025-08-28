@@ -1,5 +1,3 @@
-import { usePathname } from 'next/navigation'
-
 export function getPagination(currentPage: number, totalPages: number) {
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
