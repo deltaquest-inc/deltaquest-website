@@ -2,13 +2,12 @@
 
 import { usePathname } from 'next/navigation'
 import { slug } from 'github-slugger'
-import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import BlogListCard from '@/components/BlogListCard'
+import { getPagination, getBasePath } from '@/utils/getPagination'
 
 interface PaginationProps {
   totalPages: number
@@ -22,26 +21,18 @@ interface ListLayoutProps {
 }
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
+  const { prevPage, nextPage } = getPagination(currentPage, totalPages)
   const pathname = usePathname()
-  const segments = pathname.split('/')
-  const lastSegment = segments[segments.length - 1]
-  const basePath = pathname
-    .replace(/^\//, '') // Remove leading slash
-    .replace(/\/page\/\d+$/, '') // Remove any trailing /page
-  console.log(pathname)
-  console.log(basePath)
-  const prevPage = currentPage - 1 > 0
-  const nextPage = currentPage + 1 <= totalPages
+  const basePath = getBasePath(pathname)
 
   return (
     <div className="space-y-2 pt-6 pb-8 md:space-y-5">
       <nav className="flex justify-between">
-        {!prevPage && (
-          <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
+        {!prevPage ? (
+          <button className="cursor-auto disabled:opacity-50" disabled>
             Previous
           </button>
-        )}
-        {prevPage && (
+        ) : (
           <Link
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
@@ -52,12 +43,11 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
         <span>
           {currentPage} of {totalPages}
         </span>
-        {!nextPage && (
-          <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
+        {!nextPage ? (
+          <button className="cursor-auto disabled:opacity-50" disabled>
             Next
           </button>
-        )}
-        {nextPage && (
+        ) : (
           <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
             Next
           </Link>
@@ -66,7 +56,6 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
     </div>
   )
 }
-
 export default function ListLayoutWithTags({
   posts,
   title,
@@ -125,40 +114,20 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul>
-              {displayPosts.map((post) => {
-                const { path, date, title, summary, tags } = post
-                return (
-                  <li key={path} className="py-5">
-                    <article className="flex flex-col space-y-2 xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
-                          <time dateTime={date} suppressHydrationWarning>
-                            {formatDate(date, siteMetadata.locale)}
-                          </time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-3">
-                        <div>
-                          <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags?.map((tag) => <Tag key={tag} text={tag} />)}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                    </article>
-                  </li>
-                )
-              })}
+            <ul className="space-y-6">
+              {displayPosts.map((post, index) => (
+                <BlogListCard
+                  key={post.path}
+                  title={post.title}
+                  summary={post.summary ?? ''}
+                  date={post.date}
+                  slug={post.slug}
+                  tags={post.tags}
+                  index={index}
+                />
+              ))}
             </ul>
+
             {pagination && pagination.totalPages > 1 && (
               <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
             )}
