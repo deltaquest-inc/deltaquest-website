@@ -95,18 +95,40 @@ export default function PrivacyPolicy() {
               2. 収集・受信するデータ
             </h2>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              私たちは独自の追跡サーバーを運用していません。代わりに、お客様のデバイスは
-              <a href="#ja-4" className="text-blue-600 hover:underline dark:text-blue-400">
-                第4節
+              当社は分析、クラッシュ診断、広告の提供のために第三者サービスを利用します。これらのSDKがアプリ内で実行されると、
+              お客様のデバイスは当社のサービス提供者に直接通信し、彼らは集計されたダッシュボードやレポートを当社と共有します。
+              当社はお客様の個人情報を販売しません。詳細は
+              <a href="#ja-3" className="text-blue-600 hover:underline dark:text-blue-400">
+                第3節
               </a>
-              に記載されたパートナーに直接データを送信し、彼らは集約されたダッシュボードを私たちと共有します。
+              をご覧ください。
+            </p>
+            <p className="mb-2 text-gray-700 dark:text-gray-300">
+              設定・デバイス・地域に応じて処理される可能性のあるデータのカテゴリ：
             </p>
             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
               <li>
-                <strong>デバイスと使用状況</strong> - 広告ID（GAID /
-                IDFA）、大まかなIP（地域のみ）、デバイスモデル、OSバージョン、画面解像度、言語、クラッシュログ。
+                <strong>デバイス・アプリ情報</strong> -
+                デバイスモデル、OS/バージョン、画面サイズ、言語、アプリバージョン。
+              </li>
+              <li>
+                <strong>広告識別子</strong> - Android は GAID/AdID、iOS は IDFA（iOS
+                で追跡を許可した場合のみ）。
+              </li>
+              <li>
+                <strong>ネットワーク由来の地域</strong> -
+                国/地域を概ね推定するためにのみ使用する粗いIP。
+              </li>
+              <li>
+                <strong>利用状況・イベント</strong> - 分析とプロダクト改善のためのアプリ内操作。
+              </li>
+              <li>
+                <strong>診断</strong> - クラッシュトレース、パフォーマンスメトリクス。
               </li>
             </ul>
+            <p className="mt-4 text-gray-700 dark:text-gray-300">
+              当社はこれらの情報を、アプリの運営・改善、機能の理解、キャンペーンの効果測定、問題の修正に利用します。
+            </p>
           </div>
 
           {/* 3. Third Party Services */}
@@ -114,6 +136,9 @@ export default function PrivacyPolicy() {
             <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="ja-3">
               3. 第三者SDKとサービスプロバイダー
             </h2>
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              これらのプロバイダーは、そのSDKが有効なときにお客様のデバイスから直接データを受信します。彼らは当社へのサービス提供のためにそれを処理し、限定された目的において処理者および/または独立した管理者として行動する場合があります。詳細は各プライバシー通知をご確認ください。
+            </p>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-300 dark:border-gray-600">
                 <thead>
@@ -141,26 +166,68 @@ export default function PrivacyPolicy() {
                       広告配信と測定
                     </td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      広告ID、IP（地域）、デバイス情報
+                      広告ID、地域（IP由来）、デバイス/アプリ情報、基本的な利用状況
                     </td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
                       <a
-                        href="https://support.google.com/ads/answer/2662922"
+                        href="https://policies.google.com/technologies/ads"
                         target="_blank"
                         rel="noopener"
                         className="text-blue-600 hover:underline dark:text-blue-400"
                       >
-                        リンク
+                        「Google がデータを使用する仕組み」および広告設定
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      Firebase Analytics（Google）
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      プロダクト分析（アプリ向け GA4）
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      アプリイベント、デバイス/アプリ情報（Google シグナルが有効な場合は該当データ）
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      <a
+                        href="https://support.google.com/analytics/answer/6004245"
+                        target="_blank"
+                        rel="noopener"
+                        className="text-blue-600 hover:underline dark:text-blue-400"
+                      >
+                        プライバシーとデータ保持のコントロール
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      Firebase Crashlytics（Google）
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      クラッシュ診断
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      クラッシュトレース、デバイス/アプリのコンテキスト、セッション/インストール ID
+                    </td>
+                    <td className="border border-gray-300 p-2 dark:border-gray-600">
+                      <a
+                        href="https://firebase.google.com/support/privacy#crashlytics"
+                        target="_blank"
+                        rel="noopener"
+                        className="text-blue-600 hover:underline dark:text-blue-400"
+                      >
+                        プライバシーとクラッシュデータの90日保持
                       </a>
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">Expo</td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      アプリ更新と分析
+                      アプリ更新と診断（ビルドに使用される場合）
                     </td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      アプリ使用統計、クラッシュレポート
+                      デバイス/アプリ情報、利用状況とクラッシュ診断
                     </td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
                       <a
@@ -169,34 +236,17 @@ export default function PrivacyPolicy() {
                         rel="noopener"
                         className="text-blue-600 hover:underline dark:text-blue-400"
                       >
-                        リンク
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      Firebase Analytics and Crashlytics
-                    </td>
-                    <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      分析とクラッシュ
-                    </td>
-                    <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      アプリイベント、デバイス情報、クラッシュログ
-                    </td>
-                    <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      <a
-                        href="https://support.google.com/firebase/answer/6318039"
-                        target="_blank"
-                        rel="noopener"
-                        className="text-blue-600 hover:underline dark:text-blue-400"
-                      >
-                        リンク
+                        Expo プライバシーポリシー
                       </a>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <p className="mt-4 text-gray-700 dark:text-gray-300">
+              社内レポート: Google Analytics/GA4 および Looker Studio
+              のダッシュボードを用いて分析を閲覧する場合があります。これによりお客様のデバイスに新たなSDKが追加されることはありません。
+            </p>
           </div>
 
           {/* 4. How and Why We Use Information */}
@@ -548,19 +598,43 @@ export default function PrivacyPolicy() {
                 2. Data We Collect and Receive
               </h2>
               <p className="mb-4 text-gray-700 dark:text-gray-300">
-                We do <em>not</em> run our own tracking servers. Instead, your device sends data
-                directly to the partners listed in{' '}
-                <a href="#en-4" className="text-blue-600 hover:underline dark:text-blue-400">
-                  Section 4
-                </a>
-                , who share aggregated dashboards with us.
+                We use third-party services to provide analytics, crash diagnostics and ads. When
+                those SDKs run in the app, your device communicates directly with our service
+                providers, who share aggregated dashboards and reports with us. We do not sell your
+                personal information. See{' '}
+                <a href="#en-3" className="text-blue-600 hover:underline dark:text-blue-400">
+                  Section 3
+                </a>{' '}
+                for details.
+              </p>
+              <p className="mb-2 text-gray-700 dark:text-gray-300">
+                Categories of data processed (depending on your settings, device and region):
               </p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>
-                  <strong>Device and usage</strong> - advertising ID (GAID / IDFA), coarse IP
-                  (region only), device model, OS version, screen resolution, language, crash logs.
+                  <strong>Device & app info</strong>: device model, OS/version, screen size,
+                  language, app version.
+                </li>
+                <li>
+                  <strong>Advertising identifier</strong>: GAID/AdID on Android, IDFA on iOS
+                  (available only if you allow tracking on iOS).
+                </li>
+                <li>
+                  <strong>Network-derived region</strong>: coarse IP used only to approximate
+                  country/region.
+                </li>
+                <li>
+                  <strong>Usage/events</strong>: app interactions for analytics and product
+                  improvement.
+                </li>
+                <li>
+                  <strong>Diagnostics</strong>: crash traces, performance metrics.
                 </li>
               </ul>
+              <p className="mt-4 text-gray-700 dark:text-gray-300">
+                We use this information to operate and improve the app, understand features, measure
+                campaigns, and fix issues.
+              </p>
             </div>
 
             {/* 3. Third Party Services */}
@@ -568,6 +642,11 @@ export default function PrivacyPolicy() {
               <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white" id="en-3">
                 3. Third-Party SDKs and Service Providers
               </h2>
+              <p className="mb-4 text-gray-700 dark:text-gray-300">
+                These providers receive data directly from your device when their SDKs are active.
+                They process it to provide services to us, and may act as our processors and/or
+                independent controllers for certain limited purposes. See their notices for details.
+              </p>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300 dark:border-gray-600">
                   <thead>
@@ -592,10 +671,10 @@ export default function PrivacyPolicy() {
                         Google AdMob / Ad Manager
                       </td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        Ad serving and measurement
+                        Ad delivery & measurement
                       </td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        Advertising ID, IP (region), device info
+                        Ad ID, region (via IP), device/app info, basic usage
                       </td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
                         <a
@@ -604,18 +683,60 @@ export default function PrivacyPolicy() {
                           rel="noopener"
                           className="text-blue-600 hover:underline dark:text-blue-400"
                         >
-                          link
+                          "How Google uses data" + Ads controls
                         </a>
                       </td>
                     </tr>
 
                     <tr>
-                      <td className="border border-gray-300 p-2 dark:border-gray-600">Expo</td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        App updates and analytics
+                        Firebase Analytics (Google)
                       </td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        App usage statistics, crash reports
+                        Product analytics (GA4 for apps)
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        App events, device/app info; Google-signals data if enabled
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        <a
+                          href="https://support.google.com/analytics/answer/6004245"
+                          target="_blank"
+                          rel="noopener"
+                          className="text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          Privacy & data retention controls
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        Firebase Crashlytics (Google)
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        Crash diagnostics
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        Crash traces, device/app context; session/installation IDs
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        <a
+                          href="https://firebase.google.com/support/privacy#crashlytics"
+                          target="_blank"
+                          rel="noopener"
+                          className="text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                          Privacy & 90-day retention for crash data
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">Expo</td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        App updates & diagnostics (if used in your build)
+                      </td>
+                      <td className="border border-gray-300 p-2 dark:border-gray-600">
+                        Device/app info; usage & crash diagnostics
                       </td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
                         <a
@@ -624,34 +745,17 @@ export default function PrivacyPolicy() {
                           rel="noopener"
                           className="text-blue-600 hover:underline dark:text-blue-400"
                         >
-                          link
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        Firebase Analytics and Crashlytics
-                      </td>
-                      <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        Analytics and crashes
-                      </td>
-                      <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        App events, device info, crash logs
-                      </td>
-                      <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        <a
-                          href="https://support.google.com/firebase/answer/6318039"
-                          target="_blank"
-                          rel="noopener"
-                          className="text-blue-600 hover:underline dark:text-blue-400"
-                        >
-                          link
+                          Expo Privacy Policy
                         </a>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p className="mt-4 text-gray-700 dark:text-gray-300">
+                Internal reporting: We may view analytics using Google Analytics/GA4 and Looker
+                Studio dashboards. This does not add any SDK to your device.
+              </p>
             </div>
 
             {/* 4. How and Why We Use Information */}
