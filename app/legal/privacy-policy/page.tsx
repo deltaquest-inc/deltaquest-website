@@ -224,7 +224,7 @@ export default function PrivacyPolicy() {
                   <tr>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">Expo</td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
-                      アプリ更新と診断（ビルドに使用される場合）
+                      アプリ更新と診断
                     </td>
                     <td className="border border-gray-300 p-2 dark:border-gray-600">
                       デバイス/アプリ情報、利用状況とクラッシュ診断
@@ -733,7 +733,7 @@ export default function PrivacyPolicy() {
                     <tr>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">Expo</td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
-                        App updates & diagnostics (if used in your build)
+                        App updates & diagnostics
                       </td>
                       <td className="border border-gray-300 p-2 dark:border-gray-600">
                         Device/app info; usage & crash diagnostics
