@@ -280,14 +280,6 @@ export default function PrivacyPolicy() {
               <li>
                 <strong>不正防止システム</strong> - フェアプレイを確保し、不正を防ぐための追加措置。
               </li>
-              <li>
-                <strong>強化された分析</strong> -
-                ユーザーエクスペリエンスを改善するためのより詳細なゲームプレイ分析。
-              </li>
-              <li>
-                <strong>ゲームプレイ活動追跡</strong> -
-                レベル試行、セッション時間、アプリ内購入、視聴された広告。
-              </li>
             </ul>
             <p className="mt-4 text-gray-700 dark:text-gray-300">
               これらの機能が実装された際は、このポリシーを更新し、アプリ内アナウンスまたはウェブサイトでユーザーに通知します。
@@ -790,14 +782,6 @@ export default function PrivacyPolicy() {
                 <li>
                   <strong>Fraud prevention systems</strong> - Additional measures to ensure fair
                   play and prevent cheating.
-                </li>
-                <li>
-                  <strong>Enhanced analytics</strong> - More detailed gameplay analysis to improve
-                  user experience.
-                </li>
-                <li>
-                  <strong>Gameplay activity tracking</strong> - Level attempts, session length,
-                  in-app purchases, and ads viewed.
                 </li>
               </ul>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
