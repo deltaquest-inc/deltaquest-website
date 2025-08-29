@@ -63,8 +63,8 @@ export default function PrivacyPolicy() {
               </li>
               <li>
                 お困りの際は、DPOにお問い合わせください（
-                <a href="#ja-17" className="text-blue-600 hover:underline dark:text-blue-400">
-                  第17節参照
+                <a href="#ja-16" className="text-blue-600 hover:underline dark:text-blue-400">
+                  第16節参照
                 </a>
                 ）。
               </li>
@@ -558,8 +558,8 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   Need help? Contact our DPO{' '}
-                  <a href="#en-17" className="text-blue-600 hover:underline dark:text-blue-400">
-                    (see Section 17)
+                  <a href="#en-16" className="text-blue-600 hover:underline dark:text-blue-400">
+                    (see Section 16)
                   </a>
                   .
                 </li>
