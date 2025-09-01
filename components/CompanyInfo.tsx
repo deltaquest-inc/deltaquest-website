@@ -10,7 +10,7 @@ export default function CompanyInfo() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl border border-blue-100 bg-gradient-to-b from-[#fffef6] via-[#fffef9] to-[#fdfcf7] p-6 shadow-lg shadow-blue-300 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400 dark:border-none dark:bg-gray-800/70 dark:bg-none dark:shadow-blue-800"
+        className="rounded-2xl border border-blue-100 bg-white/70 bg-gradient-to-b via-[#fffef9] to-[#fdfcf7] p-6 shadow-lg shadow-blue-300 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400 dark:border-none dark:bg-gray-800/70 dark:bg-none dark:shadow-blue-800"
       >
         <h3 className="mb-4 text-xl font-bold text-blue-800 dark:text-gray-100">会社情報</h3>
         <ul className="space-y-2 text-gray-700 dark:text-gray-300">
@@ -52,7 +52,7 @@ export default function CompanyInfo() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="rounded-2xl border border-blue-100 bg-gradient-to-b from-[#fffef6] via-[#fffef9] to-[#fdfcf7] p-6 shadow-lg shadow-blue-300 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400 dark:border-none dark:bg-gray-800/70 dark:bg-none dark:shadow-blue-800"
+        className="from-bg-white/70 rounded-2xl border border-blue-100 bg-gradient-to-b via-[#fffef9] to-[#fdfcf7] p-6 shadow-lg shadow-blue-300 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400 dark:border-none dark:bg-gray-800/70 dark:bg-none dark:shadow-blue-800"
       >
         <h3 className="mb-4 text-xl font-bold text-blue-800 dark:text-gray-100">ミッション</h3>
         <p className="leading-relaxed text-gray-700 dark:text-gray-300">

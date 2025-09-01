@@ -13,8 +13,8 @@ type BlogCardProps = {
 const BlogCard = ({ title, summary, date, slug }: BlogCardProps) => {
   return (
     <motion.div
-      className="overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-b from-[#fffef6] via-[#fffef9] to-[#fdfcf7] shadow-lg shadow-blue-300 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400 dark:border-none dark:bg-gray-800/70 dark:bg-none dark:shadow-blue-800"
-      whileHover={{ y: -5, scale: 1.02 }}
+      className="overflow-hidden rounded-2xl bg-white/70 shadow-lg shadow-blue-200 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:shadow-blue-300 dark:bg-gray-800/70 dark:shadow-blue-800"
+      whileHover={{ y: -5 }}
     >
       <Link href={`/blog/${slug}`} className="block p-6">
         <h3 className="mb-2 text-xl font-bold text-blue-800 dark:text-gray-100">{title}</h3>
