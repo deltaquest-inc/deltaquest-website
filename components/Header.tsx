@@ -1,5 +1,6 @@
 'use client'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import Image from 'next/image'
 import NavLink from './NavLink'
@@ -18,6 +19,7 @@ const headerVariants = {
 }
 
 const Header = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const hideNav =
     isLaserTagPage(pathname) || isLegalSubpage(pathname) || isSupportGamePage(pathname)
@@ -49,7 +51,7 @@ const Header = () => {
   return (
     <>
       <motion.header
-        className="fixed top-8 right-0 left-0 z-[10000] mx-auto h-16 w-[98%] max-w-[1920px] rounded-full border border-white/30 bg-white/5 px-6 shadow-xl backdrop-blur-[2px] transition-all duration-300 dark:border-white/20 dark:bg-gray-900/20"
+        className={`fixed top-8 right-0 left-0 z-[10000] mx-auto h-16 w-[98%] max-w-[1920px] rounded-full border border-white/30 bg-white/5 px-6 shadow-xl backdrop-blur-[2px] transition-all duration-300 dark:border-white/20 dark:bg-gray-900/20 ${isMobileMenuOpen ? 'hidden sm:block' : ''}`}
         variants={headerVariants}
         initial="initial"
         animate="animate"
@@ -103,7 +105,7 @@ const Header = () => {
             )}
             <SearchButton />
             <ThemeSwitch />
-            <MobileNav />
+            <MobileNav isOpen={isMobileMenuOpen} setIsOpen={setMobileMenuOpen} />
           </div>
         </div>
       </motion.header>
