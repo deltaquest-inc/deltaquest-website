@@ -1,4 +1,5 @@
 const headerNavLinks = [
+  { title: 'ホーム', href: '/' }, // Home
   { title: '会社概要', href: '/about' }, // About
   { title: 'サービス', href: '/services' }, // Services (Laser Tag & IT)
   { title: 'ブログ', href: '/blog' }, // Blog
