@@ -27,7 +27,7 @@ export default function Home() {
   const posts = allBlogs.slice(0, 5)
 
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700">
+    <div className="divide-y divide-gray-200 pt-20 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
         <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
           デルタクエストへようこそ
@@ -62,10 +62,10 @@ export default function Home() {
           })}
         </motion.ul>
         {posts.length > 0 && (
-          <div className="mt-2.5 flex justify-end text-base leading-6 font-medium">
+          <div className="mt-2.5 flex justify-end pt-12 text-base leading-6 font-medium">
             <Link
               href="/blog"
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              className="text-[#2563eb] hover:text-[#1e3a8a] dark:hover:text-[#1e3a8a]"
             >
               すべての投稿を見る →
             </Link>
