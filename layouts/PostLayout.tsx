@@ -61,31 +61,39 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <dd>
                 <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:block xl:space-y-8 xl:space-x-0">
                   {authorDetails.map((author) => (
-                    <Link href="/author" className="flex items-center space-x-2" key={author.name}>
-                      <li className="flex items-center space-x-2">
+                    <li key={author.name}>
+                      <Link
+                        href={`/author/${author.slug || author.name}`}
+                        className="flex items-center space-x-2 hover:underline"
+                      >
                         {author.avatar && (
                           <Image
                             src={author.avatar}
                             width={38}
                             height={38}
-                            alt="avatar"
+                            alt={`Avatar de ${author.name}`}
                             className="h-10 w-10 rounded-full"
                           />
                         )}
-                        <dl className="text-sm leading-5 font-medium whitespace-nowrap">
-                          <dt className="sr-only">名前</dt>
-                          <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                          <dt className="sr-only">職業</dt>
-                          <dd className="text-gray-500 dark:text-gray-400">{author.occupation}</dd>
-                        </dl>
-                      </li>
-                    </Link>
+                        <div className="text-sm leading-5">
+                          <p className="font-medium text-gray-900 dark:text-gray-100">
+                            {author.name}
+                          </p>
+                          {author.occupation && (
+                            <p className="text-gray-500 dark:text-gray-400">{author.occupation}</p>
+                          )}
+                        </div>
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
-              <div className="prose dark:prose-invert max-w-none pt-10 pb-8">{children}</div>
+              <div className="prose dark:prose-invert max-w-none rounded-2xl border border-blue-100 bg-gradient-to-b from-[#fffef6] via-[#fffef9] to-[#fdfcf7] px-8 pt-10 pb-8 shadow-lg shadow-blue-300 backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400 md:px-12 dark:border-none dark:bg-gray-800/70 dark:bg-none dark:shadow-blue-800">
+                {children}
+              </div>
+
               {siteMetadata.comments && (
                 <div
                   className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300"
@@ -95,6 +103,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 </div>
               )}
             </div>
+
             <footer>
               <div className="divide-gray-200 text-sm leading-5 font-medium xl:col-start-1 xl:row-start-2 xl:divide-y dark:divide-gray-700">
                 {tags && (
@@ -104,7 +113,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     </h2>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
+                        <Tag
+                          key={tag}
+                          text={tag}
+                          className="hover:bg-primary-100 dark:hover:bg-primary-900 mr-2 mb-2 transition-colors"
+                        />
                       ))}
                     </div>
                   </div>

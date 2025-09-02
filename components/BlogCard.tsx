@@ -17,11 +17,11 @@ const BlogCard = ({ title, summary, date, slug }: BlogCardProps) => {
       whileHover={{ y: -5 }}
     >
       <Link href={`/blog/${slug}`} className="block p-6">
-        <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-gray-100">{title}</h3>
-        <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+        <h3 className="mb-2 text-xl font-bold text-blue-800 dark:text-gray-100">{title}</h3>
+        <p className="mb-4 text-sm text-blue-600 dark:text-gray-400">
           <time dateTime={date}>{formatDate(date)}</time>
         </p>
-        <p className="text-gray-700 dark:text-gray-300">{summary}</p>
+        <p className="line-clamp-3 text-gray-700 dark:text-gray-300">{summary}</p>
       </Link>
     </motion.div>
   )

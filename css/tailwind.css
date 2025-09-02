@@ -81,9 +81,9 @@
 @layer utilities {
   .prose {
     & a {
-      color: var(--color-primary-500);
+        color: #1e3a8a;
       &:hover {
-        color: var(--color-primary-600);
+          color: #2563eb
       }
       & code {
         color: var(--color-primary-400);
@@ -103,9 +103,9 @@
 
   .prose-invert {
     & a {
-      color: var(--color-primary-500);
+        color: #f9fafb;
       &:hover {
-        color: var(--color-primary-400);
+          color: #e5e7eb;
       }
       & code {
         color: var(--color-primary-400);
