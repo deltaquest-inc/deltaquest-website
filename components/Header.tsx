@@ -24,6 +24,16 @@ const Header = () => {
   const hideNav = isLaserTagPage(pathname) || isSupportGamePage(pathname)
   const isLegalSubpageFlag = isLegalSubpage(pathname)
   const isSupportGamePageFlag = isSupportGamePage(pathname)
+  if (isSupportGamePageFlag) {
+    return (
+      <header className="fixed top-8 right-0 left-0 z-[10000] mx-auto flex h-16 w-[98%] max-w-[1920px] items-center justify-between rounded-full border border-white/30 bg-white/5 px-6 shadow-xl backdrop-blur-[2px] dark:border-white/20 dark:bg-gray-900/20">
+        <div>
+          <Image src={logoImg} alt="Logo" className="h-10 w-10 object-contain" />
+        </div>
+        <ThemeSwitch />
+      </header>
+    )
+  }
 
   const { scrollY } = useScroll()
   const shadowOffset = useTransform(scrollY as MotionValue<number>, [0, 50], [0, 5])
