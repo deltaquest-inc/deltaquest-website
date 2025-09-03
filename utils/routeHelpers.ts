@@ -7,8 +7,8 @@
  * @param pathname - The current pathname
  * @returns true if it's a legal subpage (e.g., /legal/privacy-policy)
  */
-export const isLegalSubpage = (pathname: string): boolean => {
-  return pathname.startsWith('/legal') && pathname !== '/legal'
+export function isLegalSubpage(pathname: string) {
+  return pathname === '/legal' || pathname.startsWith('/legal/')
 }
 
 /**
