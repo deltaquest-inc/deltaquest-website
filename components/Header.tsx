@@ -21,8 +21,7 @@ const headerVariants = {
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const hideNav =
-    isLaserTagPage(pathname) || isLegalSubpage(pathname) || isSupportGamePage(pathname)
+  const hideNav = isLaserTagPage(pathname) || isSupportGamePage(pathname)
   const isLegalSubpageFlag = isLegalSubpage(pathname)
   const isSupportGamePageFlag = isSupportGamePage(pathname)
 
@@ -47,6 +46,10 @@ const Header = () => {
 
   const logoY = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 20])
   const logoRotate = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 15])
+
+  console.log('pathname:', pathname)
+  console.log('isLegalSubpageFlag:', isLegalSubpageFlag)
+  console.log('isSupportGamePageFlag:', isSupportGamePageFlag)
 
   return (
     <>
@@ -104,8 +107,7 @@ const Header = () => {
                     <NavLink key={link.title} href={link.href} title={link.title} />
                   ))}
               </div>
-
-              <SearchButton />
+              {!isLegalSubpageFlag && !isSupportGamePageFlag && <SearchButton />}
               <ThemeSwitch />
               <MobileNav isOpen={isMobileMenuOpen} setIsOpen={setMobileMenuOpen} />
             </div>
