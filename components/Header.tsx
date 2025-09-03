@@ -24,6 +24,26 @@ const Header = () => {
   const hideNav = isLaserTagPage(pathname) || isSupportGamePage(pathname)
   const isLegalSubpageFlag = isLegalSubpage(pathname)
   const isSupportGamePageFlag = isSupportGamePage(pathname)
+
+  const { scrollY } = useScroll()
+  const shadowOffset = useTransform(scrollY as MotionValue<number>, [0, 50], [0, 5])
+  const shadowOpacity = useTransform(scrollY as MotionValue<number>, [0, 50], [0, 0.3])
+  const textShadow = useTransform(
+    [shadowOffset, shadowOpacity],
+    ([offset, opacity]: [number, number]) => `
+            ${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}),
+            ${-offset}px ${-offset}px 0px rgba(255, 255, 255, ${opacity * 0.5})
+          `
+  )
+  const dropShadow = useTransform(
+    [shadowOffset, shadowOpacity],
+    ([offset, opacity]: [number, number]) => `
+            drop-shadow(${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}))
+          `
+  )
+  const logoY = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 20])
+  const logoRotate = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 15])
+
   if (isSupportGamePageFlag) {
     return (
       <header className="fixed top-8 right-0 left-0 z-[10000] mx-auto flex h-16 w-[98%] max-w-[1920px] items-center justify-between rounded-full border border-white/30 bg-white/5 px-6 shadow-xl backdrop-blur-[2px] dark:border-white/20 dark:bg-gray-900/20">
@@ -34,32 +54,6 @@ const Header = () => {
       </header>
     )
   }
-
-  const { scrollY } = useScroll()
-  const shadowOffset = useTransform(scrollY as MotionValue<number>, [0, 50], [0, 5])
-  const shadowOpacity = useTransform(scrollY as MotionValue<number>, [0, 50], [0, 0.3])
-
-  const textShadow = useTransform(
-    [shadowOffset, shadowOpacity],
-    ([offset, opacity]: [number, number]) => `
-      ${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}),
-      ${-offset}px ${-offset}px 0px rgba(255, 255, 255, ${opacity * 0.5})
-    `
-  )
-
-  const dropShadow = useTransform(
-    [shadowOffset, shadowOpacity],
-    ([offset, opacity]: [number, number]) => `
-      drop-shadow(${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}))
-    `
-  )
-
-  const logoY = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 20])
-  const logoRotate = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 15])
-
-  console.log('pathname:', pathname)
-  console.log('isLegalSubpageFlag:', isLegalSubpageFlag)
-  console.log('isSupportGamePageFlag:', isSupportGamePageFlag)
 
   return (
     <>
