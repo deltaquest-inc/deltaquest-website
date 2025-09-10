@@ -1,7 +1,8 @@
 import { genPageMetadata } from 'app/seo'
 import ServicesPageClient from './services.page.client'
 
-export const generateMetadata = async ({ params: { locale } }: { params: { locale: string } }) => {
+export const generateMetadata = async (props: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await props.params
   const messages = (await import(`../../../i18n/messages/${locale}.json`)).default
   return genPageMetadata({
     title: messages.services.metaTitle,
