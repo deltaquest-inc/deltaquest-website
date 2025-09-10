@@ -1,5 +1,11 @@
 import Main from '../Main'
 
-export default function HomePage({ params }: { params: { locale: string } }) {
+interface PageProps {
+  params: {
+    locale: string
+  }
+}
+
+export default function HomePage({ params }: PageProps) {
   return <Main />
 }
