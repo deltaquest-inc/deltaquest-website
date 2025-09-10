@@ -6,6 +6,6 @@ interface PageProps {
   }
 }
 
-export default function HomePage({ params }: { params: { locale: string } }) {
+export default function HomePage({ params }: PageProps) {
   return <Main />
 }
