@@ -10,8 +10,6 @@ export const generateMetadata = async ({ params }: { params: { locale: string } 
   })
 }
 
-export default function ServicesPage({ params }: { params: { locale: string } }) {
-  const { locale } = params
-
+export default async function ServicesPage() {
   return <ServicesPageClient />
 }
