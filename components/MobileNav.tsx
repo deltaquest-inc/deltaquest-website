@@ -5,13 +5,14 @@ import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'bo
 import { Fragment, useEffect, useRef } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import { useTranslations } from 'next-intl'
 type MobileNavProps = {
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
   const navRef = useRef(null)
-
+  const t = useTranslations('header')
   const onToggleNav = () => {
     setIsOpen(!isOpen)
     if (!isOpen) {
@@ -73,12 +74,12 @@ const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
               >
                 {headerNavLinks.map((link) => (
                   <Link
-                    key={link.title}
+                    key={link.messageKey}
                     href={link.href}
                     className="hover:text-primary-500 dark:hover:text-primary-400 mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 dark:text-gray-100"
                     onClick={onToggleNav}
                   >
-                    {link.title}
+                    {t(link.messageKey)}
                   </Link>
                 ))}
               </nav>

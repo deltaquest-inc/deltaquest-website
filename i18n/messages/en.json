@@ -1,0 +1,176 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "projects": "Portfolio",
+    "contact": "Contact",
+    "legal": "Legal Notice"
+  },
+  "footer": {
+    "laserTag": "Laser Tag Project",
+    "itSolutions": "IT Solutions",
+    "themeLink": "Tailwind Next.js Theme"
+  },
+  "home": {
+    "welcome": "Welcome to Delta Quest",
+    "description": "Delta Quest provides cutting-edge IT services, from frontend development to SEO optimization and cloud infrastructure.",
+    "viewServices": "View Services",
+    "contactUs": "Contact Us",
+    "latestPosts": "Latest Blog Posts",
+    "noPosts": "No posts available.",
+    "viewAllPosts": "View all posts →"
+  },
+  "blogs": {
+    "media-1p-ads": {
+      "title": "Media 1P Advertising Campaigns",
+      "summary": "Implementation and optimization of Media 1P advertising campaigns."
+    },
+    "logistics-redesign": {
+      "title": "Logistics Platform Redesign",
+      "summary": "Complete architecture overhaul to better meet market needs."
+    }
+  },
+  "about": {
+    "metaTitle": "About Delta Quest",
+    "metaDescription": "Discover Delta Quest's mission, vision and services.",
+    "title": "About Us",
+    "visionTitle": "Our Vision",
+    "visionStatements": [
+      "Accelerate business growth through technology",
+      "Deliver simple, scalable systems",
+      "Be the bridge between business and innovation"
+    ],
+    "ceoMessageTitle": "CEO Message",
+    "servicesTitle": "Our Main Services",
+    "ceoMessage": "With technology, we help businesses stay competitive in the market. We leverage our expertise in frontend development and system design to support sustainable and scalable growth.",
+    "ceoName": "Kevin Blume, CEO of Delta Quest",
+    "companyInfo": {
+      "title": "Company Info",
+      "missionTitle": "Mission",
+      "companyNameLabel": "Company",
+      "locationLabel": "Location",
+      "activitiesLabel": "Activities",
+      "ceoLabel": "CEO",
+      "foundedLabel": "Founded",
+      "capitalLabel": "Capital",
+      "contactLabel": "Contact",
+      "companyName": "Delta Quest",
+      "location": "20-2-3 Minami 5-jo Nishi, Chuo-ku, Sapporo",
+      "activities": "Frontend development, Web app creation, SEO optimization, CI/CD, Cloud architecture",
+      "ceo": "Kevin Blume",
+      "founded": "February 20, 2025",
+      "capital": "5 million JPY",
+      "contact": "info@deltaquest.co.jp",
+      "missionDescription": "Delta Quest leverages cutting-edge IT technologies to help businesses succeed in the digital market. Our goal is to build intuitive and scalable web applications to support business growth."
+    }
+  },
+  "services": {
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "Building modern web applications to enhance user experience."
+    },
+    "nextReact": {
+      "title": "Next.js/React Solutions",
+      "description": "Developing high-performance websites and applications."
+    },
+    "seoPerf": {
+      "title": "SEO & Performance Optimization",
+      "description": "Boost your business visibility with SEO and faster load times."
+    },
+    "cicd": {
+      "title": "CI/CD Implementation",
+      "description": "Streamlining continuous integration and delivery for efficient development."
+    },
+    "cloudInfra": {
+      "title": "Cloud Infrastructure",
+      "description": "Designing scalable architectures with AWS or GCP."
+    },
+    "aiConsulting": {
+      "title": "AI Consulting",
+      "description": "Helping businesses automate processes with AI solutions."
+    }
+  },
+  "blogPage": {
+    "title": "All Posts",
+    "searchArticles": "Search articles",
+    "noPostsFound": "No posts found.",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {current} of {total}",
+    "publishedOn": "Published on"
+  },
+
+  "legalPage": {
+    "metaTitle": "Legal Notice and Privacy Policy",
+    "metaDescription": "Read the legal notice and privacy policy of Delta Quest.",
+    "title": "Legal Notice and Privacy Policy",
+    "termsTitle": "Terms of Use",
+    "termsText": "This website is operated by Delta Quest Corporation (hereinafter referred to as \"the Company\").\nBy using this site, you agree to the following terms of use.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "We strive to ensure the accuracy and timeliness of the information, but we cannot be held responsible for errors or omissions.",
+    "copyrightTitle": "Copyright",
+    "copyrightText": "All content on this site (texts, images, design, programs, etc.) is the property of Delta Quest unless otherwise stated. Any reproduction is prohibited.",
+    "privacyTitle": "Privacy Policy",
+    "privacyText": "We handle your personal data in accordance with this privacy policy.",
+    "infoCollectedTitle": "Information Collected",
+    "infoCollectedText": "We collect your personal data for:",
+    "infoCollectedList": "Using the contact form|Analyzing to improve services|Other communications with you",
+    "dataProtectionTitle": "Data Protection",
+    "dataProtectionText": "We will not provide or disclose your personal information to third parties, except when required by law or requested by a public institution.",
+    "contactTitle": "Contact",
+    "contactText": "For any questions regarding the legal notice or privacy policy, contact us:",
+    "emailLabel": "Email",
+    "email": "info@deltaquest.co.jp"
+  },
+
+  "servicesPage": {
+    "metaTitle": "Delta Quest Services",
+    "metaDescription": "Explore the IT services offered by Delta Quest.",
+    "title": "Services",
+    "intro": "Delta Quest provides high-quality IT services to solve your business challenges, from frontend development to cloud infrastructure optimization.",
+    "ourServicesTitle": "Our IT Services",
+    "contactTitle": "Consultation & Contact",
+    "contactDescription": "If you're interested, feel free to get in touch with us.",
+    "contactButton": "Contact Us",
+    "whyTitle": "Why Choose Delta Quest?",
+    "reasons": {
+      "expertise": {
+        "title": "Technical Expertise",
+        "description": "We master the latest technologies to deliver high-performance solutions."
+      },
+      "scalability": {
+        "title": "Scalable Solutions",
+        "description": "Our services adapt to the growth and needs of your business."
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "description": "We guide our clients throughout their project with responsiveness and commitment."
+      }
+    }
+  },
+  "contactPageForm": {
+    "title": "Contact Form",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Your Message",
+    "submitButton": "Send",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for your message. We will get back to you shortly.",
+    "sendError": "Failed to send the form. Please try again."
+  },
+
+  "contactPage": {
+    "metaTitle": "Contact Delta Quest",
+    "metaDescription": "Get in touch with Delta Quest for any questions or requests regarding our IT services.",
+    "title": "Contact",
+    "intro": "For any questions or inquiries regarding Delta Quest's IT services, please contact us using the following methods.",
+    "contactMethodsTitle": "Contact Methods",
+    "emailLabel": "Email",
+    "email": "info@deltaquest.co.jp",
+    "locationLabel": "Location",
+    "location": "Sapporo, Japan",
+    "locationNote": "※ Specific details will be provided upon contact."
+  }
+}

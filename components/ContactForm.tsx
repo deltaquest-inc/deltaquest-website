@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import { useTranslations } from 'next-intl'
 const formVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -9,6 +9,7 @@ const formVariants = {
 }
 
 const ContactForm = () => {
+  const t = useTranslations('contactPageForm')
   const [isSent, setIsSent] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const formAction = `https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_CONTACT_EMAIL}`
@@ -48,7 +49,7 @@ const ContactForm = () => {
   return (
     <div className="mx-auto max-w-2xl px-4 py-8">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-gray-100">
-        お問い合わせフォーム
+        {t('title')}
       </h2>
       <AnimatePresence>
         {isSent ? (
@@ -61,11 +62,9 @@ const ContactForm = () => {
             className="flex h-64 flex-col items-center justify-center gap-6 rounded-lg border border-blue-600 bg-blue-600/10 p-6 text-center shadow-lg dark:border-blue-500 dark:bg-blue-500/10"
           >
             <h3 className="text-xl font-bold text-blue-600 dark:text-blue-500">
-              メッセージを送信しました！
+              {t('successTitle')}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              ご連絡ありがとうございます。追ってご連絡いたします。
-            </p>
+            <p className="text-gray-700 dark:text-gray-300">{t('successMessage')}</p>
           </motion.div>
         ) : (
           <motion.form
@@ -84,7 +83,7 @@ const ContactForm = () => {
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                お名前
+                {t('nameLabel')}
               </label>
               <input
                 type="text"
@@ -99,7 +98,7 @@ const ContactForm = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                メールアドレス
+                {t('emailLabel')}
               </label>
               <input
                 type="email"
@@ -114,7 +113,7 @@ const ContactForm = () => {
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"
               >
-                お問い合わせ内容
+                {t('messageLabel')}
               </label>
               <textarea
                 id="message"
@@ -135,7 +134,7 @@ const ContactForm = () => {
                 type="submit"
                 className="inline-flex cursor-pointer justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:outline-none dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-500"
               >
-                送信
+                {t('submitButton')}
               </button>
             </div>
           </motion.form>
