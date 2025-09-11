@@ -25,17 +25,24 @@ const blogCardVariants = {
   visible: { y: 0, opacity: 1 },
 }
 const blogSlugs = ['media-1p-ads', 'logistics-redesign']
-export default function Home() {
+export default function Home({ locale }: { locale: string }) {
   const t = useTranslations('home')
   const tBlog = useTranslations('blogs')
 
   const posts = allBlogs
-    .filter((post) => blogSlugs.includes(post.slug))
-    .map((post) => ({
-      ...post,
-      title: tBlog(`${post.slug}.title`),
-      summary: tBlog(`${post.slug}.summary`),
-    }))
+    .filter(
+      (post) =>
+        blogSlugs.includes(post._raw.flattenedPath.split('/').pop()!) && post.locale === locale
+    )
+    .map((post) => {
+      const slugKey = post._raw.flattenedPath.split('/').pop()!
+      return {
+        ...post,
+        title: tBlog(`${slugKey}.title`),
+        summary: tBlog(`${slugKey}.summary`),
+      }
+    })
+
   return (
     <div className="divide-y divide-gray-200 pt-20 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">

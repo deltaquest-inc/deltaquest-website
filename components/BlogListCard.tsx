@@ -12,14 +12,23 @@ type BlogListCardProps = {
   slug: string
   tags?: string[]
   index?: number
+  locale: 'en' | 'fr' | 'ja'
 }
 
-const BlogListCard = ({ title, summary, date, slug, tags, index = 0 }: BlogListCardProps) => {
+const BlogListCard = ({
+  title,
+  summary,
+  date,
+  slug,
+  tags,
+  index = 0,
+  locale,
+}: BlogListCardProps) => {
   return (
     <motion.div
       whileHover={{ x: -5 }}
       className="flex cursor-pointer flex-col justify-between rounded-2xl bg-white/70 p-6 shadow-lg shadow-blue-200 backdrop-blur-md transition-all duration-300 hover:shadow-xl hover:shadow-blue-300 dark:bg-gray-800/70 dark:shadow-blue-800"
-      onClick={() => (window.location.href = `/blog/${slug}`)}
+      onClick={() => (window.location.href = `/${locale}/blog/${slug}`)}
     >
       <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-gray-100">{title}</h3>
       <p className="mb-4 text-sm text-gray-600 dark:text-gray-300">{summary}</p>

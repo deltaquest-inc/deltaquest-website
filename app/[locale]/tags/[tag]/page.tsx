@@ -6,12 +6,14 @@ import { notFound } from 'next/navigation'
 const POSTS_PER_PAGE = 5
 
 export default async function TagPage({ params }: { params: { locale: string; tag: string } }) {
-  const { tag } = params
+  const { locale, tag } = params
   const decodedTag = decodeURI(tag)
   const filteredPosts = allCoreContent(
     sortPosts(
-      allBlogs.filter((post) =>
-        post.tags?.map((t) => t.toLowerCase()).includes(decodedTag.toLowerCase())
+      allBlogs.filter(
+        (post) =>
+          post.locale === locale &&
+          post.tags?.map((t) => t.toLowerCase()).includes(decodedTag.toLowerCase())
       )
     )
   )

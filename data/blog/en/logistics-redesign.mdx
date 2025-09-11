@@ -1,0 +1,82 @@
+---
+title: "Redesigning an International Logistics Platform"
+date: "2022-07-20"
+tags: ['logistics-tech', 'frontend', 'DDD', 'scalability', 'business-impact']
+draft: false
+summary: "A project to rebuild an international logistics platform from scratch to achieve product-market fit. Technical decisions and business impact are explained."
+images: ['/static/images/container-ship.png']
+locale: en
+---
+
+## Introduction
+
+This project aimed at a **complete redesign of the international logistics platform**. The initial version was developed as a PoC, but it did not achieve market fit, and with the redefinition of the business, a new platform adapted to core use cases was needed.
+
+This article explains **how we redesigned the architecture, built the data model, adopted Domain-Driven Design (DDD), and achieved a scalable system**.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## SITUATION: Challenges and Background
+
+The initial version of the logistics platform had architectural constraints that did not match real business needs.
+
+- **Built as a PoC, it diverged from core use cases**
+- **Changes in business strategy required adapting to different needs**
+- **Existing system lacked scalability and could not support long-term operation**
+
+Therefore, **redesigning the system from scratch was the best option**.
+
+## TASK: Goals and Role
+
+Main goals of this project:
+
+- **Achieve Product-Market Fit (PMF)** (increase monthly shipments, revenue, and repeat customers)
+- **Build a domain model reflecting real business needs**
+- **Ensure long-term scalability and extensibility**
+
+As **Head of Engineering**, I led the engineering team, oversaw architecture design, data modeling, and DB/API design. I also worked closely with the product team, **bridging business and technical requirements**.
+
+## ACTION: Approach and Execution
+
+### 1️⃣ Architecture and Data Model Redesign
+
+For the new system, **we adopted Domain-Driven Design (DDD) and built a data model that faithfully reflects business realities**.
+
+- **Analyzed logistics workflows in detail to define domain models**
+- **Defined bounded contexts and organized service dependencies**
+- **Optimized database design for performance and scalability**
+
+### 2️⃣ User Experience (UX) Improvement
+
+The new frontend leveraged **Material UI to create an intuitive, modern UI/UX**.
+
+- **Improved visibility and usability, enhancing user efficiency**
+- **Performance optimizations achieved Lighthouse score above 80**
+
+### 3️⃣ Phased Migration Strategy
+
+To mitigate risk during system replacement, **the old and new systems ran in parallel**.
+
+- **Collaborated with early adopters to ease migration**
+- **Incorporated direct user feedback for rapid improvements**
+
+## RESULT: Business Impact
+
+As a result:
+
+✅ **After launch, key KPIs like monthly shipments, revenue, and repeat customer rate were achieved**
+✅ **Backend optimization increased request processing speed by 40%**
+✅ **The system evolved to meet industry needs and allow scalable operations**
+
+## Conclusion
+
+The project delivered:
+
+- **Rebuilt architecture using DDD**
+- **Data model adapted to new business requirements**
+- **Enhanced UX/UI**
+- **Smooth migration process with existing users**
+
+Future work will continue to enhance features and performance to build an even more valuable logistics platform.
+
+🚀 Check out other case studies!

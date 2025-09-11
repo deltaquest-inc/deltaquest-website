@@ -7,23 +7,32 @@ const POSTS_PER_PAGE = 5
 
 export const metadata = genPageMetadata({ title: 'Blog' })
 
-export default async function BlogPage(props: { searchParams: Promise<{ page: string }> }) {
-  const { page } = await props.searchParams
-  const posts = allCoreContent(sortPosts(allBlogs))
-  const pageNumber = 1
-  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
-  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE * pageNumber)
-  const pagination = {
-    currentPage: pageNumber,
-    totalPages: totalPages,
-  }
+export default async function BlogPage({
+  params,
+}: {
+  params: { locale: 'en' | 'fr' | 'ja'; page?: string }
+}) {
+  const locale = params.locale
+  const pageNumber = params.page ? parseInt(params.page) : 1
+  console.log(
+    'All post locales:',
+    allBlogs.map((post) => post.locale)
+  )
+  // 🔹 Filtrer les articles par locale
+  const filteredPosts = allBlogs.filter((post) => post.locale === locale)
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
+  const initialDisplayPosts = filteredPosts.slice(
+    POSTS_PER_PAGE * (pageNumber - 1),
+    POSTS_PER_PAGE * pageNumber
+  )
 
   return (
     <ListLayout
-      posts={posts}
+      posts={filteredPosts}
       initialDisplayPosts={initialDisplayPosts}
-      pagination={pagination}
-      title="All Posts"
+      pagination={{ currentPage: pageNumber, totalPages }}
+      title={locale === 'fr' ? 'Tous les articles' : locale === 'ja' ? '全ての記事' : 'All Posts'}
     />
   )
 }
