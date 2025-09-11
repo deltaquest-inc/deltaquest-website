@@ -10,6 +10,11 @@ export const generateMetadata = async ({ params }: { params: { locale: string } 
   })
 }
 
-export default async function ServicesPage() {
-  return <ServicesPageClient />
+interface ServicesPageProps {
+  params: Promise<{ locale: string }>
+}
+
+export default async function ServicesPage({ params }: ServicesPageProps) {
+  const { locale } = await params
+  return <ServicesPageClient locale={locale} />
 }
