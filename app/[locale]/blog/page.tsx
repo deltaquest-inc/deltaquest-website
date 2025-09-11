@@ -6,16 +6,18 @@ const POSTS_PER_PAGE = 5
 
 export const metadata = genPageMetadata({ title: 'Blog' })
 
+type BlogPageParams = {
+  locale: 'en' | 'fr' | 'ja'
+  page?: string
+}
+
 type BlogPageProps = {
-  params: {
-    locale: 'en' | 'fr' | 'ja'
-    page?: string
-  }
+  params: Promise<BlogPageParams>
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  const locale = params.locale
-  const pageNumber = params.page ? parseInt(params.page, 10) : 1
+  const { locale, page } = await params
+  const pageNumber = page ? parseInt(page, 10) : 1
 
   const filteredPosts = allBlogs.filter((post) => post.locale === locale)
 
