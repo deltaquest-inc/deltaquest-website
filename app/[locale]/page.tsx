@@ -6,5 +6,5 @@ interface PageProps {
 
 export default function HomePage({ params }: PageProps) {
   const { locale } = params
-  return <Main locale={locale} /> // ← passe la locale
+  return <Main locale={locale} />
 }
