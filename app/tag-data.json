@@ -1,10 +1,10 @@
 {
-  "ad-tech": 1,
-  "frontend": 2,
-  "react": 1,
-  "typescript": 1,
-  "business-impact": 2,
-  "logistics-tech": 1,
-  "ddd": 1,
-  "scalability": 1
+  "logistics-tech": 3,
+  "frontend": 6,
+  "ddd": 3,
+  "scalability": 3,
+  "business-impact": 6,
+  "ad-tech": 3,
+  "react": 3,
+  "typescript": 3
 }

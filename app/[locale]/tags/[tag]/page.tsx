@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 const POSTS_PER_PAGE = 5
 
 export default async function TagPage({ params }: { params: { locale: string; tag: string } }) {
-  const { locale, tag } = params
+  const { locale, tag } = await params
   const decodedTag = decodeURI(tag)
   const filteredPosts = allCoreContent(
     sortPosts(
