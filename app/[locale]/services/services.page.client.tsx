@@ -6,7 +6,11 @@ import ServiceCard from '@/components/ServiceCard'
 import { servicesData } from '@/data/services/servicesData'
 import WhyDeltaQuest from '@/components/WhyDQ'
 
-export default function ServicesPageClient() {
+interface ServicesPageClientProps {
+  locale: string
+}
+
+export default function ServicesPageClient({ locale }: ServicesPageClientProps) {
   const t = useTranslations('servicesPage')
   const tServices = useTranslations('services')
 
