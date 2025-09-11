@@ -4,8 +4,12 @@ import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 
 const POSTS_PER_PAGE = 5
 
-export default async function TagPage({ params }: { params: { locale: string; tag: string } }) {
-  const { tag } = params
+export default async function TagPage({
+  params,
+}: {
+  params: Promise<{ locale: string; tag: string }>
+}) {
+  const { tag } = await params
 
   const posts = allCoreContent(sortPosts(allBlogs)).filter((post) => post.tags?.includes(tag))
 
