@@ -5,10 +5,9 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode
-  params: { locale: 'fr' | 'en' | 'ja' }
+  params: Promise<{ locale: 'fr' | 'en' | 'ja' }>
 }) {
-  const { locale } = params
-
+  const { locale } = await params
   const messages = (await import(`../../i18n/messages/${locale}.json`)).default
 
   return (
