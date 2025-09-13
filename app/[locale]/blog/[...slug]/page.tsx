@@ -22,7 +22,7 @@ const layouts = {
 }
 
 interface ResolvedPageProps {
-  params: { slug: string[]; locale: string }
+  params: Promise<{ slug: string[]; locale: string }>
 }
 
 interface AsyncPageProps {
@@ -100,7 +100,7 @@ export const generateStaticParams = async () => {
 }
 
 export default async function Page({ params }: ResolvedPageProps) {
-  const { slug, locale } = params
+  const { slug, locale } = await params
   const decodedSlug = decodeURI(slug.join('/'))
 
   let post = allBlogs.find((p) => p.slug === `${locale}/${decodedSlug}`)
