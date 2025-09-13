@@ -1,10 +1,10 @@
 import Main from '../Main'
 
 interface HomePageProps {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
-export default function HomePage({ params }: HomePageProps) {
-  const { locale } = params
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params
   return <Main locale={locale} />
 }
