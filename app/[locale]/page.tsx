@@ -6,6 +6,5 @@ interface HomePageProps {
 
 export default function HomePage({ params }: HomePageProps) {
   const { locale } = params
-
   return <Main locale={locale} />
 }
