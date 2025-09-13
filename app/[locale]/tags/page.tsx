@@ -2,10 +2,12 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import { slug } from 'github-slugger'
 import tagData from '../../tag-data.json'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
-export default function TagsPage({ params }: { params: { locale: string } }) {
-  const t = useTranslations('tagsPage')
+export default async function TagsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'tagsPage' })
+
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
@@ -23,7 +25,7 @@ export default function TagsPage({ params }: { params: { locale: string } }) {
           <div key={tKey} className="mt-2 mr-5 mb-2">
             <Tag text={tKey} />
             <Link
-              href={`/${params.locale}/tags/${slug(tKey)}`}
+              href={`/${locale}/tags/${slug(tKey)}`} // utiliser locale ici
               className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
               aria-label={`View posts tagged ${tKey}`}
             >
