@@ -126,6 +126,7 @@ export default function ListLayoutWithTags({
                 slug={post.slug}
                 tags={post.tags}
                 index={index}
+                locale={post.locale as 'en' | 'fr' | 'ja'}
               />
             ))}
           </ul>
