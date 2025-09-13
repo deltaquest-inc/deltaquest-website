@@ -21,12 +21,17 @@ const layouts = {
   PostBanner,
 }
 
-interface PageProps {
+interface ResolvedPageProps {
   params: { slug: string[]; locale: string }
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata | undefined> {
-  const { slug, locale } = params
+interface AsyncPageProps {
+  params: Promise<{ slug: string[]; locale: string }>
+}
+
+export async function generateMetadata({ params }: AsyncPageProps): Promise<Metadata | undefined> {
+  const resolvedParams = await params
+  const { slug, locale } = resolvedParams
   const decodedSlug = decodeURI(slug.join('/'))
 
   let post = allBlogs.find((p) => p.slug === `${locale}/${decodedSlug}`)
@@ -94,7 +99,7 @@ export const generateStaticParams = async () => {
   return params
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params }: ResolvedPageProps) {
   const { slug, locale } = params
   const decodedSlug = decodeURI(slug.join('/'))
 
