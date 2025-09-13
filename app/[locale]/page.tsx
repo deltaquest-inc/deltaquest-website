@@ -1,12 +1,10 @@
 import Main from '../Main'
 
 interface HomePageProps {
-  params: Promise<{ locale: string }>
+  params: { locale: string } // synchronisé
 }
 
-export const revalidate = 0
-
-export default async function HomePage({ params }: HomePageProps) {
-  const { locale } = await params
+export default function HomePage({ params }: HomePageProps) {
+  const { locale } = params
   return <Main locale={locale} />
 }
