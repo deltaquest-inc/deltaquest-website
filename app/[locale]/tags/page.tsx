@@ -25,7 +25,7 @@ export default async function TagsPage({ params }: { params: Promise<{ locale: s
           <div key={tKey} className="mt-2 mr-5 mb-2">
             <Tag text={tKey} />
             <Link
-              href={`/${locale}/tags/${slug(tKey)}`} // utiliser locale ici
+              href={`/${locale}/tags/${slug(tKey)}`}
               className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
               aria-label={`View posts tagged ${tKey}`}
             >

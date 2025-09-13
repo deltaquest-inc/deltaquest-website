@@ -8,6 +8,11 @@
     "contact": "お問い合わせ",
     "legal": "規約"
   },
+  "tagModule": {
+    "title": " All Posts",
+    "noTags": "Aucun tag disponible."
+
+  },
   "footer": {
     "laserTag": "レーザータグ事業 / Laser Tag Project",
     "itSolutions": "IT Solutions",

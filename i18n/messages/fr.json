@@ -8,6 +8,11 @@
     "contact": "Contact",
     "legal": "Mentions légales"
   },
+  "tagModule": {
+    "title": " Tous les articles",
+    "noTags": "Aucun tag disponible."
+
+},
   "footer": {
     "laserTag": "Projet Laser Tag",
     "itSolutions": "Solutions IT",
