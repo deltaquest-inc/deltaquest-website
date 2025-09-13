@@ -119,18 +119,24 @@ export default function ListLayoutWithTags({
 
         <div className="flex-1">
           <ul className="space-y-6">
-            {displayPosts.map((post, index) => (
-              <BlogListCard
-                key={post.path}
-                title={post.title}
-                summary={post.summary ?? 'No summary available.'}
-                date={post.date}
-                slug={post.slug}
-                tags={post.tags}
-                index={index}
-                locale={post.locale as 'en' | 'fr' | 'ja'}
-              />
-            ))}
+            {displayPosts.map((post, index) => {
+              const cleanedSlug = post.slug.startsWith(post.locale + '/')
+                ? post.slug.substring(post.locale.length + 1)
+                : post.slug
+
+              return (
+                <BlogListCard
+                  key={post.path}
+                  title={post.title}
+                  summary={post.summary ?? 'No summary available.'}
+                  date={post.date}
+                  slug={cleanedSlug}
+                  tags={post.tags}
+                  index={index}
+                  locale={post.locale as 'en' | 'fr' | 'ja'}
+                />
+              )
+            })}
           </ul>
 
           {pagination && pagination.totalPages > 1 && (
