@@ -11,7 +11,25 @@
   "tagModule": {
     "title": " All Posts",
     "noTags": "Aucun tag disponible."
-
+  },
+  "projects": {
+    "metaTitle": "Portfolio",
+    "metaDescription": "Explore some of the past IT projects from Delta Quest Corporation.",
+    "pageTitle": "Portfolio",
+    "pageDescription": "Showcasing some of the projects Delta Quest Corporation has worked on.",
+    "noProjects": "Currently, there are no projects to display.",
+    "projectsData": {
+      "media-1p-ads": {
+        "title": "Media 1P Advertising Campaigns",
+        "description": "Implementation and optimization of Media 1P advertising campaigns.",
+        "href": "/blog/media-1p-ads"
+      },
+      "logistics-redesign": {
+        "title": "Logistics Platform Redesign Strategy",
+        "description": "Complete architecture overhaul to better meet market needs.",
+        "href": "/blog/logistics-redesign"
+      }
+    }
   },
   "footer": {
     "laserTag": "Laser Tag Project",

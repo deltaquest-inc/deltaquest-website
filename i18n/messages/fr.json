@@ -11,12 +11,30 @@
   "tagModule": {
     "title": " Tous les articles",
     "noTags": "Aucun tag disponible."
-
-},
+  },
   "footer": {
     "laserTag": "Projet Laser Tag",
     "itSolutions": "Solutions IT",
     "themeLink": "Thème Tailwind Next.js"
+  },
+  "projects": {
+    "metaTitle": "Portfolio",
+    "metaDescription": "Découvrez les projets informatiques réalisés par Delta Quest Corporation.",
+    "pageTitle": "Portfolio",
+    "pageDescription": "Découvrez quelques-uns des projets sur lesquels Delta Quest Corporation a travaillé.",
+    "noProjects": "Il n'y a actuellement aucun projet à afficher.",
+    "projectsData": {
+      "media-1p-ads": {
+        "title": "Campagnes publicitaires Media 1P",
+        "description": "Mise en place et optimisation des campagnes publicitaires Media 1P ciblées.",
+        "href": "/blog/media-1p-ads"
+      },
+      "logistics-redesign": {
+        "title": "Refonte de la plateforme logistique",
+        "description": "Refonte complète de l’architecture pour l’adapter aux besoins du marché.",
+        "href": "/blog/logistics-redesign"
+      }
+    }
   },
   "home": {
     "welcome": "Bienvenue chez Delta Quest",

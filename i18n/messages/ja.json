@@ -8,10 +8,28 @@
     "contact": "お問い合わせ",
     "legal": "規約"
   },
+  "projects": {
+    "metaTitle": "ポートフォリオ",
+    "metaDescription": "デルタクエスト株式会社の過去のITプロジェクトをご紹介します。",
+    "pageTitle": "ポートフォリオ",
+    "pageDescription": "デルタクエスト株式会社が手がけたプロジェクトの一部をご紹介します。",
+    "noProjects": "現在、表示するプロジェクトはありません。",
+    "projectsData": {
+      "media-1p-ads": {
+        "title": "メディア向け1st Party Ads開発",
+        "description": "米国市場向けの1st Party Adsシステムの設計と実装をリード。 高速な広告配信システムの構築とパフォーマンス最適化を担当。",
+        "href": "/blog/media-1p-ads"
+      },
+      "logistics-redesign": {
+        "title": "国際物流プラットフォームの刷新",
+        "description": "国際物流プラットフォームのフルスタックアーキテクチャを刷新。UX/UIの改善と技術スタックの最適化を実施し、よりスケーラブルなシステム",
+        "href": "/blog/logistics-redesign"
+      }
+    }
+  },
   "tagModule": {
     "title": " All Posts",
     "noTags": "Aucun tag disponible."
-
   },
   "footer": {
     "laserTag": "レーザータグ事業 / Laser Tag Project",
