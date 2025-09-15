@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
-import langIconDark from '../data/langIconDark.png'
-import langIconWhite from '../data/langIconWhite.png'
+import langIconDark from '@/data/langIconDark.png'
+import langIconWhite from '@/data/langIconWhite.png'
 import { Fragment, useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTheme } from 'next-themes'
@@ -45,7 +45,7 @@ export default function LocaleSwitch() {
       setLocale(pathLocale)
       localStorage.setItem('locale', pathLocale)
     }
-  }, [pathname])
+  }, [pathname, router, storedLocale, pathLocale])
 
   function changeLocale(newLocale: string) {
     if (!pathname) return
