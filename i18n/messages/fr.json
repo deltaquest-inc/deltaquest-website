@@ -1,0 +1,222 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "blog": "Blog",
+    "projects": "Portfolio",
+    "contact": "Contact",
+    "legal": "Mentions légales"
+  },
+  "tagModule": {
+    "title": " Tous les articles",
+    "noTags": "Aucun tag disponible."
+  },
+  "footer": {
+    "laserTag": "Projet Laser Tag",
+    "itSolutions": "Solutions IT",
+    "themeLink": "Thème Tailwind Next.js"
+  },
+  "projects": {
+    "metaTitle": "Portfolio",
+    "metaDescription": "Découvrez les projets informatiques réalisés par Delta Quest Corporation.",
+    "pageTitle": "Portfolio",
+    "pageDescription": "Découvrez quelques-uns des projets sur lesquels Delta Quest Corporation a travaillé.",
+    "noProjects": "Il n'y a actuellement aucun projet à afficher.",
+    "projectsData": {
+      "media-1p-ads": {
+        "title": "Campagnes publicitaires Media 1P",
+        "description": "Mise en place et optimisation des campagnes publicitaires Media 1P ciblées.",
+        "href": "/blog/media-1p-ads"
+      },
+      "logistics-redesign": {
+        "title": "Refonte de la plateforme logistique",
+        "description": "Refonte complète de l’architecture pour l’adapter aux besoins du marché.",
+        "href": "/blog/logistics-redesign"
+      }
+    }
+  },
+  "laserTag": {
+    "tagline": "Le laser tag portable et immersif pour les événements japonais.",
+    "imageAlt": "Delta Quest VR Laser Tag",
+    "concept": {
+      "title": "Concept",
+      "description": "Delta Quest est une expérience de laser tag portable et immersive qui peut être intégrée dans tous les types de grands événements au Japon, tels que les tournois d'e-sport, les événements en stade ou les conventions d'anime et de jeux. Nous offrons une expérience de jeu « réelle » sans précédent grâce à la réalité virtuelle et aux collaborations avec des IPs."
+    },
+    "features": {
+      "title": "Caractéristiques",
+      "list": {
+        "portable": "Installation portable : S'adapte de manière flexible à tous les lieux d'événements.",
+        "ipCollaboration": "Expérience de marque par collaboration IP : Interagit avec les fans en s'associant à des animes et des jeux.",
+        "competitive": "Compétitif et familial : Le jeu propose un système de score, des matchs en équipe, et peut être apprécié par les parents et leurs enfants."
+      }
+    },
+    "targetEvents": {
+      "title": "Événements cibles",
+      "description": "Parfait pour les tournois d'e-sport, les événements sportifs, les conventions d'anime et de jeux, ainsi que de nombreux autres événements à grande échelle. C'est l'attraction idéale pour les organisateurs qui souhaitent augmenter l'engagement des visiteurs."
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "description": "Pour toute question ou demande de collaboration concernant ce service, n'hésitez pas à nous contacter."
+    }
+  },
+  "home": {
+    "welcome": "Bienvenue chez Delta Quest",
+    "description": "Delta Quest fournit des services IT de pointe, du développement frontend à l'optimisation SEO et à l'infrastructure cloud.",
+    "viewServices": "Voir les services",
+    "contactUs": "Nous contacter",
+    "latestPosts": "Derniers articles du blog",
+    "noPosts": "Aucun article disponible.",
+    "viewAllPosts": "Voir tous les articles →"
+  },
+  "blogs": {
+    "media-1p-ads": {
+      "title": "Campagnes publicitaires Media 1P",
+      "summary": "Mise en place et optimisation des campagnes publicitaires Media 1P."
+    },
+    "logistics-redesign": {
+      "title": "Refonte de la plateforme logistique",
+      "summary": "Refonte complète de l’architecture pour l’adapter aux besoins du marché."
+    }
+  },
+  "about": {
+    "metaTitle": "À propos de Delta Quest",
+    "metaDescription": "Découvrez la mission, la vision et les services de Delta Quest.",
+    "title": "À propos de nous",
+    "visionTitle": "Notre vision",
+    "visionStatements": [
+      "Accélérer la croissance des entreprises grâce à la technologie",
+      "Fournir des systèmes simples et évolutifs",
+      "Être le pont entre business et innovation"
+    ],
+    "ceoMessageTitle": "Message du PDG",
+    "servicesTitle": "Nos services principaux",
+    "ceoMessage": "Avec la technologie, nous aidons les entreprises à rester compétitives sur le marché. Nous mettons à profit notre expertise en développement frontend et en conception de systèmes pour soutenir une croissance durable et évolutive.",
+    "ceoName": "Kevin Blume, CEO de Delta Quest",
+    "companyInfo": {
+      "title": "Informations sur l'entreprise",
+      "missionTitle": "Mission",
+      "companyNameLabel": "Entreprise",
+      "locationLabel": "Localisation",
+      "activitiesLabel": "Activités",
+      "ceoLabel": "PDG",
+      "foundedLabel": "Création",
+      "capitalLabel": "Capital",
+      "contactLabel": "Contact",
+      "companyName": "Delta Quest",
+      "location": "20-2-3 Minami 5-jo Nishi, Chuo-ku, Sapporo",
+      "activities": "Développement frontend, création d'applications Web, optimisation SEO, CI/CD, architecture Cloud",
+      "ceo": "Kevin Blume",
+      "founded": "20 février 2025",
+      "capital": "5 millions de yens",
+      "contact": "info@deltaquest.co.jp",
+      "missionDescription": "Delta Quest utilise les technologies IT de pointe pour aider les entreprises à réussir sur le marché numérique. Notre objectif est de créer des applications web intuitives et évolutives pour soutenir la croissance des entreprises."
+    }
+  },
+  "services": {
+    "frontend": {
+      "title": "Développement frontend",
+      "description": "Conception d’applications web modernes pour améliorer l’expérience utilisateur."
+    },
+    "nextReact": {
+      "title": "Solutions Web avec Next.js/React",
+      "description": "Développement de sites et applications haute performance."
+    },
+    "seoPerf": {
+      "title": "SEO & Optimisation des performances",
+      "description": "Amélioration de la visibilité et de la vitesse de votre site."
+    },
+    "cicd": {
+      "title": "Mise en place CI/CD",
+      "description": "Optimisation de l’intégration et livraison continue pour un développement efficace."
+    },
+    "cloudInfra": {
+      "title": "Infrastructure Cloud",
+      "description": "Architecture scalable avec AWS ou GCP."
+    },
+    "aiConsulting": {
+      "title": "Conseil en IA",
+      "description": "Automatisation des processus grâce à l’intelligence artificielle."
+    }
+  },
+  "blogPage": {
+    "title": "Tous les articles",
+    "searchArticles": "Rechercher des articles",
+    "noPostsFound": "Aucun article trouvé.",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {current} sur {total}",
+    "publishedOn": "Publié le"
+  },
+  "legalPage": {
+    "metaTitle": "Mentions légales et Politique de confidentialité",
+    "metaDescription": "Consultez les mentions légales et la politique de confidentialité de Delta Quest.",
+    "title": "Mentions légales et Politique de confidentialité",
+    "termsTitle": "Conditions d'utilisation",
+    "termsText": "Ce site web est exploité par la société Delta Quest Corporation (ci-après désignée sous le nom de \"la Société\").\nEn utilisant ce site, vous acceptez les conditions d'utilisation suivantes.",
+    "disclaimerTitle": "Avertissement",
+    "disclaimerText": "Nous nous efforçons de garantir l'exactitude et la mise à jour des informations, mais nous ne pouvons être tenus responsables des erreurs ou omissions.",
+    "copyrightTitle": "Droits d'auteur",
+    "copyrightText": "Tous les contenus du site (textes, images, design, programmes, etc.) sont la propriété de Delta Quest sauf mention contraire. Toute reproduction est interdite.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyText": "Nous gérons vos données personnelles conformément à la présente politique de confidentialité.",
+    "infoCollectedTitle": "Informations collectées",
+    "infoCollectedText": "Nous collectons vos données personnelles pour :",
+    "infoCollectedList": "Utilisation du formulaire de contact|Analyse pour l'amélioration des services|Autres communications avec vous",
+
+    "dataProtectionTitle": "Protection des données personnelles",
+    "dataProtectionText": "Nous ne fournirons ni ne divulguerons vos informations personnelles à des tiers. Toutefois, cela ne s'applique pas à la loi ou est demandé par une institution publique.",
+    "contactTitle": "Contact",
+    "contactText": "Pour toute question relative aux mentions légales ou à la politique de confidentialité, contactez-nous :",
+    "emailLabel": "Email",
+    "email": "info@deltaquest.co.jp"
+  },
+  "servicesPage": {
+    "metaTitle": "Services Delta Quest",
+    "metaDescription": "Découvrez les services IT proposés par Delta Quest.",
+    "title": "Services",
+    "intro": "Delta Quest fournit des services IT de haute qualité pour résoudre vos problématiques business, du développement frontend à l'optimisation des infrastructures cloud.",
+    "ourServicesTitle": "Services IT proposés",
+    "contactTitle": "Consultation & Contact",
+    "contactDescription": "Si vous êtes intéressé, n'hésitez pas à nous contacter.",
+    "contactButton": "Nous contacter",
+    "whyTitle": "Pourquoi choisir Delta Quest ?",
+    "reasons": {
+      "expertise": {
+        "title": "Expertise Technique",
+        "description": "Nous maîtrisons les technologies les plus récentes pour des solutions performantes."
+      },
+      "scalability": {
+        "title": "Solutions Scalables",
+        "description": "Nos services s’adaptent à la croissance et aux besoins de votre entreprise."
+      },
+      "support": {
+        "title": "Support Dédié",
+        "description": "Nous accompagnons nos clients tout au long de leur projet avec réactivité et engagement."
+      }
+    }
+  },
+  "contactPageForm": {
+    "title": "Formulaire de contact",
+    "nameLabel": "Nom",
+    "emailLabel": "Email",
+    "messageLabel": "Votre message",
+    "submitButton": "Envoyer",
+    "successTitle": "Message envoyé !",
+    "successMessage": "Merci pour votre message. Nous reviendrons vers vous rapidement.",
+    "sendError": "Échec de l'envoi du formulaire. Veuillez réessayer."
+  },
+
+  "contactPage": {
+    "metaTitle": "Contactez Delta Quest",
+    "metaDescription": "Contactez Delta Quest pour vos questions et demandes concernant nos services IT.",
+    "title": "Contact",
+    "intro": "Pour toute question ou demande concernant les services IT de Delta Quest, veuillez nous contacter via les moyens suivants.",
+    "contactMethodsTitle": "Moyens de contact",
+    "emailLabel": "Email",
+    "email": "info@deltaquest.co.jp",
+    "locationLabel": "Localisation",
+    "location": "Sapporo, Japon",
+    "locationNote": "※ Les détails précis vous seront communiqués lors du contact."
+  }
+}

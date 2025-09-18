@@ -1,0 +1,84 @@
+---
+title: "Refonte d'une plateforme logistique internationale"
+date: "2022-07-20"
+tags: ['logistics-tech', 'frontend', 'DDD', 'scalability', 'business-impact']
+draft: false
+summary: "Un projet visant à reconstruire une plateforme logistique internationale depuis zéro pour atteindre l'adéquation produit-marché. Décisions techniques et impact business expliqués."
+images: ['/static/images/container-ship.png']
+locale: fr
+---
+
+## Introduction
+
+Ce projet avait pour objectif une **refonte complète de la plateforme logistique internationale**. La version initiale avait été développée comme PoC, mais n’a pas atteint l’adéquation produit-marché. Avec la redéfinition du business, une nouvelle plateforme adaptée aux cas d’usage principaux était nécessaire.
+
+Cet article explique **comment nous avons repensé l’architecture, construit le modèle de données, adopté le Domain-Driven Design (DDD) et réalisé un système évolutif**.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## SITUATION : Défis et Contexte
+
+La version initiale de la plateforme logistique présentait des contraintes architecturales incompatibles avec les besoins réels de l’entreprise.
+
+- **Construite comme PoC, elle était décalée par rapport aux cas d’usage principaux**
+- **Les changements dans la stratégie business nécessitaient de s’adapter à de nouveaux besoins**
+- **Le système existant manquait de scalabilité et ne pouvait pas soutenir une exploitation à long terme**
+
+Ainsi, **la refonte complète du système était la meilleure option**.
+
+## TASK : Objectifs et Rôle
+
+Objectifs principaux du projet :
+
+- **Atteindre le Product-Market Fit (PMF)** (augmentation des expéditions mensuelles, du chiffre d’affaires et du taux de clients récurrents)
+- **Construire un modèle de domaine reflétant la réalité business**
+- **Assurer scalabilité et extensibilité à long terme**
+
+En tant que **Head of Engineering**, j’ai dirigé l’équipe technique, supervisé la conception de l’architecture, le modélisation des données et le design DB/API. J’ai également travaillé étroitement avec l’équipe produit, **faisant le lien entre exigences business et techniques**.
+
+## ACTION : Approche et Mise en œuvre
+
+### 1️⃣ Refonte de l’architecture et du modèle de données
+
+Pour le nouveau système, **nous avons adopté le Domain-Driven Design (DDD) et construit un modèle de données fidèle à la réalité business**.
+
+- **Analyse détaillée des workflows logistiques pour définir les modèles de domaine**
+- **Définition des bounded contexts et organisation des dépendances entre services**
+- **Optimisation de la base de données pour performance et scalabilité**
+
+### 2️⃣ Amélioration de l’expérience utilisateur (UX)
+
+Le nouveau front-end a utilisé **Material UI pour concevoir une UI/UX intuitive et moderne**.
+
+- **Amélioration de la visibilité et de l’ergonomie, augmentant l’efficacité des utilisateurs**
+- **Optimisation des performances, score Lighthouse supérieur à 80**
+
+### 3️⃣ Stratégie de migration progressive
+
+Pour limiter les risques lors du remplacement du système, **l’ancien et le nouveau système ont fonctionné en parallèle**.
+
+- **Collaboration avec les early adopters pour faciliter la migration**
+- **Prise en compte des retours utilisateurs pour améliorer rapidement les fonctionnalités**
+
+## RESULT : Impact business
+
+Résultats obtenus :
+
+✅ **Après le lancement, les KPI clés (expéditions mensuelles, chiffre d’affaires, taux de clients récurrents) ont été atteints**
+✅ **Optimisation du backend : vitesse de traitement des requêtes améliorée de 40 %**
+✅ **Évolution du système pour répondre aux besoins de l’industrie et permettre une exploitation scalable**
+
+## Conclusion
+
+Le projet a permis :
+
+- **Reconstruction de l’architecture avec DDD**
+- **Modèle de données adapté aux nouvelles exigences business**
+- **UX/UI améliorée**
+- **Processus de migration fluide avec les utilisateurs existants**
+
+Les travaux futurs viseront à améliorer encore les fonctionnalités et les performances pour construire une plateforme logistique encore plus performante.
+
+---
+
+🚀 Consultez d’autres études de cas !

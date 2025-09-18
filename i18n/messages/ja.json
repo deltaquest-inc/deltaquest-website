@@ -1,0 +1,223 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "会社概要",
+    "services": "サービス",
+    "blog": "ブログ",
+    "projects": "ポートフォリオ",
+    "contact": "お問い合わせ",
+    "legal": "規約"
+  },
+  "laserTag": {
+    "tagline": "ポータブルで高没入型のレーザータグを、日本のイベントに。",
+    "imageAlt": "Delta Quest VR Laser Tag",
+    "concept": {
+      "title": "コンセプト",
+      "description": "Delta Questは、eスポーツ大会、スタジアムイベント、アニメ・ゲーム系の展示会など、あらゆる大型イベントに導入可能なポータブル型レーザータグ体験です。VRやIPコラボを通じて、これまでにない“リアルなゲーム”を提供します。"
+    },
+    "features": {
+      "title": "特徴",
+      "list": {
+        "portable": "持ち運び可能なセットアップ：イベント現場に合わせて柔軟に対応",
+        "ipCollaboration": "IPコラボによるブランド体験：アニメ・ゲームとの連携でファン層に刺さる",
+        "competitive": "競技性＆ファミリー向け：スコアリング、チーム戦、親子参加もOK"
+      }
+    },
+    "targetEvents": {
+      "title": "対象イベント",
+      "description": "eスポーツ大会やスポーツイベント、アニメ・ゲーム系の展示会など、大規模なイベントに幅広く対応可能です。来場者とのエンゲージメントを高めたい主催者に最適なアトラクションです。"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "本サービスに関するご質問・コラボレーションのご相談は、お気軽にご連絡ください。"
+    }
+  },
+  "projects": {
+    "metaTitle": "ポートフォリオ",
+    "metaDescription": "デルタクエスト株式会社の過去のITプロジェクトをご紹介します。",
+    "pageTitle": "ポートフォリオ",
+    "pageDescription": "デルタクエスト株式会社が手がけたプロジェクトの一部をご紹介します。",
+    "noProjects": "現在、表示するプロジェクトはありません。",
+    "projectsData": {
+      "media-1p-ads": {
+        "title": "メディア向け1st Party Ads開発",
+        "description": "米国市場向けの1st Party Adsシステムの設計と実装をリード。 高速な広告配信システムの構築とパフォーマンス最適化を担当。",
+        "href": "/blog/media-1p-ads"
+      },
+      "logistics-redesign": {
+        "title": "国際物流プラットフォームの刷新",
+        "description": "国際物流プラットフォームのフルスタックアーキテクチャを刷新。UX/UIの改善と技術スタックの最適化を実施し、よりスケーラブルなシステム",
+        "href": "/blog/logistics-redesign"
+      }
+    }
+  },
+  "tagModule": {
+    "title": " All Posts",
+    "noTags": "Aucun tag disponible."
+  },
+  "footer": {
+    "laserTag": "レーザータグ事業 / Laser Tag Project",
+    "itSolutions": "IT Solutions",
+    "themeLink": "Tailwind Next.js Theme"
+  },
+  "home": {
+    "welcome": "デルタクエストへようこそ",
+    "description": "デルタクエスト株式会社は、最先端のITサービスを提供する企業です。フロントエンド開発、Next.js/React、SEO最適化、クラウドインフラ構築など、ビジネスの成長をサポートします。",
+    "viewServices": "サービスを見る",
+    "contactUs": "お問い合わせ",
+    "latestPosts": "最新のブログ記事",
+    "noPosts": "No posts available.",
+    "viewAllPosts": "すべての投稿を見る →"
+  },
+  "blogs": {
+    "media-1p-ads": {
+      "title": "メディア向け1st Party Ads開発",
+      "summary": "米国市場向けメディアプラットフォームにおける1st Party Adsシステムの拡張プロジェクト。技術的なアプローチとビジネスインパクトの詳細を解説。"
+    },
+    "logistics-redesign": {
+      "title": "国際物流プラットフォームの刷新",
+      "summary": "市場適合を目指し、国際物流プラットフォームのアーキテクチャをゼロから再構築したプロジェクト。技術的な決断とビジネスインパクトを解説。"
+    }
+  },
+  "about": {
+    "metaTitle": "デルタクエストについて",
+    "metaDescription": "デルタクエストのミッション、ビジョン、サービスをご紹介します。",
+    "title": "会社概要",
+    "visionTitle": "私たちのビジョン",
+    "visionStatements": [
+      "テクノロジーで企業の成長を加速する",
+      "シンプルで拡張性の高いシステムを提供する",
+      "ビジネスとイノベーションの架け橋になる"
+    ],
+    "ceoMessageTitle": "代表メッセージ",
+    "servicesTitle": "主要サービス",
+    "ceoMessage": "「テクノロジーの力で、企業が市場で競争力を持つためのサポートをしたい。私たちは、フロントエンド開発とシステム設計の専門知識を活かし、企業がスケーラブルで持続可能な成長を遂げるための支援を行っています。」",
+    "ceoName": "ケヴィン・ブルメ, デルタクエスト株式会社 代表",
+    "companyInfo": {
+      "title": "会社情報",
+      "missionTitle": "ミッション",
+      "companyNameLabel": "会社名",
+      "locationLabel": "所在地",
+      "activitiesLabel": "事業内容",
+      "ceoLabel": "代表",
+      "foundedLabel": "設立",
+      "capitalLabel": "資本金",
+      "contactLabel": "お問い合わせ",
+      "companyName": "デルタクエスト株式会社",
+      "location": "札幌市中央区南5条西15丁目2-3",
+      "activities": "フロントエンド開発、Webアプリ構築、SEO最適化、CI/CD導入支援、クラウドインフラ設計",
+      "ceo": "ブルメ ケヴィン",
+      "founded": "2025年2月20日",
+      "capital": "500万円",
+      "contact": "info@deltaquest.co.jp",
+      "missionDescription": "デルタクエスト株式会社は、最先端のIT技術を活用し、企業がデジタル市場で成功するためのソリューションを提供します。私たちの目標は、直感的でスケーラブルなWebアプリケーションを構築し、ビジネスの成長を支援することです。"
+    }
+  },
+  "services": {
+    "frontend": {
+      "title": "フロントエンド開発",
+      "description": "モダンなWebアプリケーションを構築し、ユーザー体験を向上"
+    },
+    "nextReact": {
+      "title": "Next.js/ReactによるWebソリューション",
+      "description": "高性能なWebサイトやアプリケーションを開発"
+    },
+    "seoPerf": {
+      "title": "SEO & パフォーマンス最適化",
+      "description": "検索エンジン最適化とサイト高速化でビジネスの可視性を向上"
+    },
+    "cicd": {
+      "title": "CI/CD導入支援",
+      "description": "継続的インテグレーションとデリバリーを最適化し、開発の効率を向上"
+    },
+    "cloudInfra": {
+      "title": "クラウドインフラ設計",
+      "description": "AWSやGCPを活用したスケーラブルなシステムアーキテクチャを設計"
+    },
+    "aiConsulting": {
+      "title": "AIコンサルティング",
+      "description": "AI活用による業務自動化の導入支援"
+    }
+  },
+  "blogPage": {
+    "title": "すべての記事",
+    "searchArticles": "記事を検索",
+    "noPostsFound": "記事が見つかりません。",
+    "previous": "前へ",
+    "next": "次へ",
+    "pageOf": "ページ {current} / {total}",
+    "publishedOn": "公開日"
+  },
+
+  "legalPage": {
+    "metaTitle": "利用規約、プライバシーポリシー",
+    "metaDescription": "Read the legal notice and privacy policy of Delta Quest.",
+    "title": "利用規約、プライバシーポリシー",
+    "termsTitle": "利用規約",
+    "termsText": "本ウェブサイトはデルタクエスト株式会社（以下、「当社」といいます）が運営しています。 本ウェブサイトを利用される際には、以下の利用規約に同意したものとみなします。",
+    "disclaimerTitle": "免責事項",
+    "disclaimerText": "当社は、本ウェブサイトに掲載される情報の正確性・最新性の確保に努めていますが、誤りや不備がある場合があります。 本ウェブサイトの情報を利用することで発生したいかなる損害に対しても、当社は一切の責任を負いません。",
+    "copyrightTitle": "著作権",
+    "copyrightText": "本ウェブサイトに掲載されているコンテンツ（文章、画像、デザイン、プログラム等）は、特別な記載がない限り、当社が著作権を有します。 これらのコンテンツの無断転載・複製・配布を禁止します。",
+    "privacyTitle": "プライバシーポリシー",
+    "privacyText": "当社は、お客様の個人情報を適切に管理し、以下のプライバシーポリシーに基づいて取り扱います。",
+    "infoCollectedTitle": "収集する情報",
+    "infoCollectedText": "本ウェブサイトでは、以下の目的のために、お客様の個人情報を収集する場合があります：",
+    "infoCollectedList": "お問い合わせフォームの利用|サービス向上のための分析|その他、お客様へのご連絡",
+    "dataProtectionTitle": "個人情報の保護",
+    "dataProtectionText": "当社は、お客様の個人情報を第三者に提供・開示することはありません。ただし、法律の適用を受ける場合や公的機関からの要請があった場合を除きます。",
+    "contactTitle": "お問い合わせ",
+    "contactText": "本規約またはプライバシーポリシーに関するご質問がございましたら、以下までご連絡ください：",
+    "emailLabel": "メール:",
+    "email": "info@deltaquest.co.jp"
+  },
+
+  "servicesPage": {
+    "metaTitle": "サービス",
+    "metaDescription": "デルタクエスト株式会社が提供するITサービスをご紹介します。",
+    "title": "サービス",
+    "intro": "デルタクエスト株式会社は、最先端のIT技術を活用し、お客様のビジネス課題を解決するための高品質なITサービスを提供します。 フロントエンド開発からクラウドインフラの最適化まで、幅広いニーズに対応可能です。",
+    "ourServicesTitle": "提供するITサービス",
+    "contactTitle": "ご相談・お問い合わせ",
+    "contactDescription": "ご興味のある方は、お気軽にお問い合わせください。",
+    "contactButton": "お問い合わせはこちら",
+    "whyTitle": "なぜデルタクエスト？",
+    "reasons": {
+      "expertise": {
+        "title": "革新的なソリューション",
+        "description": "最新技術とアイデアで、最適なITソリューションを提供します。"
+      },
+      "scalability": {
+        "title": "迅速な対応",
+        "description": "プロジェクトに迅速に対応し、スピーディーに成果を出します。"
+      },
+      "support": {
+        "title": "信頼できるパートナー",
+        "description": "豊富な経験と高品質な開発で、安心して任せられます。"
+      }
+    }
+  },
+  "contactPageForm": {
+    "title": "お問い合わせフォーム",
+    "nameLabel": "お名前",
+    "emailLabel": "メールアドレス",
+    "messageLabel": "お問い合わせ内容",
+    "submitButton": "送信",
+    "successTitle": "メッセージを送信しました！",
+    "successMessage": "ご連絡ありがとうございます。追ってご連絡いたします。",
+    "sendError": "フォームの送信に失敗しました。もう一度お試しください。"
+  },
+
+  "contactPage": {
+    "metaTitle": "デルタクエストへのお問い合わせ",
+    "metaDescription": "デルタクエストのITサービスに関するご質問やご依頼はこちらからお問い合わせください。",
+    "title": "お問い合わせ",
+    "intro": "デルタクエスト株式会社のITサービスに関するご質問・ご相談がございましたら、以下の方法でお気軽にお問い合わせください。",
+    "contactMethodsTitle": "お問い合わせ方法",
+    "emailLabel": "メール",
+    "email": "info@deltaquest.co.jp",
+    "locationLabel": "所在地",
+    "location": "日本、札幌市",
+    "locationNote": "※詳細はお問い合わせ時にお伝えいたします"
+  }
+}

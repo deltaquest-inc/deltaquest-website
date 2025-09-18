@@ -8,6 +8,8 @@ import Link from '@/components/Link'
 import tagData from 'app/tag-data.json'
 import BlogListCard from '@/components/BlogListCard'
 import { getPagination, getBasePath } from '@/utils/getPagination'
+import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 
 interface PaginationProps {
   totalPages: number
@@ -19,7 +21,6 @@ interface ListLayoutProps {
   initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
 }
-
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const { prevPage, nextPage } = getPagination(currentPage, totalPages)
   const pathname = usePathname()
@@ -66,9 +67,10 @@ export default function ListLayoutWithTags({
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
-
+  const t = useTranslations('tagModule')
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
-
+  const params = useParams()
+  const locale = params?.locale || 'ja'
   return (
     <div>
       <div className="pt-6 pb-6">
@@ -82,14 +84,14 @@ export default function ListLayoutWithTags({
           <div className="mb-6 px-2">
             {pathname === '/blog' ? (
               <h3 className="block text-lg font-bold text-[#111827] uppercase dark:text-gray-100">
-                All Posts
+                {title}
               </h3>
             ) : (
               <Link
-                href="/blog"
-                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 block text-lg font-bold uppercase transition-colors"
+                href={`/${locale}/blog`}
+                className="block text-lg font-bold text-blue-500 uppercase transition-colors hover:text-blue-600 dark:hover:text-blue-400"
               >
-                All Posts
+                {title}
               </Link>
             )}
           </div>
@@ -100,7 +102,7 @@ export default function ListLayoutWithTags({
               return (
                 <li key={tag}>
                   <Link
-                    href={`/tags/${slug(tag)}`}
+                    href={`/${locale}/tags/${slug(tag)}`}
                     className={`inline-block rounded-xl px-3 py-2 text-sm font-medium uppercase transition-all duration-200 ${
                       isActive
                         ? 'bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-white'
@@ -117,17 +119,24 @@ export default function ListLayoutWithTags({
 
         <div className="flex-1">
           <ul className="space-y-6">
-            {displayPosts.map((post, index) => (
-              <BlogListCard
-                key={post.path}
-                title={post.title}
-                summary={post.summary ?? 'No summary available.'}
-                date={post.date}
-                slug={post.slug}
-                tags={post.tags}
-                index={index}
-              />
-            ))}
+            {displayPosts.map((post, index) => {
+              const cleanedSlug = post.slug.startsWith(post.locale + '/')
+                ? post.slug.substring(post.locale.length + 1)
+                : post.slug
+
+              return (
+                <BlogListCard
+                  key={post.path}
+                  title={post.title}
+                  summary={post.summary ?? 'No summary available.'}
+                  date={post.date}
+                  slug={cleanedSlug}
+                  tags={post.tags}
+                  index={index}
+                  locale={post.locale as 'en' | 'fr' | 'ja'}
+                />
+              )
+            })}
           </ul>
 
           {pagination && pagination.totalPages > 1 && (

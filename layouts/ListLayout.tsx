@@ -8,11 +8,13 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import { useTranslations } from 'next-intl'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
+
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]
   title: string
@@ -23,19 +25,17 @@ interface ListLayoutProps {
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const pathname = usePathname()
   const segments = pathname.split('/')
-  const lastSegment = segments[segments.length - 1]
-  const basePath = pathname
-    .replace(/^\//, '') // Remove leading slash
-    .replace(/\/page\/\d+$/, '') // Remove any trailing /page
+  const basePath = pathname.replace(/^\//, '').replace(/\/page\/\d+$/, '')
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
+  const t = useTranslations('blogPage')
 
   return (
     <div className="space-y-2 pt-6 pb-8 md:space-y-5">
       <nav className="flex justify-between">
         {!prevPage && (
-          <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
-            Previous
+          <button className="cursor-auto disabled:opacity-50" disabled>
+            {t('previous')}
           </button>
         )}
         {prevPage && (
@@ -43,20 +43,18 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
           >
-            Previous
+            {t('previous')}
           </Link>
         )}
-        <span>
-          {currentPage} of {totalPages}
-        </span>
+        <span>{t('pageOf', { current: currentPage, total: totalPages })}</span>
         {!nextPage && (
-          <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
-            Next
+          <button className="cursor-auto disabled:opacity-50" disabled>
+            {t('next')}
           </button>
         )}
         {nextPage && (
           <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
-            Next
+            {t('next')}
           </Link>
         )}
       </nav>
@@ -71,12 +69,13 @@ export default function ListLayout({
   pagination,
 }: ListLayoutProps) {
   const [searchValue, setSearchValue] = useState('')
+  const t = useTranslations('blogPage')
+
   const filteredBlogPosts = posts.filter((post) => {
     const searchContent = post.title + post.summary + post.tags?.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
-  // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
 
@@ -89,12 +88,12 @@ export default function ListLayout({
           </h1>
           <div className="relative max-w-lg">
             <label>
-              <span className="sr-only">Search articles</span>
+              <span className="sr-only">{t('searchArticles')}</span>
               <input
-                aria-label="Search articles"
+                aria-label={t('searchArticles')}
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder="Search articles"
+                placeholder={t('searchArticles')}
                 className="focus:border-primary-500 focus:ring-primary-500 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
               />
             </label>
@@ -115,14 +114,14 @@ export default function ListLayout({
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredBlogPosts.length && <li>{t('noPostsFound')}</li>}
           {displayPosts.map((post) => {
             const { path, date, title, summary, tags } = post
             return (
               <li key={path} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
-                    <dt className="sr-only">Published on</dt>
+                    <dt className="sr-only">{t('publishedOn')}</dt>
                     <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                     </dd>
@@ -135,7 +134,9 @@ export default function ListLayout({
                         </Link>
                       </h3>
                       <div className="flex flex-wrap">
-                        {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                        {tags?.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
                       </div>
                     </div>
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">

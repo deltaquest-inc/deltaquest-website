@@ -1,12 +1,14 @@
 'use client'
 import { motion } from 'framer-motion'
 import React from 'react'
+import { useTranslations } from 'next-intl'
 import { reasons } from '@/data/ReasonsWhyDQ/Reasons'
 
 export default function WhyDeltaQuest() {
+  const t = useTranslations('servicesPage')
   return (
     <div className="mx-auto mt-16 max-w-5xl space-y-12 py-12 text-center">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">なぜデルタクエスト？</h2>
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100"> {t('whyTitle')}</h2>
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {reasons.map((reason, index) => (
@@ -20,9 +22,12 @@ export default function WhyDeltaQuest() {
           >
             <div className="mb-4 text-5xl">{reason.icon}</div>
             <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-gray-100">
-              {reason.title}
+              {t(`reasons.${reason.key}.title`)}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">{reason.description}</p>
+            <p className="text-gray-600 dark:text-gray-300">
+              {' '}
+              {t(`reasons.${reason.key}.description`)}
+            </p>
           </motion.div>
         ))}
       </div>

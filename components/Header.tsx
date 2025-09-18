@@ -12,6 +12,8 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import { isLegalSubpage, isLaserTagPage, isSupportGamePage } from '@/utils/routeHelpers'
+import { useTranslations } from 'next-intl'
+import LocaleSwitch from '@/components/LocaleSwitch'
 
 const headerVariants = {
   initial: { y: -100, opacity: 0 },
@@ -19,11 +21,19 @@ const headerVariants = {
 }
 
 const Header = () => {
+  const t = useTranslations('header')
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const hideNav = isLaserTagPage(pathname) || isSupportGamePage(pathname)
   const isLegalSubpageFlag = isLegalSubpage(pathname)
   const isSupportGamePageFlag = isSupportGamePage(pathname)
+
+  const storedLocale = typeof window !== 'undefined' ? localStorage.getItem('locale') : null
+  const localeSegment = pathname?.split('/')[1] || storedLocale || 'ja'
+  const prefixHref = (href: string) => {
+    const normalized = href.replace(/^\/+/, '')
+    return `/${localeSegment}${normalized ? `/${normalized}` : ''}`
+  }
 
   const { scrollY } = useScroll()
   const shadowOffset = useTransform(scrollY as MotionValue<number>, [0, 50], [0, 5])
@@ -31,15 +41,15 @@ const Header = () => {
   const textShadow = useTransform(
     [shadowOffset, shadowOpacity],
     ([offset, opacity]: [number, number]) => `
-            ${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}),
-            ${-offset}px ${-offset}px 0px rgba(255, 255, 255, ${opacity * 0.5})
-          `
+                              ${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}),
+                              ${-offset}px ${-offset}px 0px rgba(255, 255, 255, ${opacity * 0.5})
+                            `
   )
   const dropShadow = useTransform(
     [shadowOffset, shadowOpacity],
     ([offset, opacity]: [number, number]) => `
-            drop-shadow(${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}))
-          `
+                              drop-shadow(${offset}px ${offset}px 0px rgba(0, 0, 0, ${opacity}))
+                            `
   )
   const logoY = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 20])
   const logoRotate = useTransform(scrollY as MotionValue<number>, [0, 1200], [0, 15])
@@ -85,7 +95,7 @@ const Header = () => {
               )}
             </div>
           ) : (
-            <Link href="/" aria-label={siteMetadata.headerTitle}>
+            <Link href={prefixHref('/')} aria-label={siteMetadata.headerTitle}>
               <motion.div className="flex items-center">
                 <motion.div style={{ filter: dropShadow, y: logoY, rotate: logoRotate }}>
                   <Image src={logoImg} alt="Logo" className="h-10 w-10 object-contain" />
@@ -108,10 +118,15 @@ const Header = () => {
                 {headerNavLinks
                   .filter((link) => link.href !== '/')
                   .map((link) => (
-                    <NavLink key={link.title} href={link.href} title={link.title} />
+                    <NavLink
+                      key={link.href}
+                      href={prefixHref(link.href)}
+                      title={t(link.messageKey)}
+                    />
                   ))}
               </div>
               {!isLegalSubpageFlag && !isSupportGamePageFlag && <SearchButton />}
+              <LocaleSwitch />
               <ThemeSwitch />
               <MobileNav isOpen={isMobileMenuOpen} setIsOpen={setMobileMenuOpen} />
             </div>

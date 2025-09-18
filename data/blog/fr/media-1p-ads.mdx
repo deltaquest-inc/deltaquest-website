@@ -1,0 +1,76 @@
+---
+title: "Développement de 1st Party Ads pour les médias"
+date: "2025-01-20"
+lastmod: '2023-08-05'
+tags: ['ad-tech', 'frontend', 'react', 'typescript', 'business-impact']
+draft: false
+summary: "Un projet d’extension du système 1st Party Ads pour une plateforme média américaine. Approche technique et impact business expliqués."
+images: ['/static/images/billboard.png']
+locale: fr
+---
+
+## Introduction
+
+Ce projet avait pour objectif de **déployer le système 1st Party Ads existant du marché japonais au marché américain**.
+
+Pendant le développement, nous avons dû gérer des défis tels que **la prise en charge de plusieurs devises et fuseaux horaires, la gestion des feature flags**, et plus encore. Cet article détaille ces défis, les solutions apportées et l’impact business.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## SITUATION : Défis et Contexte
+
+Notre société disposait déjà d’un système 1st Party Ads pour le marché japonais, mais la stratégie a nécessité son extension au marché américain.
+
+- **Renforcer la publicité aux États-Unis sans dépendre des 3rd Party Ads**
+- **Adapter le système existant à un nouveau marché tout en maintenant la compatibilité**
+- **Défis techniques : devises multiples, fuseaux horaires, gestion des feature flags**
+
+## TASK : Objectifs et Rôle
+
+Objectifs du projet :
+
+- **Déploiement des 1st Party Ads aux États-Unis**
+- **Optimisation de la gestion des feature flags sur différents marchés**
+- **Développement de nouvelles fonctionnalités pour le Japon tout en minimisant l’impact sur le marché US**
+- **KPIs : adoption initiale 120 %, revenus publicitaires 200 %**
+
+En tant que **Frontend Lead**, j’ai supervisé la conception technique et la mise en œuvre, coordonnant le développement des fonctionnalités avec jusqu’à 10 ingénieurs.
+
+## ACTION : Approche et Mise en œuvre
+
+### 1️⃣ Extension du système japonais pour le marché américain
+
+Le système a été conçu pour **adapter la plateforme japonaise existante au marché américain**, en tenant compte des **différentes devises, fuseaux horaires et exigences spécifiques aux publicités US**.
+
+- **Conception d’un système permettant de basculer facilement les fonctionnalités entre marchés JP/US**
+- **Gestion du développement parallèle des nouvelles fonctionnalités sur les deux marchés**
+
+### 2️⃣ Optimisation de la gestion des feature flags
+
+La **gestion des feature flags** était cruciale pour un déploiement progressif aux États-Unis.
+
+- **Gérer indépendamment le développement JP et le déploiement US**
+- **Contrôler l’impact des releases pour garantir une mise en production sécurisée**
+
+### 3️⃣ A/B Testing et Analyse de données
+
+Nous avons utilisé **des dashboards internes, Google Analytics et des interviews utilisateurs** pour mesurer l’efficacité et améliorer en continu le système.
+
+## RESULT : Impact business
+
+Résultats obtenus :
+
+✅ **Adoption initiale 120 %** (au-delà de l’objectif)
+✅ **Revenus publicitaires 200 %** (bien au-dessus des prévisions)
+✅ **Déploiement réussi sur le marché US tout en poursuivant le développement pour le marché JP**
+
+## Conclusion
+
+Le projet a permis :
+
+- **Expansion du marché via l’extension du système**
+- **Prise en charge flexible des devises et fuseaux horaires**
+- **Réduction des risques de release grâce à la gestion des feature flags**
+- **Optimisation continue via A/B testing**
+
+Il a **contribué significativement à la croissance de l’entreprise**.

@@ -1,6 +1,6 @@
 'use client'
 import { usePathname } from 'next/navigation'
-
+import { useTranslations } from 'next-intl'
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
@@ -11,7 +11,7 @@ export default function Footer() {
   const isLaserTag = isLaserTagPage(pathname)
   const isLegal = isLegalSubpage(pathname)
   const isSupportGame = isSupportGamePage(pathname)
-
+  const t = useTranslations('footer')
   if (isLegal || isSupportGame) {
     return null
   }
@@ -44,7 +44,7 @@ export default function Footer() {
                 href="/laser-tag"
                 className="hover:text-primary-500 dark:hover:text-primary-400 underline"
               >
-                レーザータグ事業 / Laser Tag Project
+                {t('laserTag')}
               </Link>
             </>
           )}
@@ -61,9 +61,19 @@ export default function Footer() {
           )}
         </div>
 
+        <div className="mt-4 mb-8 max-w-2xl px-4 text-center">
+          <blockquote className="font-serif text-xl text-gray-700 italic dark:text-gray-300">
+            Lighthouses don’t go running all over an island looking for boats to save; they just
+            stand there shining.
+          </blockquote>
+          <cite className="mt-2 block text-sm font-light text-gray-500 dark:text-gray-400">
+            - Anne Lamott
+          </cite>
+        </div>
+
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            Tailwind Nextjs Theme
+            {t('themeLink')}
           </Link>
         </div>
       </div>
