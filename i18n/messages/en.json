@@ -12,6 +12,24 @@
     "title": " All Posts",
     "noTags": "Aucun tag disponible."
   },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Updated: 2024-07-16",
+    "sections": {
+      "infoTitle": "1. Information We Collect",
+      "infoContent": "We may collect personal information such as your name, email address, and any other details you provide when contacting us.",
+      "usageTitle": "2. How We Use Your Information",
+      "usageContent": "We use the collected information to improve our services, respond to inquiries, and provide updates.",
+      "sharingTitle": "3. Sharing of Information",
+      "sharingContent": "We do not sell, trade, or otherwise transfer your personal information to outside parties.",
+      "securityTitle": "4. Security",
+      "securityContent": "We implement reasonable measures to protect your personal information.",
+      "changesTitle": "5. Changes to This Policy",
+      "changesContent": "We may update this policy from time to time. Please review it periodically."
+    }
+  },
+
   "projects": {
     "metaTitle": "Portfolio",
     "metaDescription": "Explore some of the past IT projects from Delta Quest Corporation.",
@@ -219,5 +237,204 @@
     "locationLabel": "Location",
     "location": "Sapporo, Japan",
     "locationNote": "※ Specific details will be provided upon contact."
+  },
+  "privacyPolicy": {
+    "metaTitle": "DeltaQuest, Inc. Privacy Policy",
+    "metaDescription": "DeltaQuest, Inc. Privacy Policy. Learn how we collect, use, and protect your personal information.",
+    "title": "DeltaQuest, Inc. Privacy Policy",
+    "effectiveDate": "Effective Date:",
+    "effectiveDateValue": "3 September 2025",
+    "languageToggle": {
+      "japanese": "日本語",
+      "english": "English"
+    },
+    "keyPointSummary": {
+      "title": "Key-Point Summary (Plain Language)",
+      "points": [
+        "We (<strong>DeltaQuest, Inc.</strong>) show ads and measure gameplay to improve the Game.",
+        "Advertising and analytics partners (listed below) receive an advertising ID, device details, gameplay events and crash logs.",
+        "You can limit personalised ads via your device settings or partner links in <a href=\"#section-6\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Section 6</a>.",
+        "We never ask for your real name, email or precise GPS and we do not send remote push notifications.",
+        "Need help? Contact our DPO <a href=\"#section-16\" class=\"text-blue-600 hover:underline dark:text-blue-400\">(see Section 16)</a>."
+      ],
+      "note": "This summary is just a quick overview - please read the full policy below."
+    },
+    "sections": {
+      "scope": {
+        "title": "1. Scope",
+        "content": "This policy explains how DeltaQuest, Inc. (\"<strong>we</strong>\", \"<strong>us</strong>\", \"<strong>our</strong>\") collects, uses and shares data when you play <strong>At All Costs</strong> (the \"<strong>Game</strong>\") on Android or iOS. It aligns with the disclosures shown in Google Play's Data Safety section and Apple App Store's App Privacy details."
+      },
+      "dataCollection": {
+        "title": "2. Data We Collect and Receive",
+        "intro": "We use third-party services to provide analytics, crash diagnostics and ads. When those SDKs run in the app, your device communicates directly with our service providers, who share aggregated dashboards and reports with us. We do not sell your personal information. See <a href=\"#section-3\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Section 3</a> for details.",
+        "categories": "Categories of data processed (depending on your settings, device and region):",
+        "dataTypes": [
+          {
+            "name": "Device & app info",
+            "description": "device model, OS/version, screen size, language, app version."
+          },
+          {
+            "name": "Advertising identifier",
+            "description": "GAID/AdID on Android, IDFA on iOS (available only if you allow tracking on iOS)."
+          },
+          {
+            "name": "Network-derived region",
+            "description": "coarse IP used only to approximate country/region."
+          },
+          {
+            "name": "Usage/events",
+            "description": "app interactions for analytics and product improvement."
+          },
+          {
+            "name": "Diagnostics",
+            "description": "crash traces, performance metrics."
+          }
+        ],
+        "usage": "We use this information to operate and improve the app, understand features, measure campaigns, and fix issues."
+      },
+      "thirdPartyServices": {
+        "title": "3. Third-Party SDKs and Service Providers",
+        "intro": "These providers receive data directly from your device when their SDKs are active. They process it to provide services to us, and may act as our processors and/or independent controllers for certain limited purposes. See their notices for details.",
+        "table": {
+          "headers": {
+            "partner": "Partner",
+            "purpose": "Purpose",
+            "dataShared": "Typical data shared",
+            "optOut": "Opt-out / info"
+          },
+          "rows": [
+            {
+              "partner": "Google AdMob / Ad Manager",
+              "purpose": "Ad delivery & measurement",
+              "dataShared": "Ad ID, region (via IP), device/app info, basic usage",
+              "optOut": "<a href=\"https://support.google.com/ads/answer/2662922\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">\"How Google uses data\" + Ads controls</a>"
+            },
+            {
+              "partner": "Firebase Analytics (Google)",
+              "purpose": "Product analytics (GA4 for apps)",
+              "dataShared": "App events, device/app info; Google-signals data if enabled",
+              "optOut": "<a href=\"https://support.google.com/analytics/answer/6004245\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Privacy & data retention controls</a>"
+            },
+            {
+              "partner": "Firebase Crashlytics (Google)",
+              "purpose": "Crash diagnostics",
+              "dataShared": "Crash traces, device/app context; session/installation IDs",
+              "optOut": "<a href=\"https://firebase.google.com/support/privacy#crashlytics\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Privacy & 90-day retention for crash data</a>"
+            },
+            {
+              "partner": "Expo",
+              "purpose": "App updates & diagnostics",
+              "dataShared": "Device/app info; usage & crash diagnostics",
+              "optOut": "<a href=\"https://expo.dev/privacy\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Expo Privacy Policy</a>"
+            }
+          ]
+        },
+        "internalReporting": "Internal reporting: We may view analytics using Google Analytics/GA4 and Looker Studio dashboards. This does not add any SDK to your device."
+      },
+      "howWeUseInfo": {
+        "title": "4. How and Why We Use Information",
+        "uses": [
+          "<strong>Operate and improve the Game</strong> (legitimate interest or performance of contract).",
+          "<strong>Serve ads and measure their performance</strong> (consent where required)."
+        ]
+      },
+      "futureFeatures": {
+        "title": "5. Future Features",
+        "intro": "We may add the following features in future updates:",
+        "features": [
+          "<strong>In-app privacy controls</strong> - A toggle within the game to control ad personalisation.",
+          "<strong>Fraud prevention systems</strong> - Additional measures to ensure fair play and prevent cheating."
+        ],
+        "note": "When these features are implemented, we will update this policy and notify users through in-app announcements or on our website."
+      },
+      "adPersonalization": {
+        "title": "6. Ad Personalisation Choices",
+        "options": [
+          {
+            "title": "<strong>Device controls</strong>",
+            "details": [
+              "Android 14: Settings → Privacy → Ads → \"Delete advertising ID\"",
+              "Android 13-: Settings → Privacy → Ads → \"Opt out of Ads Personalisation\"",
+              "iOS: Settings → Privacy and Security → Tracking → disable \"Allow Apps to Request to Track\""
+            ]
+          },
+          {
+            "title": "<strong>Global Privacy Control or Limit Ad Tracking</strong>",
+            "details": ["the Game honours these signals and forwards them to partners."]
+          },
+          {
+            "title": "<strong>Partner portals</strong>",
+            "details": ["see the opt-out links in <a href=\"#section-3\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Section 3</a>."]
+          }
+        ],
+        "note": "An in-app toggle is on our roadmap; in the meantime please use the methods above."
+      },
+      "legalBases": {
+        "title": "7. Legal Bases (EEA and UK)",
+        "bases": [
+          "<strong>Consent</strong> - personalised advertising.",
+          "<strong>Legitimate interests</strong> - game operation and improvement.",
+          "<strong>Performance of contract</strong> - delivering gameplay and in-app purchases you request."
+        ]
+      },
+      "dataRetention": {
+        "title": "8. Data Retention",
+        "content": "Raw analytics logs are kept by our partners for no longer than 24 months (shorter if they offer a shorter default).<br>Aggregated, de-identified statistics may be stored indefinitely for trend analysis."
+      },
+      "regionSpecific": {
+        "title": "9. Region-Specific Disclosures",
+        "content": "<strong>Brazil (LGPD):</strong> You have rights to access, correct or delete your data. Contact us to exercise them.<br><strong>Canada (PIPEDA):</strong> Our practices comply with the ten Fair Information Principles.<br><strong>Australia (Privacy Act 1988):</strong> We do not transfer personal data outside Australia unless adequate protections apply.<br><strong>Other regions:</strong> We honour applicable rights where you reside."
+      },
+      "internationalTransfers": {
+        "title": "10. International Data Transfers",
+        "content": "We are headquartered in Japan. Where partners transfer data outside the EEA or UK, they rely on Standard Contractual Clauses or equivalent safeguards."
+      },
+      "californiaRights": {
+        "title": "11. California Privacy Rights (CCPA and CPRA)",
+        "rights": [
+          "You have rights to <strong>know</strong>, <strong>delete</strong> and <strong>correct</strong> personal information.",
+          "We \"share\" identifiers for cross-context behavioural advertising. Use device controls or partner links to opt out.",
+          "No financial incentives are offered for your data."
+        ]
+      },
+      "childrensPrivacy": {
+        "title": "12. Children's Privacy",
+        "content": "The Game is directed to users aged 12 plus. We do not knowingly collect personal data from children under 12.<br>If we become aware of such collection, we will delete the information as quickly as practicable or seek parental consent."
+      },
+      "securityMeasures": {
+        "title": "13. Security Measures",
+        "content": "We follow industry-standard practices, including TLS 1.2 plus for data in transit and partner-level encryption at rest, to protect information.<br>No method of transmission or storage is 100 percent secure, but we aim to mitigate risks through regular audits and access controls."
+      },
+      "yourRights": {
+        "title": "14. Your Rights and How to Exercise Them",
+        "content": "Depending on your location you may request access, correction, deletion, restriction or portability of your data.<br>Send a request to <a href=\"mailto:support@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">support@deltaquest.co.jp</a> and we (or our partners) will respond within 30 days."
+      },
+      "policyChanges": {
+        "title": "15. Changes to This Policy",
+        "content": "We may update this policy from time to time. Material changes will be announced in-app or on our website at least 7 days before they take effect."
+      },
+      "contactUs": {
+        "title": "16. Contact Us",
+        "content": "DeltaQuest, Inc.<br/>064-0805 Hokkaido Sapporo City, Japan<br/><a href=\"mailto:support@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">support@deltaquest.co.jp</a><br/>Data-Protection Officer (Kevin Bulme): <a href=\"mailto:dpo@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">kevin.bulme@deltaquest.co.jp</a>"
+      },
+      "glossary": {
+        "title": "17. Glossary",
+        "terms": [
+          {
+            "term": "<strong>Advertising ID</strong>",
+            "definition": "a device-level ID (GAID or IDFA) that resets from system settings."
+          },
+          {
+            "term": "<strong>Personal information</strong>",
+            "definition": "data that identifies or can reasonably identify an individual."
+          },
+          {
+            "term": "<strong>Standard Contractual Clauses (SCCs)</strong>",
+            "definition": "EU model clauses for cross-border transfers."
+          }
+        ]
+      }
+    },
+    "backToTop": "↑ Back to top"
   }
 }
