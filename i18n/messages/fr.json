@@ -218,5 +218,204 @@
     "locationLabel": "Localisation",
     "location": "Sapporo, Japon",
     "locationNote": "※ Les détails précis vous seront communiqués lors du contact."
+  },
+  "privacyPolicy": {
+    "metaTitle": "DeltaQuest, Inc. Politique de confidentialité",
+    "metaDescription": "DeltaQuest, Inc. Politique de confidentialité. Découvrez comment nous collectons, utilisons et protégeons vos informations personnelles.",
+    "title": "DeltaQuest, Inc. Politique de confidentialité",
+    "effectiveDate": "Date d'entrée en vigueur:",
+    "effectiveDateValue": "3 septembre 2025",
+    "languageToggle": {
+      "japanese": "日本語",
+      "english": "English"
+    },
+    "keyPointSummary": {
+      "title": "Résumé des points clés (langage simple)",
+      "points": [
+        "Nous (<strong>DeltaQuest, Inc.</strong>) affichons des publicités et mesurons le gameplay pour améliorer le jeu.",
+        "Les partenaires publicitaires et d'analyse (listés ci-dessous) reçoivent un ID publicitaire, des détails de l'appareil, des événements de gameplay et des logs de crash.",
+        "Vous pouvez limiter les publicités personnalisées via les paramètres de votre appareil ou les liens partenaires dans la <a href=\"#section-6\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Section 6</a>.",
+        "Nous ne demandons jamais votre vrai nom, email ou GPS précis et nous n'envoyons pas de notifications push distantes.",
+        "Besoin d'aide ? Contactez notre DPO <a href=\"#section-16\" class=\"text-blue-600 hover:underline dark:text-blue-400\">(voir Section 16)</a>."
+      ],
+      "note": "Ce résumé est juste un aperçu rapide - veuillez lire la politique complète ci-dessous."
+    },
+    "sections": {
+      "scope": {
+        "title": "1. Portée",
+        "content": "Cette politique explique comment DeltaQuest, Inc. (\"<strong>nous</strong>\", \"<strong>notre</strong>\", \"<strong>nos</strong>\") collecte, utilise et partage les données lorsque vous jouez à <strong>At All Costs</strong> (le \"<strong>Jeu</strong>\") sur Android ou iOS. Elle s'aligne sur les divulgations affichées dans la section Sécurité des données de Google Play et les détails de confidentialité de l'App Store d'Apple."
+      },
+      "dataCollection": {
+        "title": "2. Données que nous collectons et recevons",
+        "intro": "Nous utilisons des services tiers pour fournir des analyses, des diagnostics de crash et des publicités. Lorsque ces SDK s'exécutent dans l'application, votre appareil communique directement avec nos fournisseurs de services, qui partagent des tableaux de bord et des rapports agrégés avec nous. Nous ne vendons pas vos informations personnelles. Voir la <a href=\"#section-3\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Section 3</a> pour plus de détails.",
+        "categories": "Catégories de données traitées (selon vos paramètres, appareil et région) :",
+        "dataTypes": [
+          {
+            "name": "Informations sur l'appareil et l'application",
+            "description": "modèle d'appareil, OS/version, taille d'écran, langue, version de l'application."
+          },
+          {
+            "name": "Identifiant publicitaire",
+            "description": "GAID/AdID sur Android, IDFA sur iOS (disponible uniquement si vous autorisez le suivi sur iOS)."
+          },
+          {
+            "name": "Région dérivée du réseau",
+            "description": "IP approximative utilisée uniquement pour approximer le pays/région."
+          },
+          {
+            "name": "Utilisation/événements",
+            "description": "interactions de l'application pour les analyses et l'amélioration du produit."
+          },
+          {
+            "name": "Diagnostics",
+            "description": "traces de crash, métriques de performance."
+          }
+        ],
+        "usage": "Nous utilisons ces informations pour exploiter et améliorer l'application, comprendre les fonctionnalités, mesurer les campagnes et corriger les problèmes."
+      },
+      "thirdPartyServices": {
+        "title": "3. SDK tiers et fournisseurs de services",
+        "intro": "Ces fournisseurs reçoivent des données directement de votre appareil lorsque leurs SDK sont actifs. Ils les traitent pour nous fournir des services, et peuvent agir en tant que processeurs et/ou contrôleurs indépendants pour certains objectifs limités. Voir leurs avis pour plus de détails.",
+        "table": {
+          "headers": {
+            "partner": "Partenaire",
+            "purpose": "Objectif",
+            "dataShared": "Données typiques partagées",
+            "optOut": "Désinscription / info"
+          },
+          "rows": [
+            {
+              "partner": "Google AdMob / Ad Manager",
+              "purpose": "Livraison et mesure publicitaires",
+              "dataShared": "ID publicitaire, région (via IP), infos appareil/app, utilisation de base",
+              "optOut": "<a href=\"https://support.google.com/ads/answer/2662922\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">\"Comment Google utilise les données\" + Contrôles publicitaires</a>"
+            },
+            {
+              "partner": "Firebase Analytics (Google)",
+              "purpose": "Analyses de produit (GA4 pour les applications)",
+              "dataShared": "Événements d'application, infos appareil/app; données Google-signaux si activées",
+              "optOut": "<a href=\"https://support.google.com/analytics/answer/6004245\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Contrôles de confidentialité et rétention des données</a>"
+            },
+            {
+              "partner": "Firebase Crashlytics (Google)",
+              "purpose": "Diagnostics de crash",
+              "dataShared": "Traces de crash, contexte appareil/app; IDs de session/installation",
+              "optOut": "<a href=\"https://firebase.google.com/support/privacy#crashlytics\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Confidentialité et rétention de 90 jours pour les données de crash</a>"
+            },
+            {
+              "partner": "Expo",
+              "purpose": "Mises à jour et diagnostics de l'application",
+              "dataShared": "Infos appareil/app; diagnostics d'utilisation et de crash",
+              "optOut": "<a href=\"https://expo.dev/privacy\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Politique de confidentialité Expo</a>"
+            }
+          ]
+        },
+        "internalReporting": "Rapports internes : Nous pouvons consulter les analyses en utilisant Google Analytics/GA4 et les tableaux de bord Looker Studio. Cela n'ajoute aucun SDK à votre appareil."
+      },
+      "howWeUseInfo": {
+        "title": "4. Comment et pourquoi nous utilisons les informations",
+        "uses": [
+          "<strong>Exploiter et améliorer le Jeu</strong> (intérêt légitime ou exécution de contrat).",
+          "<strong>Diffuser des publicités et mesurer leurs performances</strong> (consentement si requis)."
+        ]
+      },
+      "futureFeatures": {
+        "title": "5. Fonctionnalités futures",
+        "intro": "Nous pouvons ajouter les fonctionnalités suivantes dans les futures mises à jour :",
+        "features": [
+          "<strong>Contrôles de confidentialité dans l'application</strong> - Un bouton dans le jeu pour contrôler la personnalisation publicitaire.",
+          "<strong>Systèmes de prévention de la fraude</strong> - Mesures supplémentaires pour assurer un jeu équitable et prévenir la triche."
+        ],
+        "note": "Lorsque ces fonctionnalités seront implémentées, nous mettrons à jour cette politique et informerons les utilisateurs par des annonces dans l'application ou sur notre site web."
+      },
+      "adPersonalization": {
+        "title": "6. Choix de personnalisation publicitaire",
+        "options": [
+          {
+            "title": "<strong>Contrôles d'appareil</strong>",
+            "details": [
+              "Android 14 : Paramètres → Confidentialité → Publicités → \"Supprimer l'ID publicitaire\"",
+              "Android 13- : Paramètres → Confidentialité → Publicités → \"Désactiver la personnalisation des publicités\"",
+              "iOS : Paramètres → Confidentialité et sécurité → Suivi → désactiver \"Autoriser les applications à demander le suivi\""
+            ]
+          },
+          {
+            "title": "<strong>Contrôle de confidentialité global ou Limitation du suivi publicitaire</strong>",
+            "details": ["le Jeu respecte ces signaux et les transmet aux partenaires."]
+          },
+          {
+            "title": "<strong>Portails partenaires</strong>",
+            "details": ["voir les liens de désinscription dans la <a href=\"#section-3\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Section 3</a>."]
+          }
+        ],
+        "note": "Un bouton dans l'application est sur notre feuille de route ; en attendant, veuillez utiliser les méthodes ci-dessus."
+      },
+      "legalBases": {
+        "title": "7. Bases légales (EEE et Royaume-Uni)",
+        "bases": [
+          "<strong>Consentement</strong> - publicité personnalisée.",
+          "<strong>Intérêts légitimes</strong> - exploitation et amélioration du jeu.",
+          "<strong>Exécution de contrat</strong> - fourniture du gameplay et des achats intégrés que vous demandez."
+        ]
+      },
+      "dataRetention": {
+        "title": "8. Rétention des données",
+        "content": "Les logs d'analyse bruts sont conservés par nos partenaires pendant au maximum 24 mois (plus court s'ils offrent un défaut plus court).<br>Les statistiques agrégées et désidentifiées peuvent être stockées indéfiniment pour l'analyse des tendances."
+      },
+      "regionSpecific": {
+        "title": "9. Divulgations spécifiques à la région",
+        "content": "<strong>Brésil (LGPD) :</strong> Vous avez le droit d'accéder, de corriger ou de supprimer vos données. Contactez-nous pour les exercer.<br><strong>Canada (PIPEDA) :</strong> Nos pratiques respectent les dix principes d'information équitable.<br><strong>Australie (Privacy Act 1988) :</strong> Nous ne transférons pas de données personnelles hors d'Australie sauf si des protections adéquates s'appliquent.<br><strong>Autres régions :</strong> Nous respectons les droits applicables là où vous résidez."
+      },
+      "internationalTransfers": {
+        "title": "10. Transferts internationaux de données",
+        "content": "Nous avons notre siège social au Japon. Lorsque les partenaires transfèrent des données en dehors de l'EEE ou du Royaume-Uni, ils s'appuient sur des clauses contractuelles types ou des garanties équivalentes."
+      },
+      "californiaRights": {
+        "title": "11. Droits de confidentialité de Californie (CCPA et CPRA)",
+        "rights": [
+          "Vous avez le droit de <strong>connaître</strong>, <strong>supprimer</strong> et <strong>corriger</strong> les informations personnelles.",
+          "Nous \"partageons\" des identifiants pour la publicité comportementale inter-contexte. Utilisez les contrôles d'appareil ou les liens partenaires pour vous désinscrire.",
+          "Aucun incitatif financier n'est offert pour vos données."
+        ]
+      },
+      "childrensPrivacy": {
+        "title": "12. Confidentialité des enfants",
+        "content": "Le Jeu s'adresse aux utilisateurs de 12 ans et plus. Nous ne collectons pas sciemment de données personnelles d'enfants de moins de 12 ans.<br>Si nous prenons connaissance d'une telle collecte, nous supprimerons les informations aussi rapidement que possible ou demanderons le consentement parental."
+      },
+      "securityMeasures": {
+        "title": "13. Mesures de sécurité",
+        "content": "Nous suivons les pratiques standard de l'industrie, y compris TLS 1.2 plus pour les données en transit et le chiffrement au niveau des partenaires au repos, pour protéger les informations.<br>Aucune méthode de transmission ou de stockage n'est sûre à 100%, mais nous visons à atténuer les risques par des audits réguliers et des contrôles d'accès."
+      },
+      "yourRights": {
+        "title": "14. Vos droits et comment les exercer",
+        "content": "Selon votre localisation, vous pouvez demander l'accès, la correction, la suppression, la restriction ou la portabilité de vos données.<br>Envoyez une demande à <a href=\"mailto:support@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">support@deltaquest.co.jp</a> et nous (ou nos partenaires) répondrons dans les 30 jours."
+      },
+      "policyChanges": {
+        "title": "15. Modifications de cette politique",
+        "content": "Nous pouvons mettre à jour cette politique de temps à autre. Les modifications importantes seront annoncées dans l'application ou sur notre site web au moins 7 jours avant leur entrée en vigueur."
+      },
+      "contactUs": {
+        "title": "16. Contactez-nous",
+        "content": "DeltaQuest, Inc.<br/>064-0805 Hokkaido Sapporo City, Japan<br/><a href=\"mailto:support@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">support@deltaquest.co.jp</a><br/>Responsable de la protection des données (Kevin Bulme) : <a href=\"mailto:dpo@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">kevin.bulme@deltaquest.co.jp</a>"
+      },
+      "glossary": {
+        "title": "17. Glossaire",
+        "terms": [
+          {
+            "term": "<strong>ID publicitaire</strong>",
+            "definition": "un ID au niveau de l'appareil (GAID ou IDFA) qui se réinitialise depuis les paramètres système."
+          },
+          {
+            "term": "<strong>Informations personnelles</strong>",
+            "definition": "données qui identifient ou peuvent raisonnablement identifier un individu."
+          },
+          {
+            "term": "<strong>Clauses contractuelles types (CCT)</strong>",
+            "definition": "clauses modèles de l'UE pour les transferts transfrontaliers."
+          }
+        ]
+      }
+    },
+    "backToTop": "↑ Retour en haut"
   }
 }
