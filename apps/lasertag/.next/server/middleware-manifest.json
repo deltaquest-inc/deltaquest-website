@@ -17,8 +17,11 @@
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "8LnNpEGcbihMhnNr380+AAz1AbPJDiIIYNyEdbT9jS8="
+        "__NEXT_BUILD_ID": "LKh1fbtuf55xgw2XeZt6m",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "8LnNpEGcbihMhnNr380+AAz1AbPJDiIIYNyEdbT9jS8=",
+        "__NEXT_PREVIEW_MODE_ID": "52f1bf3ee3e661174e7696a1ff187be9",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "55a090a36b931249c5219f0098796dc37e4d1e94e4face4fe2b822a0d4ae22b2",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "feaf3e0f92ea6e1516ffe871fc8226a3310c9c47eb2d8f8039eb9a9cef0de5e4"
       }
     }
   },

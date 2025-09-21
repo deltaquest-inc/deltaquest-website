@@ -4,7 +4,10 @@ import ListLayout from '@/layouts/ListLayoutWithTags'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ title: 'Blog' })
+export const metadata = genPageMetadata({ 
+  title: 'Blog',
+  description: 'Découvrez nos derniers articles sur le développement web, l\'optimisation SEO et les solutions IT.'
+})
 
 type BlogPageParams = {
   locale: 'en' | 'fr' | 'ja'

@@ -1,6 +1,82 @@
 // Fallback for contentlayer/generated when not available
 // This file is used when Contentlayer doesn't generate the file on Vercel
 
+// Export types
+export interface Blog {
+  _id: string
+  _raw: {
+    sourceFilePath: string
+    sourceFileName: string
+    sourceFileDir: string
+    contentType: 'mdx'
+    flattenedPath: string
+  }
+  type: 'Blog'
+  title: string
+  date: string
+  tags?: string[]
+  lastmod?: string
+  draft?: boolean
+  summary?: string
+  images?: string[]
+  authors?: string[]
+  layout?: string
+  bibliography?: string
+  canonicalUrl?: string
+  locale: string
+  slug: string
+  path: string
+  filePath: string
+  readingTime: {
+    text: string
+    minutes: number
+    time: number
+    words: number
+  }
+  toc: any[]
+  structuredData: any
+  body: {
+    raw: string
+    code: string
+  }
+}
+
+export interface Authors {
+  _id: string
+  _raw: {
+    sourceFilePath: string
+    sourceFileName: string
+    sourceFileDir: string
+    contentType: 'mdx'
+    flattenedPath: string
+  }
+  type: 'Authors'
+  name: string
+  avatar?: string
+  occupation?: string
+  company?: string
+  email?: string
+  twitter?: string
+  bluesky?: string
+  linkedin?: string
+  github?: string
+  layout?: string
+  slug: string
+  path: string
+  filePath: string
+  readingTime: {
+    text: string
+    minutes: number
+    time: number
+    words: number
+  }
+  toc: any[]
+  body: {
+    raw: string
+    code: string
+  }
+}
+
 export const allBlogs = [
   {
     _id: 'blog/fr/media-1p-ads.mdx',
@@ -11,7 +87,7 @@ export const allBlogs = [
       contentType: 'mdx',
       flattenedPath: 'blog/fr/media-1p-ads',
     },
-    type: 'Blog',
+    type: 'Blog' as const,
     title: 'Media 1P Ads',
     date: '2024-01-15T00:00:00.000Z',
     tags: ['ad-tech', 'business-impact'],
@@ -39,6 +115,7 @@ export const allBlogs = [
       image: '',
       url: 'https://it.deltaquest.co.jp/blog/fr/media-1p-ads',
     },
+    body: { raw: '', code: '' },
   },
   {
     _id: 'blog/fr/logistics-redesign.mdx',
@@ -49,7 +126,7 @@ export const allBlogs = [
       contentType: 'mdx',
       flattenedPath: 'blog/fr/logistics-redesign',
     },
-    type: 'Blog',
+    type: 'Blog' as const,
     title: 'Logistics Redesign',
     date: '2024-01-10T00:00:00.000Z',
     tags: ['logistics-tech', 'scalability'],
@@ -77,6 +154,7 @@ export const allBlogs = [
       image: '',
       url: 'https://it.deltaquest.co.jp/blog/fr/logistics-redesign',
     },
+    body: { raw: '', code: '' },
   },
   {
     _id: 'blog/en/media-1p-ads.mdx',
@@ -87,7 +165,7 @@ export const allBlogs = [
       contentType: 'mdx',
       flattenedPath: 'blog/en/media-1p-ads',
     },
-    type: 'Blog',
+    type: 'Blog' as const,
     title: 'Media 1P Ads',
     date: '2024-01-15T00:00:00.000Z',
     tags: ['ad-tech', 'business-impact'],
@@ -115,6 +193,7 @@ export const allBlogs = [
       image: '',
       url: 'https://it.deltaquest.co.jp/blog/en/media-1p-ads',
     },
+    body: { raw: '', code: '' },
   },
   {
     _id: 'blog/en/logistics-redesign.mdx',
@@ -125,7 +204,7 @@ export const allBlogs = [
       contentType: 'mdx',
       flattenedPath: 'blog/en/logistics-redesign',
     },
-    type: 'Blog',
+    type: 'Blog' as const,
     title: 'Logistics Redesign',
     date: '2024-01-10T00:00:00.000Z',
     tags: ['logistics-tech', 'scalability'],
@@ -153,6 +232,7 @@ export const allBlogs = [
       image: '',
       url: 'https://it.deltaquest.co.jp/blog/en/logistics-redesign',
     },
+    body: { raw: '', code: '' },
   },
   {
     _id: 'blog/ja/media-1p-ads.mdx',
@@ -163,7 +243,7 @@ export const allBlogs = [
       contentType: 'mdx',
       flattenedPath: 'blog/ja/media-1p-ads',
     },
-    type: 'Blog',
+    type: 'Blog' as const,
     title: 'Media 1P Ads',
     date: '2024-01-15T00:00:00.000Z',
     tags: ['ad-tech', 'business-impact'],
@@ -191,6 +271,7 @@ export const allBlogs = [
       image: '',
       url: 'https://it.deltaquest.co.jp/blog/ja/media-1p-ads',
     },
+    body: { raw: '', code: '' },
   },
   {
     _id: 'blog/ja/logistics-redesign.mdx',
@@ -201,7 +282,7 @@ export const allBlogs = [
       contentType: 'mdx',
       flattenedPath: 'blog/ja/logistics-redesign',
     },
-    type: 'Blog',
+    type: 'Blog' as const,
     title: 'Logistics Redesign',
     date: '2024-01-10T00:00:00.000Z',
     tags: ['logistics-tech', 'scalability'],
@@ -229,6 +310,7 @@ export const allBlogs = [
       image: '',
       url: 'https://it.deltaquest.co.jp/blog/ja/logistics-redesign',
     },
+    body: { raw: '', code: '' },
   },
 ]
 
@@ -242,7 +324,7 @@ export const allAuthors = [
       contentType: 'mdx',
       flattenedPath: 'authors/default',
     },
-    type: 'Authors',
+    type: 'Authors' as const,
     name: 'DeltaQuest Team',
     avatar: '',
     occupation: 'IT Solutions',
@@ -258,6 +340,7 @@ export const allAuthors = [
     filePath: 'authors/default.mdx',
     readingTime: { text: '1 min read', minutes: 1, time: 60000, words: 200 },
     toc: [],
+    body: { raw: '', code: '' },
   },
 ]
 

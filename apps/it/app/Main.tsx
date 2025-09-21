@@ -1,7 +1,7 @@
 'use client'
 import { genPageMetadata } from 'app/seo'
 import Link from 'next/link'
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from '../contentlayer/generated'
 import LinkButton from '@/components/LinkButton'
 import { motion } from 'framer-motion'
 import BlogCard from '@/components/BlogCard'
