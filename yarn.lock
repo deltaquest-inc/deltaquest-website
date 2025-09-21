@@ -1774,6 +1774,7 @@ __metadata:
     next: 15.1.4
     next-intl: ^4.3.5
     next-themes: ^0.3.0
+    pliny: ^0.4.1
     postcss: ^8.4.24
     prettier: 3.6.2
     prettier-plugin-tailwindcss: ^0.6.11
@@ -1827,7 +1828,7 @@ __metadata:
     next-contentlayer2: 0.5.4
     next-intl: ^4.3.5
     next-themes: ^0.3.0
-    pliny: 0.4.1
+    pliny: ^0.4.1
     postcss: ^8.4.24
     prettier: 3.6.2
     prettier-plugin-tailwindcss: ^0.6.11
@@ -1884,6 +1885,7 @@ __metadata:
     next: 15.1.4
     next-intl: ^4.3.5
     next-themes: ^0.3.0
+    pliny: ^0.4.1
     postcss: ^8.4.24
     prettier: 3.6.2
     prettier-plugin-tailwindcss: ^0.6.11
@@ -10530,7 +10532,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pliny@npm:0.4.1":
+"pliny@npm:^0.4.1":
   version: 0.4.1
   resolution: "pliny@npm:0.4.1"
   dependencies:

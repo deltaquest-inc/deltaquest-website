@@ -26,6 +26,7 @@
     "next": "15.1.4",
     "next-intl": "^4.3.5",
     "next-themes": "^0.3.0",
+    "pliny": "^0.4.1",
     "postcss": "^8.4.24",
     "react": "18",
     "react-dom": "18",
