@@ -1,10 +1,10 @@
-import type { Config } from '@typescript-eslint/utils'
-
-export const createTypeScriptConfig = (options: {
+export interface TypeScriptConfigOptions {
   projectRoot: string
   include?: string[]
   exclude?: string[]
-}): Config => ({
+}
+
+export const createTypeScriptConfig = (options: TypeScriptConfigOptions) => ({
   extends: [
     'eslint:recommended',
     '@typescript-eslint/recommended',
