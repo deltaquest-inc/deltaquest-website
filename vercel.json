@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/it/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    },
+    {
+      "src": "apps/lasertag/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    },
+    {
+      "src": "apps/games/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/it/$1"
+    }
+  ],
+  "functions": {
+    "apps/it/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    },
+    "apps/lasertag/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    },
+    "apps/games/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
+
+

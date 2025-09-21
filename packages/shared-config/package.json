@@ -1,0 +1,11 @@
+{
+  "name": "@deltaquest/shared-config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.js",
+  "dependencies": {
+    "next": "15.1.4",
+    "react": "18",
+    "react-dom": "18"
+  }
+}

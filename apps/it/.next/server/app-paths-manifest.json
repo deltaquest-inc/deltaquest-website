@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/blog/page": "app/[locale]/blog/page.js",
+  "/[locale]/services/page": "app/[locale]/services/page.js",
+  "/[locale]/projects/page": "app/[locale]/projects/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/[locale]/legal/page": "app/[locale]/legal/page.js",
+  "/[locale]/blog/[...slug]/page": "app/[locale]/blog/[...slug]/page.js",
+  "/[locale]/laser-tag/page": "app/[locale]/laser-tag/page.js"
+}
