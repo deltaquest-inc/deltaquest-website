@@ -26,7 +26,7 @@ import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 import prettier from 'prettier'
 
-const root = process.cwd()
+const root = path.join(process.cwd(), 'apps/it')
 const isProduction = process.env.NODE_ENV === 'production'
 
 // heroicon mini link
@@ -152,7 +152,7 @@ export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors],
   mdx: {
-    cwd: process.cwd(),
+    cwd: path.join(process.cwd(), 'apps/it'),
     remarkPlugins: [
       remarkExtractFrontmatter,
       remarkGfm,
