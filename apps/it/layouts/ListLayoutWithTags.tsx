@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import { slug } from 'github-slugger'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
+import type { Blog } from '../contentlayer/generated'
 import Link from '@/components/Link'
 import tagData from 'app/tag-data.json'
 import BlogListCard from '@/components/BlogListCard'
