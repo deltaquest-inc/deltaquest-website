@@ -1,1 +1,0 @@
-"use strict";exports.id=791,exports.ids=[791],exports.modules={6791:e=>{e.exports=JSON.parse('{"games":{"title":"DeltaQuest Games","description":"Support pour vos jeux DeltaQuest pr\xe9f\xe9r\xe9s"}}')}};

@@ -1,25 +1,7 @@
 {
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/api/newsletter/route": "app/api/newsletter/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/support-game/page": "app/support-game/page.js",
-  "/author/page": "app/author/page.js",
-  "/[locale]/contact/page": "app/[locale]/contact/page.js",
-  "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/support-game/page": "app/[locale]/support-game/page.js",
-  "/[locale]/tags/[tag]/[page]/page": "app/[locale]/tags/[tag]/[page]/page.js",
-  "/[locale]/tags/[tag]/page": "app/[locale]/tags/[tag]/page.js",
-  "/[locale]/tags/page": "app/[locale]/tags/page.js",
   "/[locale]/blog/[...slug]/page": "app/[locale]/blog/[...slug]/page.js",
   "/[locale]/blog/page": "app/[locale]/blog/page.js",
-  "/[locale]/legal/page": "app/[locale]/legal/page.js",
-  "/[locale]/blog/page/[page]/page": "app/[locale]/blog/page/[page]/page.js",
   "/[locale]/about/page": "app/[locale]/about/page.js",
-  "/[locale]/projects/page": "app/[locale]/projects/page.js",
-  "/[locale]/legal/terms-and-conditions/page": "app/[locale]/legal/terms-and-conditions/page.js",
-  "/[locale]/services/page": "app/[locale]/services/page.js",
-  "/[locale]/laser-tag/page": "app/[locale]/laser-tag/page.js",
-  "/[locale]/legal/privacy-policy/page": "app/[locale]/legal/privacy-policy/page.js"
+  "/[locale]/page": "app/[locale]/page.js"
 }

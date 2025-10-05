@@ -2,16 +2,16 @@ import 'css/prism.css'
 import 'katex/dist/katex.css'
 
 import PageTitle from '@/components/PageTitle'
-import { components } from '@/components/MDXComponents'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
-import { allBlogs, allAuthors, Authors, Blog } from '../../../../contentlayer/generated'
+import { allBlogs, allAuthors, Authors, Blog } from '../../../../../../.contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
 import PostLayout from '@/layouts/PostLayout'
 import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
+import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { components } from '@/components/MDXComponents'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: AsyncPageProps): Promise<Meta
   const authorList = post.authors || ['default']
   const authorDetails = authorList.map((author) => {
     const authorResults = allAuthors.find((p) => p.slug === author)
-    return authorResults || { name: 'Unknown Author', slug: 'unknown' }
+    return coreContent(authorResults as Authors)
   })
 
   const publishedAt = new Date(post.date).toISOString()
@@ -86,18 +86,17 @@ export async function generateMetadata({ params }: AsyncPageProps): Promise<Meta
   }
 }
 
-// Temporarily disable static generation to debug
-// export const generateStaticParams = async () => {
-//   const locales = ['en', 'fr', 'ja']
-//   const params = locales.flatMap((locale) => {
-//     return allBlogs.map((p) => ({
-//       locale,
-//       slug: p.slug.split('/').map((name) => decodeURI(name)),
-//     }))
-//   })
+export const generateStaticParams = async () => {
+  const locales = ['en', 'fr', 'ja']
+  const params = locales.flatMap((locale) => {
+    return allBlogs.map((p) => ({
+      locale,
+      slug: p.slug.split('/').map((name) => decodeURI(name)),
+    }))
+  })
 
-//   return params
-// }
+  return params
+}
 
 export default async function Page({ params }: ResolvedPageProps) {
   const { slug, locale } = await params
@@ -113,17 +112,17 @@ export default async function Page({ params }: ResolvedPageProps) {
     return notFound()
   }
 
-  const sortedPosts = allBlogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  const postIndex = sortedPosts.findIndex((p) => p.slug === post.slug)
+  const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
+  const postIndex = sortedCoreContents.findIndex((p) => p.slug === post.slug)
 
-  const prev = sortedPosts[postIndex + 1]
-  const next = sortedPosts[postIndex - 1]
+  const prev = sortedCoreContents[postIndex + 1]
+  const next = sortedCoreContents[postIndex - 1]
   const authorList = post.authors || ['default']
   const authorDetails = authorList.map((author) => {
     const authorResults = allAuthors.find((p) => p.slug === author)
-    return authorResults || { name: 'Unknown Author', slug: 'unknown' }
+    return coreContent(authorResults as Authors)
   })
-  const mainContent = post
+  const mainContent = coreContent(post)
   const jsonLd = post.structuredData
   jsonLd['author'] = authorDetails.map((author) => {
     return {

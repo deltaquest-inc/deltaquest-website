@@ -1,13 +1,10 @@
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from '../../../../../.contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 import ListLayout from '@/layouts/ListLayoutWithTags'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ 
-  title: 'Blog',
-  description: 'Découvrez nos derniers articles sur le développement web, l\'optimisation SEO et les solutions IT.'
-})
+export const metadata = genPageMetadata({ title: 'Blog' })
 
 type BlogPageParams = {
   locale: 'en' | 'fr' | 'ja'
