@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env INIT_CWD=$PWD next dev",
+    "prebuild": "cross-env INIT_CWD=$PWD contentlayer build",
     "build": "cross-env INIT_CWD=$PWD next build",
     "start": "next start -p 3000",
     "lint": "next lint",
