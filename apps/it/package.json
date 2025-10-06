@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "contentlayer dev & next dev",
-    "prebuild": "contentlayer build",
-    "build": "contentlayer build && next build",
+    "dev": "yarn contentlayer dev & next dev",
+    "prebuild": "yarn contentlayer build",
+    "build": "yarn contentlayer build && next build",
     "start": "next start -p 3000",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
