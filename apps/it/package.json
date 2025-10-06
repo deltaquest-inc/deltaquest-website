@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "cross-env INIT_CWD=$PWD contentlayer build && cross-env INIT_CWD=$PWD next build",
+    "dev": "cross-env INIT_CWD=$PWD yarn contentlayer dev & next dev",
+    "build": "cross-env INIT_CWD=$PWD yarn contentlayer build && cross-env INIT_CWD=$PWD next build",
     "start": "next start -p 3000",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
@@ -23,6 +23,7 @@
     "autoprefixer": "^10.4.16",
     "body-scroll-lock": "^4.0.0-beta.0",
     "contentlayer2": "0.5.4",
+    "cross-env": "^7.0.3",
     "esbuild": "0.20.2",
     "framer-motion": "^12.23.12",
     "github-slugger": "^2.0.0",
