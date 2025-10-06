@@ -6,7 +6,7 @@ export interface DomainConfig {
 }
 
 export const createNextConfig = (domainConfig: DomainConfig): NextConfig => {
-  return {
+  const config: NextConfig = {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
@@ -50,6 +50,11 @@ export const createNextConfig = (domainConfig: DomainConfig): NextConfig => {
       return config
     },
   }
+
+  try {
+    const { withContentlayer } = require('next-contentlayer2')
+    return withContentlayer(config)
+  } catch (e) {
+    return config
+  }
 }
-
-
