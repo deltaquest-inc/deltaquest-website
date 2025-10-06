@@ -23,7 +23,7 @@
       "@/css/*": ["css/*"],
       "@/messages/*": ["./apps/it/messages/*"],
       "@/utils/*": ["utils/*"],
-      "contentlayer/generated": ["./contentlayer/generated"],
+      "contentlayer/generated": ["./.contentlayer/generated"],
       "pliny/*": ["../../node_modules/pliny/*"]
     },
     "plugins": [
