@@ -9,7 +9,6 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit"
   },
-
   "dependencies": {
     "@deltaquest/shared-config": "workspace:*",
     "@deltaquest/shared-i18n": "workspace:*",
