@@ -8,7 +8,6 @@ import Link from '@/components/Link'
 import tagData from 'app/tag-data.json'
 import BlogListCard from '@/components/BlogListCard'
 import { getPagination, getBasePath } from '@/utils/getPagination'
-import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
 
 interface PaginationProps {
@@ -67,7 +66,6 @@ export default function ListLayoutWithTags({
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
-  const t = useTranslations('tagModule')
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
   const params = useParams()
   const locale = params?.locale || 'ja'
