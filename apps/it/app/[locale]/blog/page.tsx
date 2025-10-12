@@ -1,6 +1,7 @@
 import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 import ListLayout from '@/layouts/ListLayoutWithTags'
+import type { Metadata } from 'next'
 
 const POSTS_PER_PAGE = 5
 
