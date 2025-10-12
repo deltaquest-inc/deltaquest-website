@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_rsc_messages_ja_json";
+exports.ids = ["_rsc_messages_ja_json"];
+exports.modules = {
+
+/***/ "(rsc)/./messages/ja.json":
+/*!**************************!*\
+  !*** ./messages/ja.json ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"header":{"title":"DeltaQuest LaserTag"},"laserTag":{"tagline":"ポータブルで高没入型のレーザータグを、日本のイベントに。","imageAlt":"Delta Quest VR Laser Tag","concept":{"title":"コンセプト","description":"Delta Questは、eスポーツ大会、スタジアムイベント、アニメ・ゲーム系の展示会など、あらゆる大型イベントに導入可能なポータブル型レーザータグ体験です。VRやIPコラボを通じて、これまでにない“リアルなゲーム”を提供します。"},"features":{"title":"特徴","list":{"portable":"持ち運び可能なセットアップ：イベント現場に合わせて柔軟に対応","ipCollaboration":"IPコラボによるブランド体験：アニメ・ゲームとの連携でファン層に刺さる","competitive":"競技性＆ファミリー向け：スコアリング、チーム戦、親子参加もOK"}},"targetEvents":{"title":"対象イベント","description":"eスポーツ大会やスポーツイベント、アニメ・ゲーム系の展示会など、大規模なイベントに幅広く対応可能です。来場者とのエンゲージメントを高めたい主催者に最適なアトラクションです。"},"contact":{"title":"お問い合わせ","description":"本サービスに関するご質問・コラボレーションのご相談は、お気軽にご連絡ください。"}}}');
+
+/***/ })
+
+};
+;
