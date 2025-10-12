@@ -1,14 +1,11 @@
 import { getRequestConfig } from 'next-intl/server'
 
 export default getRequestConfig(async ({ locale }) => {
-  // Ensure locale is always a string
-  if (!locale) {
-    throw new Error('Locale is required')
-  }
+  const currentLocale = locale ?? 'ja'
 
   return {
-    locale: locale as string,
-    messages: (await import(`./messages/${locale}.json`)).default,
+    locale: currentLocale,
+    messages: (await import(`./messages/${currentLocale}.json`)).default,
   }
 })
 
