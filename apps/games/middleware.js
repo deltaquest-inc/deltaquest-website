@@ -1,7 +1,14 @@
-const { createI18nMiddleware, config } = require('@deltaquest/shared-i18n')
+import createMiddleware from 'next-intl/middleware'
 
-const middleware = createI18nMiddleware()
-middleware.config = config
+export default createMiddleware({
+  locales: ['ja', 'fr', 'en'],
+  defaultLocale: 'en',
+  localePrefix: 'as-needed'
+})
 
-module.exports = middleware
-module.exports.default = middleware
+export const config = {
+  matcher: [
+    // Skip all internal paths (_next), API routes, static files, and images
+    '/((?!_next|api|favicon.ico|static|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.svg|.*\\.ico).*)',
+  ]
+}

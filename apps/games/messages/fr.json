@@ -4,7 +4,15 @@
   },
   "games": {
     "title": "DeltaQuest Games",
-    "description": "Support pour vos jeux DeltaQuest préférés"
+    "description": "Support pour vos jeux DeltaQuest préférés",
+    "support": {
+      "title": "Obtenir de l'aide",
+      "subtitle": "Besoin d'aide avec nos services de support de jeux ? Contactez-nous directement.",
+      "contactButton": "Contacter le support",
+      "copyButton": "Copier l'email",
+      "urgentInfo": "Pour les questions urgentes, vous pouvez également nous joindre à :",
+      "email": "apps@deltaquest.co.jp"
+    }
   }
 }
 

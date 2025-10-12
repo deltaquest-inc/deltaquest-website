@@ -1,8 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const MailtoButton = () => {
+  const t = useTranslations('games.support')
   const [isLoading, setIsLoading] = useState(false)
   const [hasError, setHasError] = useState(false)
 
@@ -11,7 +13,7 @@ const MailtoButton = () => {
     setHasError(false)
 
     try {
-      const email = 'apps@deltaquest.co.jp'
+      const email = t('email')
       const subject = 'Support Game Inquiry'
       const body = `Hello DeltaQuest Team,
 
@@ -36,7 +38,7 @@ Best regards,
 
   const handleFallbackClick = () => {
     // Fallback: copy email to clipboard
-    const email = 'apps@deltaquest.co.jp'
+    const email = t('email')
     navigator.clipboard
       .writeText(email)
       .then(() => {
@@ -62,9 +64,9 @@ Best regards,
       <div className="flex min-h-screen items-center justify-center p-6">
         <div className="bg-opacity-95 flex flex-col items-center space-y-4 rounded-lg bg-white p-8 shadow-2xl backdrop-blur-sm">
           <div className="text-center">
-            <h2 className="mb-2 text-2xl font-bold text-gray-900">Get Support</h2>
+            <h2 className="mb-2 text-2xl font-bold text-gray-900">{t('title')}</h2>
             <p className="mb-6 text-gray-600">
-              Need help with our support game services? Contact us directly.
+              {t('subtitle')}
             </p>
           </div>
 
@@ -120,7 +122,7 @@ Best regards,
                       d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  Contact Support
+                  {t('contactButton')}
                 </>
               )}
             </button>
@@ -145,7 +147,7 @@ Best regards,
                   d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                 />
               </svg>
-              Copy Email
+              {t('copyButton')}
             </button>
           </div>
 
@@ -173,8 +175,8 @@ Best regards,
 
           {/* Additional contact info */}
           <div className="mt-6 text-center text-sm text-gray-500">
-            <p>For urgent matters, you can also reach us at:</p>
-            <p className="mt-1 font-mono font-medium text-gray-700">apps@deltaquest.co.jp</p>
+            <p>{t('urgentInfo')}</p>
+            <p className="mt-1 font-mono font-medium text-gray-700">{t('email')}</p>
           </div>
         </div>
       </div>

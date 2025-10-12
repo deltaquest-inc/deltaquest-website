@@ -64,7 +64,11 @@ export default function LocaleSwitch() {
     const segments = pathname.split('/')
     segments[1] = newLocale
     const newPath = segments.join('/')
+    
+    // Save user preference
     localStorage.setItem('locale', newLocale)
+    localStorage.setItem('user-locale-preference', newLocale)
+    
     setLocale(newLocale)
     router.push(newPath)
   }

@@ -17,7 +17,7 @@ exports.modules = {
   \**************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"header":{"title":"DeltaQuest Games"},"games":{"title":"DeltaQuest Games","description":"お気に入りのDeltaQuestゲームのサポート"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"header":{"title":"DeltaQuest Games"},"games":{"title":"DeltaQuest Games","description":"お気に入りのDeltaQuestゲームのサポート","support":{"title":"サポートを受ける","subtitle":"ゲームサポートサービスでお困りですか？直接お問い合わせください。","contactButton":"サポートに連絡","copyButton":"メールをコピー","urgentInfo":"緊急の場合は、以下のアドレスでもお問い合わせいただけます：","email":"apps@deltaquest.co.jp"}}}');
 
 /***/ })
 
