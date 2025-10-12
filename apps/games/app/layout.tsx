@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import { ThemeProviders } from './theme-providers'
 import { Analytics } from './analytics'
 import { GTM } from './gtm'
 import '@/css/tailwind.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const space_grotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +52,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${space_grotesk.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <head>
         <link rel="icon" href="/static/favicons/favicon.ico" sizes="any" />
         <link rel="icon" href="/static/favicons/favicon.svg" type="image/svg+xml" />
@@ -62,7 +70,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>
+      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <GTM />
           <Analytics />

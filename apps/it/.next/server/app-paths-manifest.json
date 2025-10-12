@@ -1,6 +1,1 @@
-{
-  "/[locale]/services/page": "app/[locale]/services/page.js",
-  "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/about/page": "app/[locale]/about/page.js",
-  "/[locale]/laser-tag/page": "app/[locale]/laser-tag/page.js"
-}
+{}

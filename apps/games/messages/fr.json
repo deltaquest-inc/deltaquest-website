@@ -1,4 +1,7 @@
 {
+  "header": {
+    "title": "DeltaQuest Games"
+  },
   "games": {
     "title": "DeltaQuest Games",
     "description": "Support pour vos jeux DeltaQuest préférés"
