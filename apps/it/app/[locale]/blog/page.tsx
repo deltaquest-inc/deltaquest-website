@@ -4,10 +4,21 @@ import ListLayout from '@/layouts/ListLayoutWithTags'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({
-  title: 'Blog',
-  description: 'Read our latest articles and insights',
-})
+export async function generateMetadata({ params }: { params: Promise<BlogPageParams> }): Promise<Metadata> {
+  const { locale } = await params
+  
+  // Simple title mapping based on locale
+  const titles = {
+    fr: 'Blog - Delta Quest',
+    en: 'Blog - Delta Quest',
+    ja: 'ブログ - Delta Quest'
+  }
+  
+  return genPageMetadata({
+    title: titles[locale as keyof typeof titles] || titles.fr,
+    description: 'Read our latest articles and insights',
+  })
+}
 
 type BlogPageParams = {
   locale: 'en' | 'fr' | 'ja'

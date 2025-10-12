@@ -1,7 +1,4 @@
 'use client'
-import Image from 'next/image'
-import langIconDark from '@/data/langIconDark.png'
-import langIconWhite from '@/data/langIconWhite.png'
 import { Fragment, useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTheme } from 'next-themes'
@@ -22,6 +19,21 @@ const locales = [
 ]
 
 const Blank = () => <span className="inline-block h-6 w-6" />
+
+const LanguageIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-6 w-6 cursor-pointer"
+  >
+    <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" />
+  </svg>
+)
 
 export default function LocaleSwitch() {
   const [mounted, setMounted] = useState(false)
@@ -57,26 +69,13 @@ export default function LocaleSwitch() {
     router.push(newPath)
   }
 
-  const isDark = resolvedTheme === 'dark'
-  const icon = isDark ? langIconWhite : langIconDark
 
   return (
     <div className="flex items-center">
       <Menu as="div" className="relative inline-block text-left">
-        <div className="hover:text-primary-500 dark:hover:text-primary-400 flex items-center justify-center">
+        <div className="hover:text-blue-600 dark:hover:text-blue-400 flex items-center justify-center cursor-pointer group">
           <MenuButton aria-label="Language switcher">
-            {mounted ? (
-              <Image
-                src={icon}
-                alt="Language Icon"
-                width={24}
-                height={24}
-                className="h-6 w-6"
-                priority={false}
-              />
-            ) : (
-              <Blank />
-            )}
+            {mounted ? <LanguageIcon /> : <Blank />}
           </MenuButton>
         </div>
         <Transition
@@ -97,7 +96,7 @@ export default function LocaleSwitch() {
                       {({ focus }) => (
                         <button
                           className={`${
-                            focus ? 'bg-primary-600 text-white' : ''
+                            focus ? 'bg-blue-600 text-white' : ''
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                         >
                           {label}

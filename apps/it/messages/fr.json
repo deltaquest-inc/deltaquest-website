@@ -148,6 +148,23 @@
     "pageOf": "Page {current} sur {total}",
     "publishedOn": "Publié le"
   },
+  "blogPost": {
+    "publishedDate": "Date de publication",
+    "author": "Auteur",
+    "tags": "Tags",
+    "previousArticle": "Article précédent",
+    "nextArticle": "Article suivant",
+    "backToBlog": "← Retour à la liste des articles"
+  },
+  "pageTitles": {
+    "home": "Accueil - Delta Quest",
+    "about": "À propos - Delta Quest",
+    "services": "Services - Delta Quest",
+    "blog": "Blog - Delta Quest",
+    "projects": "Portfolio - Delta Quest",
+    "contact": "Contact - Delta Quest",
+    "blogPost": "{{title}} - Delta Quest"
+  },
   "legalPage": {
     "metaTitle": "Mentions légales et Politique de confidentialité",
     "metaDescription": "Consultez les mentions légales et la politique de confidentialité de Delta Quest.",

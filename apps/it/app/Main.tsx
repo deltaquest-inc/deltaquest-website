@@ -5,35 +5,30 @@ import { allBlogs } from '../contentlayer/generated'
 import LinkButton from '@/components/LinkButton'
 import { motion } from 'framer-motion'
 import BlogCard from '@/components/BlogCard'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 export const metadata = genPageMetadata({
   title: 'ホーム',
   description: '最先端のITソリューションを提供するデルタクエスト株式会社。',
 })
+
 const blogContainerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 }
-const blogCardVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-}
+const blogCardVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } }
 const blogSlugs = ['media-1p-ads', 'logistics-redesign']
-export default function Home({ locale }: { locale: string }) {
+
+export default function Home() {
   const t = useTranslations('home')
   const tBlog = useTranslations('blogs')
+  const locale = useLocale() // gardé si utile ailleurs
 
   const posts = allBlogs
-    .filter(
-      (post) =>
-        blogSlugs.includes(post._raw.flattenedPath.split('/').pop()!) && post.locale === locale
-    )
+    .filter((post) => {
+      const slug = post._raw.flattenedPath.split('/').pop()!
+      return blogSlugs.includes(slug)
+    })
     .map((post) => {
       const slugKey = post._raw.flattenedPath.split('/').pop()!
       return {
@@ -69,21 +64,13 @@ export default function Home({ locale }: { locale: string }) {
           {!posts.length && <p className="text-gray-500 dark:text-gray-400">{t('noPosts')}</p>}
           {posts.map((post) => (
             <motion.li key={post.slug} variants={blogCardVariants}>
-              <BlogCard
-                title={post.title}
-                summary={post.summary}
-                date={post.date}
-                slug={post.slug}
-              />
+              <BlogCard title={post.title} summary={post.summary} date={post.date} slug={post.slug} />
             </motion.li>
           ))}
         </motion.ul>
         {posts.length > 0 && (
           <div className="mt-2.5 flex justify-end pt-12 text-base leading-6 font-medium">
-            <Link
-              href="/blog"
-              className="text-[#2563eb] hover:text-[#1e3a8a] dark:hover:text-[#1e3a8a]"
-            >
+            <Link href="/blog" className="text-[#2563eb] hover:text-[#1e3a8a] dark:hover:text-[#1e3a8a]">
               {t('viewAllPosts')}
             </Link>
           </div>
