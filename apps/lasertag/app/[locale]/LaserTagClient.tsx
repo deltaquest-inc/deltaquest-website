@@ -2,9 +2,18 @@
 
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import ConceptCard from '@/components/ConceptCard'
+import FeatureCard from '@/components/FeatureCard'
+import ContactCard from '@/components/ContactCard'
 
 export default function LaserTagClient() {
   const t = useTranslations('laserTag')
+
+  const features = [
+    t('features.list.portable'),
+    t('features.list.ipCollaboration'),
+    t('features.list.competitive')
+  ]
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-12 text-gray-900 dark:text-gray-100">
@@ -26,36 +35,36 @@ export default function LaserTagClient() {
         </div>
       </section>
 
-      <section className="mb-12">
-        <h2 className="mb-2 text-2xl font-semibold">🎯 {t('concept.title')}</h2>
-        <p>{t('concept.description')}</p>
-      </section>
+      <div className="grid gap-8">
+        <ConceptCard
+          title={t('concept.title')}
+          description={t('concept.description')}
+          icon="🎯"
+          index={0}
+        />
 
-      <section className="mb-12">
-        <h2 className="mb-2 text-2xl font-semibold">🚀 {t('features.title')}</h2>
-        <ul className="list-inside list-disc space-y-2">
-          <li>{t('features.list.portable')}</li>
-          <li>{t('features.list.ipCollaboration')}</li>
-          <li>{t('features.list.competitive')}</li>
-        </ul>
-      </section>
+        <FeatureCard
+          title={t('features.title')}
+          features={features}
+          icon="🚀"
+          index={1}
+        />
 
-      <section className="mb-12">
-        <h2 className="mb-2 text-2xl font-semibold">📍 {t('targetEvents.title')}</h2>
-        <p>{t('targetEvents.description')}</p>
-      </section>
+        <ConceptCard
+          title={t('targetEvents.title')}
+          description={t('targetEvents.description')}
+          icon="📍"
+          index={2}
+        />
 
-      <section className="mb-12">
-        <h2 className="mb-2 text-2xl font-semibold">📞 {t('contact.title')}</h2>
-        <p>
-          {t('contact.description')}
-          <br />
-          📧{' '}
-          <a href="mailto:your@email.com" className="text-orange-400 hover:underline">
-            kevin.bulme@deltaquest.co.jp
-          </a>
-        </p>
-      </section>
+        <ContactCard
+          title={t('contact.title')}
+          description={t('contact.description')}
+          email="kevin.bulme@deltaquest.co.jp"
+          icon="📞"
+          index={3}
+        />
+      </div>
     </main>
   )
 }
