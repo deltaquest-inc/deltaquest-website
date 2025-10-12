@@ -13,25 +13,25 @@ const space_grotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: 'DeltaQuest LaserTag - Laser Tag Gaming Experience',
-    template: '%s | DeltaQuest LaserTag'
+    default: 'デルタクエスト株式会社 | レーザータグ体験',
+    template: '%s | デルタクエスト株式会社'
   },
-  description: 'Experience the ultimate laser tag gaming adventure with DeltaQuest. Professional laser tag equipment and immersive gaming experiences.',
-  keywords: ['laser tag', 'gaming', 'DeltaQuest', 'laser tag equipment', 'gaming experience'],
-  authors: [{ name: 'DeltaQuest' }],
-  creator: 'DeltaQuest',
+  description: '最先端のレーザータグ体験を提供するデルタクエスト株式会社。ポータブルで没入感のあるレーザータグゲーム体験を日本のイベントに。',
+  keywords: ['レーザータグ', 'ゲーム', 'デルタクエスト', 'レーザータグ体験', 'イベント', 'eスポーツ', 'アニメ', 'ゲーム大会'],
+  authors: [{ name: 'デルタクエスト株式会社' }],
+  creator: 'デルタクエスト株式会社',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'ja_JP',
     url: 'https://lasertag.deltaquest.co.jp',
-    siteName: 'DeltaQuest LaserTag',
-    title: 'DeltaQuest LaserTag - Laser Tag Gaming Experience',
-    description: 'Experience the ultimate laser tag gaming adventure with DeltaQuest.',
+    siteName: 'デルタクエスト株式会社',
+    title: 'デルタクエスト株式会社 | レーザータグ体験',
+    description: '最先端のレーザータグ体験を提供するデルタクエスト株式会社。',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DeltaQuest LaserTag',
-    description: 'Experience the ultimate laser tag gaming adventure with DeltaQuest.',
+    title: 'デルタクエスト株式会社',
+    description: '最先端のレーザータグ体験を提供するデルタクエスト株式会社。',
   },
   robots: {
     index: true,

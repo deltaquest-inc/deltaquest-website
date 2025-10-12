@@ -1,18 +1,18 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'DeltaQuest LaserTag - Laser Tag Gaming Experience',
-  author: 'DeltaQuest',
+  title: 'デルタクエスト株式会社 | レーザータグ体験',
+  author: 'デルタクエスト株式会社',
   headerTitle: 'DeltaQuest LaserTag',
   description:
-    'Experience the ultimate laser tag gaming adventure with DeltaQuest. Professional laser tag equipment and immersive gaming experiences.',
-  language: 'en',
+    '最先端のレーザータグ体験を提供するデルタクエスト株式会社。ポータブルで没入感のあるレーザータグゲーム体験を日本のイベントに。',
+  language: 'ja',
   theme: 'system', // system, dark or light
   siteUrl: 'https://lasertag.deltaquest.co.jp',
   siteRepo: 'https://github.com/KevinBulme/delta-quest',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/social-banner.png`,
   email: 'info@deltaquest.co.jp',
-  locale: 'en-US',
+  locale: 'ja-JP',
   stickyNav: false,
   analytics: {
     googleAnalytics: {
