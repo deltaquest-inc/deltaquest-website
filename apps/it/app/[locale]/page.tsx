@@ -1,4 +1,5 @@
 import Main from '../Main'
+import type { Metadata } from 'next'
 
 interface HomePageProps {
   params: Promise<{ locale: string }>
