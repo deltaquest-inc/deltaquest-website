@@ -1,8 +1,7 @@
 import { allAuthors } from '../../../../contentlayer/generated'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { genPageMetadata } from '@/app/seo'
+import { genPageMetadata } from 'app/seo'
 import { notFound } from 'next/navigation'
 
 interface Props {
@@ -13,7 +12,10 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params
   const author = allAuthors.find((p) => p.slug === slug)
   if (!author) {
-    return genPageMetadata({ title: 'Author Not Found' })
+    return genPageMetadata({
+      title: 'Author Not Found',
+      description: 'The requested author could not be found.',
+    })
   }
 
   return genPageMetadata({
@@ -31,7 +33,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }: Props) {
   const { slug } = await params
   const author = allAuthors.find((p) => p.slug === slug)
-  
+
   if (!author) {
     notFound()
   }
@@ -40,7 +42,13 @@ export default async function Page({ params }: Props) {
 
   return (
     <AuthorLayout content={mainContent}>
-      <MDXLayoutRenderer code={author.body.code} components={{}} />
+      <div className="prose dark:prose-invert max-w-none">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: author.body?.raw || 'No content available for this author.',
+          }}
+        />
+      </div>
     </AuthorLayout>
   )
 }
