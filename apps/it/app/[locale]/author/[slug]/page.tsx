@@ -1,4 +1,4 @@
-import { allAuthors } from '../../../../contentlayer/generated'
+import { allAuthors } from 'contentlayer/generated'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
