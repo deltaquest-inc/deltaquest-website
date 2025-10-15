@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "contentlayer2 build || contentlayer build",
     "dev": "cross-env INIT_CWD=$PWD contentlayer2 dev & next dev",
-    "build": "cross-env INIT_CWD=$PWD node ../../node_modules/.bin/contentlayer2 build && cross-env INIT_CWD=$PWD next build",
+    "build": "contentlayer2 build && next build",
     "start": "next start -p 3000",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
