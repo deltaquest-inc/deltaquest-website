@@ -6,6 +6,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = createNextConfig({
   domain: 'it.deltaquest.co.jp',
   subdomain: 'it',
+  experimental: {
+    outputFileTracingIncludes: {
+      '/**/*': ['.contentlayer/generated/**'],
+    },
+  },
 })
 
 module.exports = withBundleAnalyzer(nextConfig)
