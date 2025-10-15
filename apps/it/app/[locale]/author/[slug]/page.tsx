@@ -7,12 +7,11 @@ import { notFound } from 'next/navigation'
 export const dynamic = 'force-static'
 export const dynamicParams = false
 
-interface Props {
-  params: { locale: string; slug: string }
-}
+type Params = { locale: string; slug: string }
+type Props = { params: Promise<Params> }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = params
+  const { slug } = await params
   const author = allAuthors.find((p) => p.slug === slug)
   if (!author) {
     return genPageMetadata({
@@ -20,7 +19,6 @@ export async function generateMetadata({ params }: Props) {
       description: 'The requested author could not be found.',
     })
   }
-
   return genPageMetadata({
     title: author.name,
     description: `${author.name} - ${author.occupation} at ${author.company}`,
@@ -30,20 +28,17 @@ export async function generateMetadata({ params }: Props) {
 const LOCALES = ['fr', 'en', 'ja'] as const
 export async function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
-    allAuthors.map((author) => ({ locale, slug: author.slug }))
+    allAuthors.map((author) => ({ locale, slug: author.slug })),
   )
 }
 
 export default async function Page({ params }: Props) {
-  const { slug } = params
+  const { slug } = await params
   const author = allAuthors.find((p) => p.slug === slug)
-
   if (!author) {
     notFound()
   }
-
   const mainContent = coreContent(author)
-
   return (
     <AuthorLayout content={mainContent}>
       <div className="prose dark:prose-invert max-w-none">
