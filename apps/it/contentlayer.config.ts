@@ -149,7 +149,7 @@ export const Authors = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-  contentDirPath: process.env.VERCEL ? path.join(process.cwd(), 'apps/it', 'data') : 'data',
+  contentDirPath: 'data',
   documentTypes: [Blog, Authors],
   mdx: {
     cwd: process.env.VERCEL ? path.join(process.cwd(), 'apps/it') : process.cwd(),
