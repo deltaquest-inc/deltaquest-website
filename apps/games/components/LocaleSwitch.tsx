@@ -43,19 +43,19 @@ export default function LocaleSwitch() {
 
   const storedLocale = typeof window !== 'undefined' ? localStorage.getItem('locale') : null
   const pathLocale = pathname?.split('/')[1] || null
-  const initialLocale = pathLocale || storedLocale || 'ja'
+  const initialLocale = pathLocale || storedLocale || 'en'
   const [locale, setLocale] = useState(initialLocale)
 
   useEffect(() => {
     setMounted(true)
 
-    if (!pathLocale && storedLocale && pathname) {
+    if (pathLocale) {
+      setLocale(pathLocale)
+      localStorage.setItem('locale', pathLocale)
+    } else if (storedLocale && pathname) {
       const segments = pathname.split('/')
       segments[1] = storedLocale
       router.replace(segments.join('/'))
-    } else if (pathLocale) {
-      setLocale(pathLocale)
-      localStorage.setItem('locale', pathLocale)
     }
   }, [pathname, router, storedLocale, pathLocale])
 
