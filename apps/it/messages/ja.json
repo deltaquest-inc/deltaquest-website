@@ -1,0 +1,445 @@
+{
+  "home": {
+    "welcome": "デルタクエストへようこそ",
+    "description": "デルタクエスト株式会社は、最先端のITサービスを提供する企業です。フロントエンド開発、Next.js/React、SEO最適化、クラウドインフラ構築など、ビジネスの成長をサポートします。",
+    "viewServices": "サービスを見る",
+    "contactUs": "お問い合わせ",
+    "latestPosts": "最新のブログ記事",
+    "noPosts": "No posts available.",
+    "viewAllPosts": "すべての投稿を見る →"
+  },
+  "blogs": {
+    "media-1p-ads": {
+      "title": "メディア向け1st Party Ads開発",
+      "summary": "米国市場向けメディアプラットフォームにおける1st Party Adsシステムの拡張プロジェクト。技術的なアプローチとビジネスインパクトの詳細を解説。"
+    },
+    "logistics-redesign": {
+      "title": "国際物流プラットフォームの刷新",
+      "summary": "市場適合を目指し、国際物流プラットフォームのアーキテクチャをゼロから再構築したプロジェクト。技術的な決断とビジネスインパクトを解説。"
+    }
+  },
+  "header": {
+    "home": "Home",
+    "about": "会社概要",
+    "services": "サービス",
+    "blog": "ブログ",
+    "contact": "お問い合わせ",
+    "projects": "ポートフォリオ",
+    "legal": "規約"
+  },
+  "footer": {
+    "company": "会社",
+    "services": "サービス",
+    "legal": "法的",
+    "contact": "お問い合わせ",
+    "rights": "全著作権所有",
+    "laserTag": "レーザータグ事業 / Laser Tag Project",
+    "themeLink": "Tailwind Next.js Theme",
+    "itSolutions": "IT Solutions"
+  },
+  "blogPost": {
+    "publishedDate": "公開日",
+    "author": "著者",
+    "tags": "タグ",
+    "previousArticle": "前の記事",
+    "nextArticle": "次の記事",
+    "backToBlog": "← ブログ一覧へ戻る"
+  },
+  "pageTitles": {
+    "home": "ホーム - Delta Quest",
+    "about": "会社概要 - Delta Quest",
+    "services": "サービス - Delta Quest",
+    "blog": "ブログ - Delta Quest",
+    "projects": "ポートフォリオ - Delta Quest",
+    "contact": "お問い合わせ - Delta Quest",
+    "blogPost": "{{title}} - Delta Quest"
+  },
+  "laserTag": {
+    "tagline": "ポータブルで高没入型のレーザータグを、日本のイベントに。",
+    "imageAlt": "Delta Quest VR Laser Tag",
+    "concept": {
+      "title": "コンセプト",
+      "description": "Delta Questは、eスポーツ大会、スタジアムイベント、アニメ・ゲーム系の展示会など、あらゆる大型イベントに導入可能なポータブル型レーザータグ体験です。VRやIPコラボを通じて、これまでにない“リアルなゲーム”を提供します。"
+    },
+    "features": {
+      "title": "特徴",
+      "list": {
+        "portable": "持ち運び可能なセットアップ：イベント現場に合わせて柔軟に対応",
+        "ipCollaboration": "IPコラボによるブランド体験：アニメ・ゲームとの連携でファン層に刺さる",
+        "competitive": "競技性＆ファミリー向け：スコアリング、チーム戦、親子参加もOK"
+      }
+    },
+    "targetEvents": {
+      "title": "対象イベント",
+      "description": "eスポーツ大会やスポーツイベント、アニメ・ゲーム系の展示会など、大規模なイベントに幅広く対応可能です。来場者とのエンゲージメントを高めたい主催者に最適なアトラクションです。"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "本サービスに関するご質問・コラボレーションのご相談は、お気軽にご連絡ください。"
+    }
+  },
+  "projects": {
+    "metaTitle": "ポートフォリオ",
+    "metaDescription": "デルタクエスト株式会社の過去のITプロジェクトをご紹介します。",
+    "pageTitle": "ポートフォリオ",
+    "pageDescription": "デルタクエスト株式会社が手がけたプロジェクトの一部をご紹介します。",
+    "noProjects": "現在、表示するプロジェクトはありません。",
+    "projectsData": {
+      "media-1p-ads": {
+        "title": "メディア向け1st Party Ads開発",
+        "description": "米国市場向けの1st Party Adsシステムの設計と実装をリード。 高速な広告配信システムの構築とパフォーマンス最適化を担当。",
+        "href": "/blog/media-1p-ads"
+      },
+      "logistics-redesign": {
+        "title": "国際物流プラットフォームの刷新",
+        "description": "国際物流プラットフォームのフルスタックアーキテクチャを刷新。UX/UIの改善と技術スタックの最適化を実施し、よりスケーラブルなシステム",
+        "href": "/blog/logistics-redesign"
+      }
+    }
+  },
+  "tagModule": {
+    "title": " All Posts",
+    "noTags": "Aucun tag disponible."
+  },
+  "about": {
+    "metaTitle": "デルタクエストについて",
+    "metaDescription": "デルタクエストのミッション、ビジョン、サービスをご紹介します。",
+    "title": "会社概要",
+    "visionTitle": "私たちのビジョン",
+    "visionStatements": [
+      "テクノロジーで企業の成長を加速する",
+      "シンプルで拡張性の高いシステムを提供する",
+      "ビジネスとイノベーションの架け橋になる"
+    ],
+    "ceoMessageTitle": "代表メッセージ",
+    "servicesTitle": "主要サービス",
+    "ceoMessage": "「テクノロジーの力で、企業が市場で競争力を持つためのサポートをしたい。私たちは、フロントエンド開発とシステム設計の専門知識を活かし、企業がスケーラブルで持続可能な成長を遂げるための支援を行っています。」",
+    "ceoName": "ケヴィン・ブルメ, デルタクエスト株式会社 代表",
+    "companyInfo": {
+      "title": "会社情報",
+      "missionTitle": "ミッション",
+      "companyNameLabel": "会社名",
+      "locationLabel": "所在地",
+      "activitiesLabel": "事業内容",
+      "ceoLabel": "代表",
+      "foundedLabel": "設立",
+      "capitalLabel": "資本金",
+      "contactLabel": "お問い合わせ",
+      "companyName": "デルタクエスト株式会社",
+      "location": "札幌市中央区南5条西15丁目2-3",
+      "activities": "フロントエンド開発、Webアプリ構築、SEO最適化、CI/CD導入支援、クラウドインフラ設計",
+      "ceo": "ブルメ ケヴィン",
+      "founded": "2025年2月20日",
+      "capital": "500万円",
+      "contact": "info@deltaquest.co.jp",
+      "missionDescription": "デルタクエスト株式会社は、最先端のIT技術を活用し、企業がデジタル市場で成功するためのソリューションを提供します。私たちの目標は、直感的でスケーラブルなWebアプリケーションを構築し、ビジネスの成長を支援することです。"
+    }
+  },
+  "services": {
+    "frontend": {
+      "title": "フロントエンド開発",
+      "description": "モダンなWebアプリケーションを構築し、ユーザー体験を向上"
+    },
+    "nextReact": {
+      "title": "Next.js/ReactによるWebソリューション",
+      "description": "高性能なWebサイトやアプリケーションを開発"
+    },
+    "seoPerf": {
+      "title": "SEO & パフォーマンス最適化",
+      "description": "検索エンジン最適化とサイト高速化でビジネスの可視性を向上"
+    },
+    "cicd": {
+      "title": "CI/CD導入支援",
+      "description": "継続的インテグレーションとデリバリーを最適化し、開発の効率を向上"
+    },
+    "cloudInfra": {
+      "title": "クラウドインフラ設計",
+      "description": "AWSやGCPを活用したスケーラブルなシステムアーキテクチャを設計"
+    },
+    "aiConsulting": {
+      "title": "AIコンサルティング",
+      "description": "AI活用による業務自動化の導入支援"
+    }
+  },
+  "blogPage": {
+    "title": "すべての記事",
+    "searchArticles": "記事を検索",
+    "noPostsFound": "記事が見つかりません。",
+    "previous": "前へ",
+    "next": "次へ",
+    "pageOf": "ページ {current} / {total}",
+    "publishedOn": "公開日"
+  },
+  "legalPage": {
+    "metaTitle": "利用規約、プライバシーポリシー",
+    "metaDescription": "Read the legal notice and privacy policy of Delta Quest.",
+    "title": "利用規約、プライバシーポリシー",
+    "termsTitle": "利用規約",
+    "termsText": "本ウェブサイトはデルタクエスト株式会社（以下、「当社」といいます）が運営しています。 本ウェブサイトを利用される際には、以下の利用規約に同意したものとみなします。",
+    "disclaimerTitle": "免責事項",
+    "disclaimerText": "当社は、本ウェブサイトに掲載される情報の正確性・最新性の確保に努めていますが、誤りや不備がある場合があります。 本ウェブサイトの情報を利用することで発生したいかなる損害に対しても、当社は一切の責任を負いません。",
+    "copyrightTitle": "著作権",
+    "copyrightText": "本ウェブサイトに掲載されているコンテンツ（文章、画像、デザイン、プログラム等）は、特別な記載がない限り、当社が著作権を有します。 これらのコンテンツの無断転載・複製・配布を禁止します。",
+    "privacyTitle": "プライバシーポリシー",
+    "privacyText": "当社は、お客様の個人情報を適切に管理し、以下のプライバシーポリシーに基づいて取り扱います。",
+    "infoCollectedTitle": "収集する情報",
+    "infoCollectedText": "本ウェブサイトでは、以下の目的のために、お客様の個人情報を収集する場合があります：",
+    "infoCollectedList": "お問い合わせフォームの利用|サービス向上のための分析|その他、お客様へのご連絡",
+    "dataProtectionTitle": "個人情報の保護",
+    "dataProtectionText": "当社は、お客様の個人情報を第三者に提供・開示することはありません。ただし、法律の適用を受ける場合や公的機関からの要請があった場合を除きます。",
+    "contactTitle": "お問い合わせ",
+    "contactText": "本規約またはプライバシーポリシーに関するご質問がございましたら、以下までご連絡ください：",
+    "emailLabel": "メール:",
+    "email": "info@deltaquest.co.jp"
+  },
+  "servicesPage": {
+    "metaTitle": "サービス",
+    "metaDescription": "デルタクエスト株式会社が提供するITサービスをご紹介します。",
+    "title": "サービス",
+    "intro": "デルタクエスト株式会社は、最先端のIT技術を活用し、お客様のビジネス課題を解決するための高品質なITサービスを提供します。 フロントエンド開発からクラウドインフラの最適化まで、幅広いニーズに対応可能です。",
+    "ourServicesTitle": "提供するITサービス",
+    "contactTitle": "ご相談・お問い合わせ",
+    "contactDescription": "ご興味のある方は、お気軽にお問い合わせください。",
+    "contactButton": "お問い合わせはこちら",
+    "whyTitle": "なぜデルタクエスト？",
+    "reasons": {
+      "expertise": {
+        "title": "革新的なソリューション",
+        "description": "最新技術とアイデアで、最適なITソリューションを提供します。"
+      },
+      "scalability": {
+        "title": "迅速な対応",
+        "description": "プロジェクトに迅速に対応し、スピーディーに成果を出します。"
+      },
+      "support": {
+        "title": "信頼できるパートナー",
+        "description": "豊富な経験と高品質な開発で、安心して任せられます。"
+      }
+    }
+  },
+  "contactPageForm": {
+    "title": "お問い合わせフォーム",
+    "nameLabel": "お名前",
+    "emailLabel": "メールアドレス",
+    "messageLabel": "お問い合わせ内容",
+    "submitButton": "送信",
+    "successTitle": "メッセージを送信しました！",
+    "successMessage": "ご連絡ありがとうございます。追ってご連絡いたします。",
+    "sendError": "フォームの送信に失敗しました。もう一度お試しください。"
+  },
+  "contactPage": {
+    "metaTitle": "デルタクエストへのお問い合わせ",
+    "metaDescription": "デルタクエストのITサービスに関するご質問やご依頼はこちらからお問い合わせください。",
+    "title": "お問い合わせ",
+    "intro": "デルタクエスト株式会社のITサービスに関するご質問・ご相談がございましたら、以下の方法でお気軽にお問い合わせください。",
+    "contactMethodsTitle": "お問い合わせ方法",
+    "emailLabel": "メール",
+    "email": "info@deltaquest.co.jp",
+    "locationLabel": "所在地",
+    "location": "日本、札幌市",
+    "locationNote": "※詳細はお問い合わせ時にお伝えいたします"
+  },
+  "privacyPolicy": {
+    "metaTitle": "デルタクエスト株式会社 プライバシーポリシー",
+    "metaDescription": "デルタクエスト株式会社 プライバシーポリシー。個人情報の収集、使用、保護方法についてご説明します。",
+    "title": "デルタクエスト株式会社 プライバシーポリシー",
+    "effectiveDate": "施行日:",
+    "effectiveDateValue": "2025年9月3日",
+    "languageToggle": {
+      "japanese": "日本語",
+      "english": "English"
+    },
+    "keyPointSummary": {
+      "title": "重要ポイント要約（平易な言葉）",
+      "points": [
+        "私たち（<strong>デルタクエスト株式会社</strong>）は広告を表示し、ゲームを改善するためにゲームプレイを測定します。",
+        "広告・分析パートナー（下記に記載）は広告ID、デバイス詳細、ゲームプレイイベントおよびクラッシュログを受信します。",
+        "デバイス設定または<a href=\"#section-6\" class=\"text-blue-600 hover:underline dark:text-blue-400\">第6節</a>のパートナーリンクでパーソナライズ広告を制限できます。",
+        "私たちは本名、メールアドレス、正確なGPSを要求せず、リモートプッシュ通知も送信しません。",
+        "お困りの際は、DPOにお問い合わせください（<a href=\"#section-16\" class=\"text-blue-600 hover:underline dark:text-blue-400\">第16節参照</a>）。"
+      ],
+      "note": "この要約は概要のみです - 下記の完全なポリシーをお読みください。"
+    },
+    "sections": {
+      "scope": {
+        "title": "1. 適用範囲",
+        "content": "このポリシーは、デルタクエスト株式会社（「<strong>私たち</strong>」、「<strong>当社</strong>」、「<strong>弊社</strong>」）がAndroidまたはiOSで<strong>At All Costs</strong>（「<strong>ゲーム</strong>」）をプレイする際にデータを収集、使用、共有する方法を説明します。Google Playのデータ安全性セクションとApple App Storeのアプリプライバシー詳細に表示される開示事項と一致します。"
+      },
+      "dataCollection": {
+        "title": "2. 収集・受信するデータ",
+        "intro": "当社は分析、クラッシュ診断、広告の提供のために第三者サービスを利用します。これらのSDKがアプリ内で実行されると、お客様のデバイスは当社のサービス提供者に直接通信し、彼らは集計されたダッシュボードやレポートを当社と共有します。当社はお客様の個人情報を販売しません。詳細は<a href=\"#section-3\" class=\"text-blue-600 hover:underline dark:text-blue-400\">第3節</a>をご覧ください。",
+        "categories": "設定・デバイス・地域に応じて処理される可能性のあるデータのカテゴリ：",
+        "dataTypes": [
+          {
+            "name": "デバイス・アプリ情報",
+            "description": "デバイスモデル、OS/バージョン、画面サイズ、言語、アプリバージョン。"
+          },
+          {
+            "name": "広告識別子",
+            "description": "Android は GAID/AdID、iOS は IDFA（iOS で追跡を許可した場合のみ）。"
+          },
+          {
+            "name": "ネットワーク由来の地域",
+            "description": "国/地域を概ね推定するためにのみ使用する粗いIP。"
+          },
+          {
+            "name": "利用状況・イベント",
+            "description": "分析とプロダクト改善のためのアプリ内操作。"
+          },
+          {
+            "name": "診断",
+            "description": "クラッシュトレース、パフォーマンスメトリクス。"
+          }
+        ],
+        "usage": "当社はこれらの情報を、アプリの運営・改善、機能の理解、キャンペーンの効果測定、問題の修正に利用します。"
+      },
+      "thirdPartyServices": {
+        "title": "3. 第三者SDKとサービスプロバイダー",
+        "intro": "これらのプロバイダーは、そのSDKが有効なときにお客様のデバイスから直接データを受信します。彼らは当社へのサービス提供のためにそれを処理し、限定された目的において処理者および/または独立した管理者として行動する場合があります。詳細は各プライバシー通知をご確認ください。",
+        "table": {
+          "headers": {
+            "partner": "パートナー",
+            "purpose": "目的",
+            "dataShared": "共有される典型的なデータ",
+            "optOut": "オプトアウト / 情報"
+          },
+          "rows": [
+            {
+              "partner": "Google AdMob / Ad Manager",
+              "purpose": "広告配信と測定",
+              "dataShared": "広告ID、地域（IP由来）、デバイス/アプリ情報、基本的な利用状況",
+              "optOut": "<a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">「Google がデータを使用する仕組み」および広告設定</a>"
+            },
+            {
+              "partner": "Firebase Analytics（Google）",
+              "purpose": "プロダクト分析（アプリ向け GA4）",
+              "dataShared": "アプリイベント、デバイス/アプリ情報（Google シグナルが有効な場合は該当データ）",
+              "optOut": "<a href=\"https://support.google.com/analytics/answer/6004245\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">プライバシーとデータ保持のコントロール</a>"
+            },
+            {
+              "partner": "Firebase Crashlytics（Google）",
+              "purpose": "クラッシュ診断",
+              "dataShared": "クラッシュトレース、デバイス/アプリのコンテキスト、セッション/インストール ID",
+              "optOut": "<a href=\"https://firebase.google.com/support/privacy#crashlytics\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">プライバシーとクラッシュデータの90日保持</a>"
+            },
+            {
+              "partner": "Expo",
+              "purpose": "アプリ更新と診断",
+              "dataShared": "デバイス/アプリ情報、利用状況とクラッシュ診断",
+              "optOut": "<a href=\"https://expo.dev/privacy\" target=\"_blank\" rel=\"noopener\" class=\"text-blue-600 hover:underline dark:text-blue-400\">Expo プライバシーポリシー</a>"
+            }
+          ]
+        },
+        "internalReporting": "社内レポート: Google Analytics/GA4 および Looker Studio のダッシュボードを用いて分析を閲覧する場合があります。これによりお客様のデバイスに新たなSDKが追加されることはありません。"
+      },
+      "howWeUseInfo": {
+        "title": "4. 情報の使用方法と理由",
+        "uses": [
+          "<strong>ゲームの運営と改善</strong>（正当な利益または契約の履行）。",
+          "<strong>広告の配信とパフォーマンス測定</strong>（必要な場合の同意）。"
+        ]
+      },
+      "futureFeatures": {
+        "title": "5. 将来の機能",
+        "intro": "将来のアップデートで以下の機能を追加する可能性があります：",
+        "features": [
+          "<strong>アプリ内プライバシーコントロール</strong> - 広告パーソナライゼーションを制御するゲーム内のトグル。",
+          "<strong>不正防止システム</strong> - フェアプレイを確保し、不正を防ぐための追加措置。"
+        ],
+        "note": "これらの機能が実装された際は、このポリシーを更新し、アプリ内アナウンスまたはウェブサイトでユーザーに通知します。"
+      },
+      "adPersonalization": {
+        "title": "6. 広告パーソナライゼーションの選択",
+        "options": [
+          {
+            "title": "<strong>デバイスコントロール</strong>",
+            "details": [
+              "Android 14: 設定 → プライバシー → 広告 → 「広告IDを削除」",
+              "Android 13-: 設定 → プライバシー → 広告 → 「広告パーソナライゼーションをオプトアウト」",
+              "iOS: 設定 → プライバシーとセキュリティ → 追跡 → 「アプリに追跡を要求することを許可」を無効化"
+            ]
+          },
+          {
+            "title": "<strong>グローバルプライバシーコントロールまたは広告追跡制限</strong>",
+            "details": [
+              "ゲームはこれらの信号を尊重し、パートナーに転送します。"
+            ]
+          },
+          {
+            "title": "<strong>パートナーポータル</strong>",
+            "details": [
+              "<a href=\"#section-3\" class=\"text-blue-600 hover:underline dark:text-blue-400\">第3節</a>のオプトアウトリンクを参照してください。"
+            ]
+          }
+        ],
+        "note": "アプリ内トグルはロードマップに含まれています。それまでは上記の方法をご利用ください。"
+      },
+      "legalBases": {
+        "title": "7. 法的根拠（EEAとUK）",
+        "bases": [
+          "<strong>同意</strong> - パーソナライズ広告。",
+          "<strong>正当な利益</strong> - ゲーム運営と改善。",
+          "<strong>契約の履行</strong> - お客様が要求するゲームプレイとアプリ内購入の提供。"
+        ]
+      },
+      "dataRetention": {
+        "title": "8. データ保持",
+        "content": "生の分析ログは、パートナーによって24ヶ月を超えて保持されません（より短いデフォルトを提供する場合は短くなります）。<br>集約された、識別不可能な統計は、トレンド分析のために無期限に保存される場合があります。"
+      },
+      "regionSpecific": {
+        "title": "9. 地域固有の開示",
+        "content": "<strong>ブラジル（LGPD）:</strong> お客様にはデータへのアクセス、修正、削除の権利があります。行使するにはお問い合わせください。<br><strong>カナダ（PIPEDA）:</strong> 当社の慣行は10の公正情報原則に準拠しています。<br><strong>オーストラリア（Privacy Act 1988）:</strong> 適切な保護が適用されない限り、オーストラリア国外に個人データを転送しません。<br><strong>その他の地域:</strong> お客様の居住地に適用される権利を尊重します。"
+      },
+      "internationalTransfers": {
+        "title": "10. 国際データ転送",
+        "content": "当社は日本に本社を置いています。パートナーがEEAまたはUK国外にデータを転送する場合、彼らは標準契約条項または同等の保護措置に依存します。"
+      },
+      "californiaRights": {
+        "title": "11. カリフォルニア州プライバシー権（CCPAとCPRA）",
+        "rights": [
+          "お客様には個人情報を<strong>知る</strong>、<strong>削除</strong>、<strong>修正</strong>する権利があります。",
+          "当社はクロスコンテキスト行動広告のために識別子を「共有」します。デバイスコントロールまたはパートナーリンクを使用してオプトアウトしてください。",
+          "お客様のデータに対する金銭的インセンティブは提供されません。"
+        ]
+      },
+      "childrensPrivacy": {
+        "title": "12. 児童のプライバシー",
+        "content": "ゲームは12歳以上のユーザー向けです。12歳未満の児童から個人データを故意に収集することはありません。<br>そのような収集に気づいた場合、できるだけ早く情報を削除するか、親の同意を求めます。"
+      },
+      "securityMeasures": {
+        "title": "13. セキュリティ対策",
+        "content": "当社は、転送中のデータにはTLS 1.2以上、保存時のデータにはパートナーレベルの暗号化を含む業界標準の慣行に従って情報を保護します。<br>転送や保存の方法は100%安全ではありませんが、定期的な監査とアクセス制御を通じてリスクを軽減することを目指しています。"
+      },
+      "yourRights": {
+        "title": "14. お客様の権利と行使方法",
+        "content": "お客様の所在地に応じて、データへのアクセス、修正、削除、制限、または移植性を要求できます。<br><a href=\"mailto:support@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">support@deltaquest.co.jp</a>にリクエストを送信してください。当社（またはパートナー）は30日以内に回答します。"
+      },
+      "policyChanges": {
+        "title": "15. このポリシーの変更",
+        "content": "当社はこのポリシーを随時更新する場合があります。重要な変更は、発効の少なくとも7日前にアプリ内またはウェブサイトで発表されます。"
+      },
+      "contactUs": {
+        "title": "16. お問い合わせ",
+        "content": "デルタクエスト株式会社<br/>日本〒064-0805 北海道札幌市<br/><a href=\"mailto:support@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">support@deltaquest.co.jp</a><br/>データ保護責任者（ブルメ・ケヴィン）: <a href=\"mailto:dpo@deltaquest.co.jp\" class=\"text-blue-600 hover:underline dark:text-blue-400\">kevin.bulme@deltaquest.co.jp</a>"
+      },
+      "glossary": {
+        "title": "17. 用語集",
+        "terms": [
+          {
+            "term": "<strong>広告ID</strong>",
+            "definition": "システム設定からリセットされるデバイスレベルのID（GAIDまたはIDFA）。"
+          },
+          {
+            "term": "<strong>個人情報</strong>",
+            "definition": "個人を識別または合理的に識別できるデータ。"
+          },
+          {
+            "term": "<strong>標準契約条項（SCCs）</strong>",
+            "definition": "国境を越えた転送のためのEUモデル条項。"
+          }
+        ]
+      }
+    },
+    "backToTop": "↑ トップに戻る"
+  }
+}

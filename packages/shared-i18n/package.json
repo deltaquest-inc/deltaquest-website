@@ -1,0 +1,9 @@
+{
+  "name": "@deltaquest/shared-i18n",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.js",
+  "dependencies": {
+    "next-intl": "^4.3.5"
+  }
+}

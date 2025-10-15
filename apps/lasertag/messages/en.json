@@ -1,0 +1,29 @@
+{
+  "header": {
+    "title": "DeltaQuest LaserTag"
+  },
+  "laserTag": {
+    "tagline": "Portable and highly immersive laser tag for Japanese events.",
+    "imageAlt": "Delta Quest VR Laser Tag",
+    "concept": {
+      "title": "Concept",
+      "description": "Delta Quest is a portable and highly immersive laser tag experience that can be integrated into all kinds of large-scale events in Japan, such as e-sports tournaments, stadium events, and anime/game conventions. We offer an unprecedented 'real game' experience through VR and IP collaborations."
+    },
+    "features": {
+      "title": "Features",
+      "list": {
+        "portable": "Portable setup: Adapts flexibly to any event location.",
+        "ipCollaboration": "Brand experience through IP collaboration: Interacts with the fan base by partnering with anime and games.",
+        "competitive": "Competitive and family-friendly: The game features a scoring system, team matches, and can be enjoyed by parents and children alike."
+      }
+    },
+    "targetEvents": {
+      "title": "Target Events",
+      "description": "Ideal for e-sports tournaments, sports events, anime/game conventions, and many other large-scale events. It's the perfect attraction for organizers who want to increase visitor engagement."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "For any questions or collaboration inquiries regarding this service, please feel free to contact us."
+    }
+  }
+}
