@@ -4,12 +4,15 @@ import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
 import { notFound } from 'next/navigation'
 
+export const dynamic = 'force-static'
+export const dynamicParams = false
+
 interface Props {
-  params: Promise<{ locale: string; slug: string }>
+  params: { locale: string; slug: string }
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params
+  const { slug } = params
   const author = allAuthors.find((p) => p.slug === slug)
   if (!author) {
     return genPageMetadata({
@@ -24,14 +27,15 @@ export async function generateMetadata({ params }: Props) {
   })
 }
 
+const LOCALES = ['fr', 'en', 'ja'] as const
 export async function generateStaticParams() {
-  return allAuthors.map((author) => ({
-    slug: author.slug,
-  }))
+  return LOCALES.flatMap((locale) =>
+    allAuthors.map((author) => ({ locale, slug: author.slug }))
+  )
 }
 
 export default async function Page({ params }: Props) {
-  const { slug } = await params
+  const { slug } = params
   const author = allAuthors.find((p) => p.slug === slug)
 
   if (!author) {
