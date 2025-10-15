@@ -41,8 +41,10 @@ export default function Footer() {
             <>
               <div>{` • `}</div>
               <Link
-                href="/laser-tag"
+                href="https://lasertag.deltaquest.co.jp"
                 className="hover:text-primary-500 dark:hover:text-primary-400 underline"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {t('laserTag')}
               </Link>
