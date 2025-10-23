@@ -11,7 +11,100 @@
       "contactButton": "Contact Support",
       "copyButton": "Copy Email",
       "urgentInfo": "For urgent matters, you can also reach us at:",
-      "email": "apps@deltaquest.co.jp"
+      "email": "apps@deltaquest.co.jp",
+      "showFormButton": "Show Contact Form",
+      "hideFormButton": "Hide Form"
+    },
+    "contactForm": {
+      "title": "Contact Support",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "subjectLabel": "Subject",
+      "selectSubject": "Select a subject",
+      "technicalSupport": "Technical Support",
+      "gameBug": "Game Bug Report",
+      "accountIssue": "Account Issue",
+      "billing": "Billing Question",
+      "other": "Other",
+      "messageLabel": "Message",
+      "submitButton": "Send Message",
+      "successTitle": "Message Sent!",
+      "successMessage": "Thank you for contacting us. We'll get back to you soon!",
+      "errorMessage": "Failed to send message. Please try again."
+    }
+  },
+  "atallcosts": {
+    "hero": {
+      "title": "Help us grow this still-in-development game with your voice.",
+      "subtitle": "Your words will shape the future of this game.",
+      "ctaButton": "Join the Development"
+    },
+    "devMessage": {
+      "title": "Message from the Development Team",
+      "message1": "Your voice will make this game more interesting.",
+      "message2": "We are now collecting feedback from everyone to make this game better.",
+      "message3": "There are still incomplete parts, but real opinions are what lead to the next step.",
+      "message4": "This is not the stage of advertising or promotion, but the stage of 'playing and getting opinions'.",
+      "message5": "Bug reports, ideas, impressions - everything is welcome. Every small voice is an important hint for the development team.",
+      "message6": "Please lend us a little strength.",
+      "signature": "From Kevin"
+    },
+    "cta": {
+      "title": "Join Now",
+      "primaryButton": "Join the Development",
+      "note": "This is a test version still in development. After playing, please share your thoughts."
+    },
+    "feedback": {
+      "title": "Send Feedback",
+      "subtitle": "You can share your feedback through the following three channels.",
+      "discord": {
+        "title": "Join the Discord community",
+        "button": "Join Discord",
+        "tooltip": "Exchange opinions with the development team and other players"
+      },
+      "x": {
+        "title": "Post your thoughts on X",
+        "button": "Post #AtAllCosts",
+        "tooltip": "Share your impressions with hashtags"
+      },
+      "form": {
+        "title": "Submit structured feedback",
+        "button": "Answer Survey",
+        "tooltip": "Send your opinion in survey format"
+      }
+    },
+    "gameIntro": {
+      "title": "About the Game",
+      "description": "A new RPG experience themed on politics and strategy. Your choices drive the story.",
+      "charactersTitle": "Meet the Characters",
+      "character1": {
+        "name": "Alex",
+        "role": "Protagonist",
+        "description": "A newcomer politician who has stepped into the world of politics"
+      },
+      "character2": {
+        "name": "Sarah",
+        "role": "Mentor",
+        "description": "An experienced political advisor"
+      },
+      "character3": {
+        "name": "Marco",
+        "role": "Rival",
+        "description": "A young politician from an opposing party"
+      },
+      "character4": {
+        "name": "Elena",
+        "role": "Supporter",
+        "description": "Leader of a citizens' movement"
+      }
+    },
+    "finalNote": {
+      "title": "Final Message from the Team",
+      "message1": "We want to complete this work together with all the players.",
+      "message2": "Whether it's impressions or improvement suggestions, your words will drive the next update.",
+      "message3": "We are challenging ourselves with a political RPG from Sapporo.",
+      "message4": "Creating a game that can compete globally from a local city.",
+      "message5": "Your opinion becomes the power that moves this world."
     }
   }
 }

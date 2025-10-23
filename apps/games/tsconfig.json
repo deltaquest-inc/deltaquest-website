@@ -22,6 +22,7 @@
       "@/layouts/*": ["layouts/*"],
       "@/css/*": ["css/*"],
       "@/utils/*": ["utils/*"],
+      "@/lib/*": ["lib/*"],
       "@deltaquest/shared-ui": ["../../packages/shared-ui"],
       "@deltaquest/shared-i18n": ["../../packages/shared-i18n"],
       "@deltaquest/shared-config": ["../../packages/shared-config"],
