@@ -1,0 +1,12 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="600" fill="url(#gradient)"/>
+<defs>
+<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0D1B2A"/>
+<stop offset="50%" stop-color="#1E4A63"/>
+<stop offset="100%" stop-color="#2C37D6"/>
+</linearGradient>
+</defs>
+<text x="600" y="300" text-anchor="middle" fill="#F2C94C" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Sapporo Winter Night</text>
+<text x="600" y="350" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24">Hero Background Placeholder</text>
+</svg>

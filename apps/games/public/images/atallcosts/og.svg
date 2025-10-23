@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="630" fill="url(#gradient)"/>
+<defs>
+<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0D1B2A"/>
+<stop offset="50%" stop-color="#1E4A63"/>
+<stop offset="100%" stop-color="#2C37D6"/>
+</linearGradient>
+</defs>
+<text x="600" y="250" text-anchor="middle" fill="#F2C94C" font-family="Arial, sans-serif" font-size="64" font-weight="bold">At All Costs</text>
+<text x="600" y="320" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="32">プレイヤーと一緒にゲームを育てる</text>
+<text x="600" y="380" text-anchor="middle" fill="#A9B8C9" font-family="Arial, sans-serif" font-size="24">札幌発・政治系RPGの開発に参加しよう</text>
+<text x="600" y="450" text-anchor="middle" fill="#1E90FF" font-family="Arial, sans-serif" font-size="20">Let's build this game together</text>
+</svg>

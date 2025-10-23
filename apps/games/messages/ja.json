@@ -11,7 +11,100 @@
       "contactButton": "サポートに連絡",
       "copyButton": "メールをコピー",
       "urgentInfo": "緊急の場合は、以下のアドレスでもお問い合わせいただけます：",
-      "email": "apps@deltaquest.co.jp"
+      "email": "apps@deltaquest.co.jp",
+      "showFormButton": "フォームを表示",
+      "hideFormButton": "フォームを非表示"
+    },
+    "contactForm": {
+      "title": "サポートに連絡",
+      "nameLabel": "お名前",
+      "emailLabel": "メールアドレス",
+      "subjectLabel": "件名",
+      "selectSubject": "件名を選択してください",
+      "technicalSupport": "技術サポート",
+      "gameBug": "ゲームバグ報告",
+      "accountIssue": "アカウント問題",
+      "billing": "請求に関する質問",
+      "other": "その他",
+      "messageLabel": "メッセージ",
+      "submitButton": "メッセージを送信",
+      "successTitle": "メッセージを送信しました！",
+      "successMessage": "お問い合わせいただき、ありがとうございます。すぐにご連絡いたします！",
+      "errorMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
+    }
+  },
+  "atallcosts": {
+    "hero": {
+      "title": "まだ開発途中のこのゲームを、あなたの声で育ててください。",
+      "subtitle": "あなたの一言が、このゲームの未来をつくります。",
+      "ctaButton": "開発に参加する"
+    },
+    "devMessage": {
+      "title": "開発チームからのメッセージ",
+      "message1": "あなたの声が、このゲームをもっと面白くする。",
+      "message2": "私たちは今、このゲームをより良くするために、みなさんのフィードバックを集めています。",
+      "message3": "まだ完成していない部分もありますが、リアルな意見こそ、次の一歩につながります。",
+      "message4": "今は広告や宣伝の段階ではなく、「プレイして、意見をもらう段階」です。",
+      "message5": "バグ報告、アイデア、感想、なんでも歓迎です。どんな小さな声も、開発チームにとって大切なヒントになります。",
+      "message6": "どうか、少しだけ力を貸してください。",
+      "signature": "ケヴィンより"
+    },
+    "cta": {
+      "title": "今すぐ参加しよう",
+      "primaryButton": "開発に参加する",
+      "note": "このゲームはまだ開発中のテスト版です。体験後、ぜひご意見をお聞かせください。"
+    },
+    "feedback": {
+      "title": "フィードバックを送る",
+      "subtitle": "以下の3つの方法で、あなたの意見を届けてください。",
+      "discord": {
+        "title": "Discordで意見交換する",
+        "button": "Discordで参加",
+        "tooltip": "開発チームや他のプレイヤーと意見交換できます"
+      },
+      "x": {
+        "title": "X（旧Twitter）でポストする",
+        "button": "#AtAllCosts をポスト",
+        "tooltip": "ハッシュタグで感想を共有してください"
+      },
+      "form": {
+        "title": "Googleフォームで回答する",
+        "button": "アンケートに答える",
+        "tooltip": "アンケート形式で意見を送れます"
+      }
+    },
+    "gameIntro": {
+      "title": "このゲームについて",
+      "description": "政治と戦略をテーマにした新しいRPG体験。あなたの選択が物語を動かす。",
+      "charactersTitle": "キャラクター紹介",
+      "character1": {
+        "name": "アレックス",
+        "role": "主人公",
+        "description": "政治の世界に足を踏み入れた新人政治家"
+      },
+      "character2": {
+        "name": "サラ",
+        "role": "メンター",
+        "description": "経験豊富な政治顧問"
+      },
+      "character3": {
+        "name": "マルコ",
+        "role": "ライバル",
+        "description": "対立する政党の若手政治家"
+      },
+      "character4": {
+        "name": "エレナ",
+        "role": "サポーター",
+        "description": "市民運動のリーダー"
+      }
+    },
+    "finalNote": {
+      "title": "開発チームからのメッセージ（最後に）",
+      "message1": "私たちはこの作品を、プレイヤーのみなさんと一緒に完成させたいと思っています。",
+      "message2": "感想でも、改善提案でも構いません。あなたの一言が、次のアップデートを動かします。",
+      "message3": "札幌発の政治系RPGに挑戦しています。",
+      "message4": "地方都市から世界へ通用するゲームをつくる。",
+      "message5": "あなたの意見が、この世界を動かす力になります。"
     }
   }
 }

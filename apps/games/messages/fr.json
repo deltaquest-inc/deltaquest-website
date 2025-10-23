@@ -13,6 +13,80 @@
       "urgentInfo": "Pour les questions urgentes, vous pouvez également nous joindre à :",
       "email": "apps@deltaquest.co.jp"
     }
+  },
+  "atallcosts": {
+    "hero": {
+      "title": "Aidez-nous à faire grandir ce jeu encore en développement avec votre voix.",
+      "subtitle": "Vos mots façonneront l'avenir de ce jeu.",
+      "ctaButton": "Rejoindre le développement"
+    },
+    "devMessage": {
+      "title": "Message de l'équipe de développement",
+      "message1": "Votre voix rendra ce jeu plus intéressant.",
+      "message2": "Nous collectons maintenant les retours de tous pour améliorer ce jeu.",
+      "message3": "Il y a encore des parties incomplètes, mais les vraies opinions sont ce qui mène à l'étape suivante.",
+      "message4": "Ce n'est pas le stade de la publicité ou de la promotion, mais le stade de 'jouer et obtenir des opinions'.",
+      "message5": "Rapports de bugs, idées, impressions - tout est bienvenu. Chaque petite voix est un indice important pour l'équipe de développement.",
+      "message6": "Veuillez nous prêter un peu de force.",
+      "signature": "De Kevin"
+    },
+    "cta": {
+      "title": "Rejoignez maintenant",
+      "primaryButton": "Rejoindre le développement",
+      "note": "Ceci est une version de test encore en développement. Après avoir joué, partagez vos pensées."
+    },
+    "feedback": {
+      "title": "Envoyer des commentaires",
+      "subtitle": "Vous pouvez partager vos commentaires via les trois canaux suivants.",
+      "discord": {
+        "title": "Rejoindre la communauté Discord",
+        "button": "Rejoindre Discord",
+        "tooltip": "Échanger des opinions avec l'équipe de développement et d'autres joueurs"
+      },
+      "x": {
+        "title": "Publier vos pensées sur X",
+        "button": "Publier #AtAllCosts",
+        "tooltip": "Partager vos impressions avec des hashtags"
+      },
+      "form": {
+        "title": "Soumettre des commentaires structurés",
+        "button": "Répondre au sondage",
+        "tooltip": "Envoyer votre opinion au format sondage"
+      }
+    },
+    "gameIntro": {
+      "title": "À propos du jeu",
+      "description": "Une nouvelle expérience RPG sur le thème de la politique et de la stratégie. Vos choix font avancer l'histoire.",
+      "charactersTitle": "Rencontrez les personnages",
+      "character1": {
+        "name": "Alex",
+        "role": "Protagoniste",
+        "description": "Un nouveau politicien qui a mis le pied dans le monde de la politique"
+      },
+      "character2": {
+        "name": "Sarah",
+        "role": "Mentor",
+        "description": "Une conseillère politique expérimentée"
+      },
+      "character3": {
+        "name": "Marco",
+        "role": "Rival",
+        "description": "Un jeune politicien d'un parti opposé"
+      },
+      "character4": {
+        "name": "Elena",
+        "role": "Supporter",
+        "description": "Leader d'un mouvement citoyen"
+      }
+    },
+    "finalNote": {
+      "title": "Message final de l'équipe",
+      "message1": "Nous voulons compléter ce travail ensemble avec tous les joueurs.",
+      "message2": "Que ce soit des impressions ou des suggestions d'amélioration, vos mots feront avancer la prochaine mise à jour.",
+      "message3": "Nous nous lançons le défi d'un RPG politique de Sapporo.",
+      "message4": "Créer un jeu qui peut rivaliser mondialement depuis une ville locale.",
+      "message5": "Votre opinion devient le pouvoir qui fait bouger ce monde."
+    }
   }
 }
 
