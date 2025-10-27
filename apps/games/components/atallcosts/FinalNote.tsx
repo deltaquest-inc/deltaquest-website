@@ -6,14 +6,22 @@ const FinalNote = () => {
   const t = useTranslations('atallcosts.finalNote')
 
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-16 px-4">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: 'url(/images/atallcosts/final_bg.png)',
+        }}
+      />
+      
+      <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20 text-center"
+          className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             {t('title')}
@@ -35,3 +43,4 @@ const FinalNote = () => {
 }
 
 export default FinalNote
+

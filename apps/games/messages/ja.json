@@ -78,24 +78,24 @@
       "description": "政治と戦略をテーマにした新しいRPG体験。あなたの選択が物語を動かす。",
       "charactersTitle": "キャラクター紹介",
       "character1": {
-        "name": "アレックス",
-        "role": "主人公",
-        "description": "政治の世界に足を踏み入れた新人政治家"
+        "name": "外交官",
+        "role": "Diplomat",
+        "description": "国際関係と外交を担当する政治家"
       },
       "character2": {
-        "name": "サラ",
-        "role": "メンター",
-        "description": "経験豊富な政治顧問"
+        "name": "秘書",
+        "role": "Secretary",
+        "description": "政治活動を支える重要なサポート役"
       },
       "character3": {
-        "name": "マルコ",
-        "role": "ライバル",
-        "description": "対立する政党の若手政治家"
+        "name": "グリーン建築家",
+        "role": "GreenArchitect",
+        "description": "持続可能な都市計画を推進する建築家"
       },
       "character4": {
-        "name": "エレナ",
-        "role": "サポーター",
-        "description": "市民運動のリーダー"
+        "name": "オールドガード",
+        "role": "OldGuard",
+        "description": "伝統と経験を持つ政治のベテラン"
       }
     },
     "finalNote": {

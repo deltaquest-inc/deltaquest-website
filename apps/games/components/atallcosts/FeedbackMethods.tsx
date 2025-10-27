@@ -58,7 +58,7 @@ const FeedbackMethods = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-yellow-200">
+          <p className="text-xl" style={{ color: '#F2C94C' }}>
             {t('subtitle')}
           </p>
         </motion.div>
@@ -79,7 +79,8 @@ const FeedbackMethods = () => {
               </h3>
               <motion.button
                 onClick={method.onClick}
-                className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+                className="w-full px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+                style={{ backgroundColor: '#1E90FF' }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 aria-label={method.tooltip}

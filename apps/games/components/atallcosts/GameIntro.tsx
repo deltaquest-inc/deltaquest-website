@@ -13,8 +13,16 @@ const GameIntro = () => {
   ]
 
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-16 px-4">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+        style={{
+          backgroundImage: 'url(/images/atallcosts/character_grid_bg.png)',
+        }}
+      />
+      
+      <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,9 +33,17 @@ const GameIntro = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             {t('title')}
           </h2>
-          <p className="text-xl text-yellow-200 max-w-3xl mx-auto">
+          <p className="text-xl text-yellow-200 max-w-3xl mx-auto mb-8">
             {t('description')}
           </p>
+          
+          <div className="max-w-4xl mx-auto">
+            <img 
+              src="/images/atallcosts/world_preview.png" 
+              alt="Game World Preview" 
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
         </motion.div>
 
         <motion.div
@@ -51,8 +67,12 @@ const GameIntro = () => {
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl">
-                  {character.name.charAt(0)}
+                <div className="w-20 h-20 mx-auto mb-4">
+                  <img 
+                    src={`/images/atallcosts/character_0${index + 1}_${character.role}.png`}
+                    alt={character.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">
                   {character.name}
@@ -73,3 +93,4 @@ const GameIntro = () => {
 }
 
 export default GameIntro
+

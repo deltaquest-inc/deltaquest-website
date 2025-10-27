@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function AtAllCostsPage() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+    <div className="relative min-h-screen" style={{ backgroundColor: '#0D1B2A' }}>
       <SnowOverlay />
       
       <div className="relative z-10">

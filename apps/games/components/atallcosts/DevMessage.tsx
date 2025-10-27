@@ -19,6 +19,14 @@ const DevMessage = () => {
             {t('title')}
           </h2>
           
+          <div className="mb-6">
+            <img 
+              src="/images/atallcosts/team_photo.jpg" 
+              alt="開発チームの写真" 
+              className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white/20"
+            />
+          </div>
+          
           <blockquote className="text-lg md:text-xl text-yellow-100 leading-relaxed space-y-4">
             <p>{t('message1')}</p>
             <p>{t('message2')}</p>
@@ -37,3 +45,4 @@ const DevMessage = () => {
 }
 
 export default DevMessage
+

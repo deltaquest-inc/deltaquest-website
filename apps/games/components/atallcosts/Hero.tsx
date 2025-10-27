@@ -15,7 +15,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{
-          backgroundImage: 'url(/images/atallcosts/hero.svg)',
+          backgroundImage: 'url(/images/atallcosts/hero_main.png)',
         }}
       />
       
@@ -31,13 +31,14 @@ const Hero = () => {
             {t('title')}
           </h1>
           
-          <p className="text-xl md:text-2xl text-yellow-200 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: '#F2C94C' }}>
             {t('subtitle')}
           </p>
           
           <motion.button
             onClick={scrollToFeedback}
-            className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+            style={{ backgroundColor: '#1E90FF' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             aria-label={t('ctaButton')}

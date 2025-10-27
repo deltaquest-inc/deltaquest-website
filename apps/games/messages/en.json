@@ -78,24 +78,24 @@
       "description": "A new RPG experience themed on politics and strategy. Your choices drive the story.",
       "charactersTitle": "Meet the Characters",
       "character1": {
-        "name": "Alex",
-        "role": "Protagonist",
-        "description": "A newcomer politician who has stepped into the world of politics"
+        "name": "Diplomat",
+        "role": "Diplomat",
+        "description": "A politician specializing in international relations and diplomacy"
       },
       "character2": {
-        "name": "Sarah",
-        "role": "Mentor",
-        "description": "An experienced political advisor"
+        "name": "Secretary",
+        "role": "Secretary",
+        "description": "A crucial support role in political activities"
       },
       "character3": {
-        "name": "Marco",
-        "role": "Rival",
-        "description": "A young politician from an opposing party"
+        "name": "Green Architect",
+        "role": "GreenArchitect",
+        "description": "An architect promoting sustainable urban planning"
       },
       "character4": {
-        "name": "Elena",
-        "role": "Supporter",
-        "description": "Leader of a citizens' movement"
+        "name": "Old Guard",
+        "role": "OldGuard",
+        "description": "A political veteran with tradition and experience"
       }
     },
     "finalNote": {

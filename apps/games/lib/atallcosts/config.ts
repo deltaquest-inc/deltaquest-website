@@ -14,5 +14,5 @@ export const ATC_CONFIG = {
   // OG
   ogTitle: '札幌発・政治系RPGの開発に参加しよう｜At All Costs',
   ogDesc: '開発中のテスト版をプレイして、あなたの声でゲームを育ててください。バグ報告・アイデア・感想、なんでも歓迎。',
-  ogImage: '/images/atallcosts/og.svg', // add placeholder
+  ogImage: '/images/atallcosts/hero_og.png', // add placeholder
 }
