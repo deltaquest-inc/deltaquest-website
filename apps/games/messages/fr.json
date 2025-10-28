@@ -18,7 +18,8 @@
     "hero": {
       "title": "Participez à la création de notre jeu. Vos retours influenceront son avenir.",
       "subtitle": "Vos mots façonneront l'avenir de notre jeu.",
-      "ctaButton": "Rejoindre le développement"
+      "ctaButton": "Rejoindre le développement",
+      "notificationMessage": "Commençons la campagne et gagnons ces élections !",
     },
     "devMessage": {
       "title": "Message de l'équipe de développement",
@@ -61,7 +62,7 @@
       "character1": {
         "name": "Diplomate",
         "role": "Diplomat",
-        "description": "Un politicien spécialisé dans les relations internationales et la diplomatie"
+        "description": "Élevé dans une famille de politiciens de carrière et d'attachés aux affaires étrangères, le Diplomate a passé des années à travailler dans des ambassades et des tribunaux internationaux. Connu pour avoir négocié la paix entre des syndicats rivaux et dirigé des panels à l'ONU, il a bâti sa carrière sur le compromis, le charme et le prestige mondial. Aujourd'hui, il se lance dans la politique intérieure, promettant d'appliquer des « normes internationales » à la gouvernance nationale, et d'éviter les conflits à tout prix."
       },
       "character2": {
         "name": "Secrétaire",
@@ -77,6 +78,24 @@
         "name": "Ancienne Garde",
         "role": "OldGuard",
         "description": "Un vétéran politique avec tradition et expérience"
+      }
+    },
+    "team": {
+      "title": "Rencontrez l'équipe",
+      "member1": {
+        "name": "Kevin",
+        "role": "Lead Developer",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "member2": {
+        "name": "Charles",
+        "role": "Game Designer",
+        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      "member3": {
+        "name": "Diego",
+        "role": "Community Manager",
+        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       }
     },
     "finalNote": {
