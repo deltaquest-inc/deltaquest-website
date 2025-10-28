@@ -7,7 +7,7 @@
 /* Core theme configuration */
 @theme {
     /* Font families */
-    --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    --font-sans: var(--font-space-grotesk), 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     /* Colors */
@@ -66,5 +66,93 @@
         outline: 2px solid;
         border-radius: var(--radius-sm);
         outline-color: var(--color-primary-500);
+    }
+}
+
+/* Snow animations for AtAllCosts page */
+@keyframes snowfall-1 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes snowfall-2 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-30px) rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes snowfall-3 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) translateX(80px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+.animate-snowfall-1 {
+    animation: snowfall-1 linear infinite;
+}
+
+.animate-snowfall-2 {
+    animation: snowfall-2 linear infinite;
+}
+
+.animate-snowfall-3 {
+    animation: snowfall-3 linear infinite;
+}
+
+/* Character waving animation */
+@keyframes waving {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0);
+    }
+    10% {
+        transform: rotate(-8deg) translateY(-2px);
+    }
+    20% {
+        transform: rotate(8deg) translateY(-2px);
+    }
+    30% {
+        transform: rotate(-8deg) translateY(-2px);
+    }
+    40% {
+        transform: rotate(8deg) translateY(-2px);
+    }
+    50% {
+        transform: rotate(-8deg) translateY(-2px);
+    }
+    60% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .animate-snowfall-1,
+    .animate-snowfall-2,
+    .animate-snowfall-3 {
+        animation: none;
     }
 }

@@ -11,7 +11,119 @@
       "contactButton": "サポートに連絡",
       "copyButton": "メールをコピー",
       "urgentInfo": "緊急の場合は、以下のアドレスでもお問い合わせいただけます：",
-      "email": "apps@deltaquest.co.jp"
+      "email": "apps@deltaquest.co.jp",
+      "showFormButton": "フォームを表示",
+      "hideFormButton": "フォームを非表示"
+    },
+    "contactForm": {
+      "title": "サポートに連絡",
+      "nameLabel": "お名前",
+      "emailLabel": "メールアドレス",
+      "subjectLabel": "件名",
+      "selectSubject": "件名を選択してください",
+      "technicalSupport": "技術サポート",
+      "gameBug": "ゲームバグ報告",
+      "accountIssue": "アカウント問題",
+      "billing": "請求に関する質問",
+      "other": "その他",
+      "messageLabel": "メッセージ",
+      "submitButton": "メッセージを送信",
+      "successTitle": "メッセージを送信しました！",
+      "successMessage": "お問い合わせいただき、ありがとうございます。すぐにご連絡いたします！",
+      "errorMessage": "メッセージの送信に失敗しました。もう一度お試しください。"
+    }
+  },
+  "atallcosts": {
+    "hero": {
+      "title": "まだ開発途中のこのゲームを、あなたの声で育ててください。",
+      "subtitle": "あなたの一言が、このゲームの未来をつくります。",
+      "ctaButton": "開発に参加する",
+      "notificationMessage": "キャンペーンを始めて、この選挙で勝利しましょう！"
+    },
+    "devMessage": {
+      "title": "開発チームからのメッセージ",
+      "message1": "あなたの声が、このゲームをもっと面白くする。",
+      "message2": "私たちは今、このゲームをより良くするために、みなさんのフィードバックを集めています。",
+      "message3": "まだ完成していない部分もありますが、リアルな意見こそ、次の一歩につながります。",
+      "message4": "今は広告や宣伝の段階ではなく、「プレイして、意見をもらう段階」です。",
+      "message5": "バグ報告、アイデア、感想、なんでも歓迎です。どんな小さな声も、開発チームにとって大切なヒントになります。",
+      "message6": "どうか、少しだけ力を貸してください。",
+      "signature": "ケヴィンより"
+    },
+    "cta": {
+      "title": "今すぐ参加しよう",
+      "primaryButton": "開発に参加する",
+      "note": "このゲームはまだ開発中のテスト版です。体験後、ぜひご意見をお聞かせください。"
+    },
+    "feedback": {
+      "title": "フィードバックを送る",
+      "subtitle": "以下の3つの方法で、あなたの意見を届けてください。",
+      "discord": {
+        "title": "Discordで意見交換する",
+        "button": "Discordで参加",
+        "tooltip": "開発チームや他のプレイヤーと意見交換できます"
+      },
+      "x": {
+        "title": "X（旧Twitter）でポストする",
+        "button": "#AtAllCosts をポスト",
+        "tooltip": "ハッシュタグで感想を共有してください"
+      },
+      "form": {
+        "title": "Googleフォームで回答する",
+        "button": "アンケートに答える",
+        "tooltip": "アンケート形式で意見を送れます"
+      }
+    },
+    "gameIntro": {
+      "title": "このゲームについて",
+      "description": "政治と戦略をテーマにした新しいRPG体験。あなたの選択が物語を動かす。",
+      "charactersTitle": "キャラクター紹介",
+      "character1": {
+        "name": "外交官",
+        "role": "Diplomat",
+        "description": "生粋の政治家一家と外交官の家庭に生まれたディプロマットは、長年にわたり大使館や国際裁判所で活動してきた。労働組合間の対立を調停し、国連でパネルを主導した経験を持つ彼らは、妥協、魅力、そして世界的な名声によってキャリアを築いてきた。今、国内政治に乗り出し、「国際基準」を導入すると宣言し、いかなる対立も回避する姿勢を示している。"
+      },
+      "character2": {
+        "name": "秘書",
+        "role": "Secretary",
+        "description": "政治活動を支える重要なサポート役"
+      },
+      "character3": {
+        "name": "グリーン建築家",
+        "role": "GreenArchitect",
+        "description": "持続可能な都市計画を推進する建築家"
+      },
+      "character4": {
+        "name": "オールドガード",
+        "role": "OldGuard",
+        "description": "伝統と経験を持つ政治のベテラン"
+      }
+    },
+    "team": {
+      "title": "チームメンバーをご紹介",
+      "member1": {
+        "name": "Kevin",
+        "role": "リードデベロッパー",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "member2": {
+        "name": "Charles",
+        "role": "ゲームデザイナー",
+        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      "member3": {
+        "name": "Diego",
+        "role": "コミュニティマネージャー",
+        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      }
+    },
+    "finalNote": {
+      "title": "開発チームからのメッセージ（最後に）",
+      "message1": "私たちはこの作品を、プレイヤーのみなさんと一緒に完成させたいと思っています。",
+      "message2": "感想でも、改善提案でも構いません。あなたの一言が、次のアップデートを動かします。",
+      "message3": "札幌発の政治系RPGに挑戦しています。",
+      "message4": "地方都市から世界へ通用するゲームをつくる。",
+      "message5": "あなたの意見が、この世界を動かす力になります。"
     }
   }
 }
