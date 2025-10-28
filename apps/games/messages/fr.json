@@ -18,7 +18,8 @@
     "hero": {
       "title": "Aidez-nous à faire grandir ce jeu encore en développement avec votre voix.",
       "subtitle": "Vos mots façonneront l'avenir de ce jeu.",
-      "ctaButton": "Rejoindre le développement"
+      "ctaButton": "Rejoindre le développement",
+      "notificationMessage": "Commençons la campagne et gagnons ces élections !"
     },
     "devMessage": {
       "title": "Message de l'équipe de développement",
@@ -61,7 +62,7 @@
       "character1": {
         "name": "Diplomate",
         "role": "Diplomat",
-        "description": "Un politicien spécialisé dans les relations internationales et la diplomatie"
+        "description": "Élevé dans une famille de politiciens de carrière et d'attachés aux affaires étrangères, le Diplomate a passé des années à travailler dans des ambassades et des tribunaux internationaux. Connu pour avoir négocié la paix entre des syndicats rivaux et dirigé des panels à l'ONU, il a bâti sa carrière sur le compromis, le charme et le prestige mondial. Aujourd'hui, il se lance dans la politique intérieure, promettant d'appliquer des « normes internationales » à la gouvernance nationale, et d'éviter les conflits à tout prix."
       },
       "character2": {
         "name": "Secrétaire",
