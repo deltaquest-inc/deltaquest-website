@@ -55,10 +55,10 @@ const FeedbackMethods = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-pixel text-neon-white-static">
             {t('title')}
           </h2>
-          <p className="text-xl" style={{ color: '#F2C94C' }}>
+          <p className="text-xl font-pixel" style={{ color: '#F2C94C' }}>
             {t('subtitle')}
           </p>
         </motion.div>
@@ -71,15 +71,18 @@ const FeedbackMethods = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="relative bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-3xl p-8 border-2 border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105"
             >
+              {/* Speech bubble tail */}
+              <div className={`absolute ${index === 0 ? 'bottom-0 left-8' : index === 1 ? 'bottom-0 left-1/2 -translate-x-1/2' : 'bottom-0 right-8'} w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-16 border-b-blue-500/20 transform rotate-45 translate-y-4`}></div>
+              
               <div className="text-4xl mb-4">{method.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-4">
+              <h3 className="text-xl font-semibold text-white mb-4 font-pixel text-neon-white-static">
                 {method.title}
               </h3>
               <motion.button
                 onClick={method.onClick}
-                className="w-full px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+                className="w-full px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel"
                 style={{ backgroundColor: '#1E90FF' }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

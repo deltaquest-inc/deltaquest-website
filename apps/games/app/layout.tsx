@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { Space_Grotesk, Press_Start_2P } from 'next/font/google'
 import { ThemeProviders } from './theme-providers'
 import { Analytics } from './analytics'
 import { GTM } from './gtm'
@@ -9,6 +9,13 @@ const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-space-grotesk',
+})
+
+const press_start_2p = Press_Start_2P({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-press-start-2p',
 })
 
 export const metadata: Metadata = {
@@ -54,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${space_grotesk.variable} ${press_start_2p.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>

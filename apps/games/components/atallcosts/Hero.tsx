@@ -21,14 +21,32 @@ const Hero = () => {
   // Position de l'explosion au centre du personnage
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+      {/* Bold Blue Gradient Background (AINNA Design 1) - Adjusted */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-blue-700/20 to-blue-900/40"
+      />
+      
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
         style={{
           backgroundImage: 'url(/images/atallcosts/hero_main.png)',
         }}
       />
+
+      {/* Confetti Animation (AINNA Design 1) */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-confetti-1"></div>
+        <div className="absolute top-0 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-confetti-2"></div>
+        <div className="absolute top-0 left-1/2 w-1.5 h-1.5 bg-red-400 rounded-full animate-confetti-3"></div>
+        <div className="absolute top-0 left-2/3 w-1 h-1 bg-green-400 rounded-full animate-confetti-4"></div>
+        <div className="absolute top-0 left-3/4 w-2 h-2 bg-purple-400 rounded-full animate-confetti-1"></div>
+        <div className="absolute top-0 left-1/6 w-1 h-1 bg-pink-400 rounded-full animate-confetti-2"></div>
+        <div className="absolute top-0 left-5/6 w-1.5 h-1.5 bg-orange-400 rounded-full animate-confetti-3"></div>
+        <div className="absolute top-0 left-1/12 w-1 h-1 bg-cyan-400 rounded-full animate-confetti-4"></div>
+        <div className="absolute top-0 left-11/12 w-2 h-2 bg-lime-400 rounded-full animate-confetti-1"></div>
+      </div>
 
       {/* Secretary Notification Popup */}
       {showNotification && (
@@ -125,17 +143,17 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight font-pixel text-neon-white-static">
             {t('title')}
           </h1>
           
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: '#F2C94C' }}>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto font-pixel" style={{ color: '#F2C94C' }}>
             {t('subtitle')}
           </p>
           
           <motion.button
             onClick={scrollToFeedback}
-            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg"
             style={{ backgroundColor: '#1E90FF' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

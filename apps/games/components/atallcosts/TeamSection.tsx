@@ -45,7 +45,7 @@ const TeamSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-pixel text-neon-white-static">
             {t('title')}
           </h2>
         </motion.div>
@@ -70,13 +70,20 @@ const TeamSection = () => {
                   />
                 </div>
 
-                {/* Name */}
-                <h3 className="text-xl font-bold text-white mb-2 text-center">
-                  {member.name}
-                </h3>
+                {/* Name with smartphone icon for first member (AINNA Design 3) */}
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-xl font-bold text-white text-center font-pixel">
+                    {member.name}
+                  </h3>
+                  {index === 0 && (
+                    <div className="text-2xl animate-bounce" title="Listening to user input">
+                      📱
+                    </div>
+                  )}
+                </div>
 
                 {/* Role */}
-                <p className="text-blue-200 mb-4 text-center text-sm">
+                <p className="text-blue-200 mb-4 text-center text-sm font-pixel">
                   {member.role}
                 </p>
 
