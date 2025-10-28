@@ -99,6 +99,24 @@
         "description": "A political veteran with tradition and experience"
       }
     },
+    "team": {
+      "title": "Meet the Team",
+      "member1": {
+        "name": "Kevin",
+        "role": "Lead Developer",
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      "member2": {
+        "name": "Charles",
+        "role": "Game Designer",
+        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      "member3": {
+        "name": "Diego",
+        "role": "Community Manager",
+        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      }
+    },
     "finalNote": {
       "title": "Final Message from the Team",
       "message1": "We want to complete this work together with all the players.",

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { ATC_CONFIG } from '@/lib/atallcosts/config'
 import Hero from '@/components/atallcosts/Hero'
 import DevMessage from '@/components/atallcosts/DevMessage'
+import TeamSection from '@/components/atallcosts/TeamSection'
 import CTA from '@/components/atallcosts/CTA'
 import FeedbackMethods from '@/components/atallcosts/FeedbackMethods'
 import GameIntro from '@/components/atallcosts/GameIntro'
@@ -33,6 +34,7 @@ export default function AtAllCostsPage() {
       <div className="relative z-10">
         <Hero />
         <DevMessage />
+        <TeamSection />
         <CTA />
         <div id="feedback">
           <FeedbackMethods />
