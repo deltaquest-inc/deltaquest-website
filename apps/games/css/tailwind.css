@@ -303,26 +303,20 @@
     animation: neon-glow-white 2s ease-in-out infinite;
 }
 
-/* Static neon effects (no animation) - Very subtle version */
+/* Static neon effects (no animation) - Optimized version */
 .text-neon-blue-static {
     color: #1E90FF;
-    text-shadow: 
-        0 0 2px #1E90FF,
-        0 0 4px #1E90FF;
+    text-shadow: 0 0 3px rgba(30, 144, 255, 0.6);
 }
 
 .text-neon-yellow-static {
     color: #F2C94C;
-    text-shadow: 
-        0 0 2px #F2C94C,
-        0 0 4px #F2C94C;
+    text-shadow: 0 0 3px rgba(242, 201, 76, 0.6);
 }
 
 .text-neon-white-static {
     color: #FFFFFF;
-    text-shadow: 
-        0 0 2px #FFFFFF,
-        0 0 4px #FFFFFF;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
 }
 
 /* Game card styles for character cards */

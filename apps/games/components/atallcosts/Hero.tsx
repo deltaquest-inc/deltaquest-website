@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const Hero = () => {
   const t = useTranslations('atallcosts.hero')
@@ -35,17 +36,13 @@ const Hero = () => {
         }}
       />
 
-      {/* Confetti Animation (AINNA Design 1) */}
+      {/* Confetti Animation (AINNA Design 1) - Optimized */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-confetti-1"></div>
-        <div className="absolute top-0 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-confetti-2"></div>
         <div className="absolute top-0 left-1/2 w-1.5 h-1.5 bg-red-400 rounded-full animate-confetti-3"></div>
-        <div className="absolute top-0 left-2/3 w-1 h-1 bg-green-400 rounded-full animate-confetti-4"></div>
         <div className="absolute top-0 left-3/4 w-2 h-2 bg-purple-400 rounded-full animate-confetti-1"></div>
         <div className="absolute top-0 left-1/6 w-1 h-1 bg-pink-400 rounded-full animate-confetti-2"></div>
         <div className="absolute top-0 left-5/6 w-1.5 h-1.5 bg-orange-400 rounded-full animate-confetti-3"></div>
-        <div className="absolute top-0 left-1/12 w-1 h-1 bg-cyan-400 rounded-full animate-confetti-4"></div>
-        <div className="absolute top-0 left-11/12 w-2 h-2 bg-lime-400 rounded-full animate-confetti-1"></div>
       </div>
 
       {/* Secretary Notification Popup */}
@@ -91,9 +88,7 @@ const Hero = () => {
             >
               {/* Single Explosion */}
               {isExiting && (
-                <motion.img
-                  src="/images/atallcosts/explosion.png"
-                  alt="Explosion"
+                <motion.div
                   className="absolute w-12 h-12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                   initial={{ 
                     opacity: 0, 
@@ -109,16 +104,27 @@ const Hero = () => {
                     duration: 0.6,
                     ease: "easeOut"
                   }}
-                />
+                >
+                  <Image
+                    src="/images/atallcosts/explosion.png"
+                    alt="Explosion"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
+                </motion.div>
               )}
               
               <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center z-10">
                 <span className="text-white text-xs font-bold">1</span>
               </div>
-              <img 
+              <Image 
                 src="/images/atallcosts/character_02_Secretary.png"
                 alt="Secretary"
+                width={64}
+                height={64}
                 className="w-16 h-16 object-contain relative z-10"
+                priority={false}
               />
             </motion.div>
 

@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 const DevMessage = () => {
   const t = useTranslations('atallcosts.devMessage')
@@ -50,10 +51,14 @@ const DevMessage = () => {
             transition={{ duration: 0.8, type: 'spring' }}
           >
             <div className="relative inline-block">
-              <img 
+              <Image 
                 src="/images/atallcosts/team_photo.jpg" 
                 alt="開発チームの写真" 
+                width={160}
+                height={160}
                 className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-yellow-400 shadow-2xl"
+                loading="lazy"
+                sizes="(max-width: 768px) 160px, 160px"
               />
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-full bg-yellow-400/20 blur-xl"></div>

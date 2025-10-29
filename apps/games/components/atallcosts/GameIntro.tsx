@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 
 const GameIntro = () => {
   const t = useTranslations('atallcosts.gameIntro')
@@ -156,10 +157,14 @@ const GameIntro = () => {
           </p>
           
           <div className="max-w-4xl mx-auto">
-            <img 
+            <Image 
               src="/images/atallcosts/world_preview.png" 
               alt="Game World Preview" 
+              width={800}
+              height={450}
               className="w-full h-auto rounded-lg shadow-2xl"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
             />
           </div>
         </motion.div>
@@ -289,16 +294,23 @@ const GameIntro = () => {
             </div>
 
             {/* Character Image */}
-            <div className="flex justify-center mb-4">
-              <motion.img
-                src={`/images/atallcosts/character_0${selectedCharacter + 1}_${characters[selectedCharacter].role}.png`}
-                alt={characters[selectedCharacter].name}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.3, type: 'spring' }}
-                className="character-image w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-2xl"
-              />
-            </div>
+                     <div className="flex justify-center mb-4">
+                       <motion.div
+                         initial={{ scale: 0 }}
+                         animate={{ scale: 1 }}
+                         transition={{ delay: 0.3, type: 'spring' }}
+                         className="character-image w-32 h-32 md:w-48 md:h-48"
+                       >
+                         <Image
+                           src={`/images/atallcosts/character_0${selectedCharacter + 1}_${characters[selectedCharacter].role}.png`}
+                           alt={characters[selectedCharacter].name}
+                           width={192}
+                           height={192}
+                           className="w-full h-full object-contain drop-shadow-2xl"
+                           priority={false}
+                         />
+                       </motion.div>
+                     </div>
 
             {/* Card Content */}
             <div className="space-y-4">
