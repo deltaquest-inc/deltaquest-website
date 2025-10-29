@@ -86,8 +86,12 @@ const GameIntro = () => {
       const touchX = touch.clientX - centerX
       const touchY = touch.clientY - centerY
       
-      const rotateX = (touchY / rect.height) * -20
-      const rotateY = (touchX / rect.width) * 20
+      // Increased sensitivity for mobile/touch devices
+      const isMobile = window.innerWidth <= 768
+      const sensitivityMultiplier = isMobile ? 35 : 20
+      
+      const rotateX = (touchY / rect.height) * -sensitivityMultiplier
+      const rotateY = (touchX / rect.width) * sensitivityMultiplier
       
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
       
