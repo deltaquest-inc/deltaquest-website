@@ -65,19 +65,19 @@
         "description": "Élevé dans une famille de politiciens de carrière et d'attachés aux affaires étrangères, le Diplomate a passé des années à travailler dans des ambassades et des tribunaux internationaux. Connu pour avoir négocié la paix entre des syndicats rivaux et dirigé des panels à l'ONU, il a bâti sa carrière sur le compromis, le charme et le prestige mondial. Aujourd'hui, il se lance dans la politique intérieure, promettant d'appliquer des « normes internationales » à la gouvernance nationale, et d'éviter les conflits à tout prix."
       },
       "character2": {
-        "name": "Secrétaire",
-        "role": "Secretary",
-        "description": "Un rôle de soutien crucial dans les activités politiques"
+        "name": "La Flamme du Peuple",
+        "role": "PeoplesFlame",
+        "description": "Né pendant une crise nationale et radicalisé dans les rues, la Flamme du Peuple se proclame la voix des oubliés. Il a dirigé des manifestations, a été arrêté des dizaines de fois et n'appartient à aucun parti seulement à ses partisans. Avec des slogans comme « Brûlez l'Ancienne Garde » et « L'espoir est un marteau », il attire aussi bien les idéalistes que les anarchistes. Sa campagne n'a pas pour but de gagner, mais de briser le système. Mais que se passerait-il s'il gagnait réellement ?"
       },
       "character3": {
         "name": "Architecte Vert",
         "role": "GreenArchitect",
-        "description": "Un architecte promouvant l'urbanisme durable"
+        "description": "Autrefois ingénieure en environnement spécialisée dans la conception de villes résistantes aux inondations, elle a quitté son poste dans le secteur privé après avoir été témoin du prix de la cupidité pour la planète. De la restauration des mangroves à la direction de manifestations étudiantes, elle a passé des années à prouver que le progrès et la préservation peuvent coexister. Aujourd'hui, elle se lance en politique pour reconstruire non seulement la terre, mais aussi le système lui-même."
       },
       "character4": {
         "name": "Ancienne Garde",
         "role": "OldGuard",
-        "description": "Un vétéran politique avec tradition et expérience"
+        "description": "Ancien vétéran de guerre devenu porte-flambeau du conservatisme, le Vieux Garde croit que les plus beaux jours de la nation sont derrière elle et que cela vaut la peine de se battre pour les retrouver. Fort de plusieurs décennies de service, tant militaire que politique, il est devenu une icône culturelle pour les générations plus âgées. Ses détracteurs le considèrent comme une relique ; ses partisans, comme un sauveur. Franc, sans concession et dangereusement convaincant, il n'est pas là pour se faire des amis mais pour « réparer ce qui a été brisé »."
       }
     },
     "team": {

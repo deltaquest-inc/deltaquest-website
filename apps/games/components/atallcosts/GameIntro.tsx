@@ -201,7 +201,7 @@ const GameIntro = () => {
                 {/* Type Badge */}
                 <div className={`type-badge ${
                   character.role === 'Diplomat' ? 'type-diplomat' :
-                  character.role === 'Secretary' ? 'type-secretary' :
+                  character.role === 'PeoplesFlame' ? 'type-peoplesflame' :
                   character.role === 'GreenArchitect' ? 'type-architect' :
                   character.role === 'OldGuard' ? 'type-guard' : ''
                 }`}>
@@ -275,7 +275,7 @@ const GameIntro = () => {
             {/* Type Badge */}
             <div className={`absolute top-4 left-4 type-badge ${
               characters[selectedCharacter].role === 'Diplomat' ? 'type-diplomat' :
-              characters[selectedCharacter].role === 'Secretary' ? 'type-secretary' :
+              characters[selectedCharacter].role === 'PeoplesFlame' ? 'type-peoplesflame' :
               characters[selectedCharacter].role === 'GreenArchitect' ? 'type-architect' :
               characters[selectedCharacter].role === 'OldGuard' ? 'type-guard' : ''
             } text-xs`}>

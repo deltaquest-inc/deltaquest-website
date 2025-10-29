@@ -388,10 +388,10 @@
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
-.type-secretary {
-    background: linear-gradient(45deg, #EC4899, #BE185D);
+.type-peoplesflame {
+    background: linear-gradient(45deg, #EF4444, #DC2626);
     color: white;
-    box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
 }
 
 .type-architect {
