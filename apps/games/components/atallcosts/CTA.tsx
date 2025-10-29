@@ -27,24 +27,25 @@ const CTA = () => {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-pixel text-neon-white-static">
             {t('title')}
           </h2>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               onClick={scrollToFeedback}
-              className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+              className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg"
               style={{ backgroundColor: '#1E90FF' }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label={t('primaryButton')}
             >
+              <span className="treasure-chest-icon animate-treasure-glow"></span>
               {t('primaryButton')}
             </motion.button>
           </div>
           
-          <p className="text-sm max-w-2xl mx-auto" style={{ color: '#F2C94C' }}>
+          <p className="text-sm max-w-2xl mx-auto font-pixel" style={{ color: '#F2C94C' }}>
             {t('note')}
           </p>
         </motion.div>

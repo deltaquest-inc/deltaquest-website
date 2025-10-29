@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { ATC_CONFIG } from '@/lib/atallcosts/config'
 import Hero from '@/components/atallcosts/Hero'
+import GameCartridge from '@/components/atallcosts/GameCartridge'
 import DevMessage from '@/components/atallcosts/DevMessage'
 import TeamSection from '@/components/atallcosts/TeamSection'
 import CTA from '@/components/atallcosts/CTA'
@@ -33,6 +34,7 @@ export default function AtAllCostsPage() {
       
       <div className="relative z-10">
         <Hero />
+        <GameCartridge />
         <DevMessage />
         <TeamSection />
         <CTA />

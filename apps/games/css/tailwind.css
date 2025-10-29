@@ -115,6 +115,67 @@
     animation: snowfall-3 linear infinite;
 }
 
+/* Confetti animations for Meta Ads integration */
+@keyframes confetti-fall-1 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(100px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confetti-fall-2 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-80px) rotate(-540deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confetti-fall-3 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(60px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confetti-fall-4 {
+    0% {
+        transform: translateY(-100vh) translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-120px) rotate(-720deg);
+        opacity: 0;
+    }
+}
+
+.animate-confetti-1 {
+    animation: confetti-fall-1 3s linear infinite;
+}
+
+.animate-confetti-2 {
+    animation: confetti-fall-2 3.5s linear infinite;
+}
+
+.animate-confetti-3 {
+    animation: confetti-fall-3 4s linear infinite;
+}
+
+.animate-confetti-4 {
+    animation: confetti-fall-4 2.8s linear infinite;
+}
+
 /* Character waving animation */
 @keyframes waving {
     0%, 100% {
@@ -148,11 +209,376 @@
     background: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
+/* Treasure chest icon animation */
+@keyframes treasure-glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px #F2C94C) drop-shadow(0 0 10px #F2C94C);
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 10px #F2C94C) drop-shadow(0 0 20px #F2C94C);
+        transform: scale(1.05);
+    }
+}
+
+.animate-treasure-glow {
+    animation: treasure-glow 2s ease-in-out infinite;
+}
+
+/* Treasure chest SVG icon */
+.treasure-chest-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F2C94C'%3E%3Cpath d='M4 8h16v2H4V8zm0 4h16v6H4v-6zm2 2h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 0h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z'/%3E%3Cpath d='M2 6h20v2H2V6zm0 6h20v8H2v-8zm2 2h16v4H4v-4zm2 1h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Neon text effects for Meta Ads integration */
+@keyframes neon-glow-blue {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px #1E90FF,
+            0 0 10px #1E90FF,
+            0 0 15px #1E90FF,
+            0 0 20px #1E90FF;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #1E90FF,
+            0 0 20px #1E90FF,
+            0 0 30px #1E90FF,
+            0 0 40px #1E90FF;
+    }
+}
+
+@keyframes neon-glow-yellow {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px #F2C94C,
+            0 0 10px #F2C94C,
+            0 0 15px #F2C94C,
+            0 0 20px #F2C94C;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #F2C94C,
+            0 0 20px #F2C94C,
+            0 0 30px #F2C94C,
+            0 0 40px #F2C94C;
+    }
+}
+
+@keyframes neon-glow-white {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px #FFFFFF,
+            0 0 10px #FFFFFF,
+            0 0 15px #FFFFFF,
+            0 0 20px #FFFFFF;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #FFFFFF,
+            0 0 20px #FFFFFF,
+            0 0 30px #FFFFFF,
+            0 0 40px #FFFFFF;
+    }
+}
+
+.text-neon-blue {
+    color: #1E90FF;
+    animation: neon-glow-blue 2s ease-in-out infinite;
+}
+
+.text-neon-yellow {
+    color: #F2C94C;
+    animation: neon-glow-yellow 2s ease-in-out infinite;
+}
+
+.text-neon-white {
+    color: #FFFFFF;
+    animation: neon-glow-white 2s ease-in-out infinite;
+}
+
+/* Static neon effects (no animation) - Optimized version */
+.text-neon-blue-static {
+    color: #1E90FF;
+    text-shadow: 0 0 3px rgba(30, 144, 255, 0.6);
+}
+
+.text-neon-yellow-static {
+    color: #F2C94C;
+    text-shadow: 0 0 3px rgba(242, 201, 76, 0.6);
+}
+
+.text-neon-white-static {
+    color: #FFFFFF;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+/* Game card styles for character cards */
+.game-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.2),
+        0 0 20px rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+}
+
+.game-card:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        0 0 30px rgba(59, 130, 246, 0.2);
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* Rarity stars */
+.rarity-stars {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 2px;
+}
+
+.rarity-star {
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: drop-shadow(0 0 3px #FFD700);
+}
+
+/* Character type badges */
+.type-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.type-diplomat {
+    background: linear-gradient(45deg, #3B82F6, #1E40AF);
+    color: white;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.type-peoplesflame {
+    background: linear-gradient(45deg, #EF4444, #DC2626);
+    color: white;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.type-architect {
+    background: linear-gradient(45deg, #10B981, #047857);
+    color: white;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.type-guard {
+    background: linear-gradient(45deg, #F59E0B, #D97706);
+    color: white;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+/* Power level bar */
+.power-bar {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.power-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10B981, #F59E0B);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* 3D Tilt effect for modal cards - only when interacting */
+.card-modal-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle shine effect that traverses the card every 3-4 seconds */
+@keyframes card-shine-traverse {
+    0% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+    100% {
+        transform: translateX(400%) skewX(-15deg);
+    }
+}
+
+.card-modal-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: translateX(-100%) skewX(-15deg);
+    animation: card-shine-traverse 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Custom elegant scrollbar for description text */
+.card-modal-3d .description-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Firefox */
+}
+
+.card-modal-3d .description-scroll::-webkit-scrollbar {
+    width: 4px; /* Thin scrollbar */
+}
+
+.card-modal-3d .description-scroll::-webkit-scrollbar-track {
+    background: transparent; /* Invisible track */
+}
+
+.card-modal-3d .description-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    transition: background 0.2s ease;
+}
+
+.card-modal-3d .description-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode scrollbar for better contrast */
+@media (prefers-color-scheme: dark) {
+    .card-modal-3d .description-scroll {
+        scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    }
+    
+    .card-modal-3d .description-scroll::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .card-modal-3d .description-scroll::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Responsive sizing for mobile */
+@media (max-width: 768px) {
+    .card-modal-3d {
+        max-width: 90vw;
+        max-height: 70vh;
+        padding: 1.5rem;
+    }
+    
+    .card-modal-3d .character-image {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .card-modal-3d .character-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-modal-3d .description-box {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-modal-3d .stats-section {
+        margin-top: 1rem;
+    }
+}
+
+.card-modal-3d.interacting {
+    cursor: grabbing;
+}
+
+/* Shine effect that follows mouse/touch */
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.15) 30%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+.card-modal-3d.interacting .card-shine {
+    opacity: 1;
+}
+
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .animate-snowfall-1,
     .animate-snowfall-2,
-    .animate-snowfall-3 {
+    .animate-snowfall-3,
+    .animate-confetti-1,
+    .animate-confetti-2,
+    .animate-confetti-3,
+    .animate-confetti-4,
+    .animate-treasure-glow,
+    .text-neon-blue,
+    .text-neon-yellow,
+    .text-neon-white,
+    .game-card {
         animation: none;
+    }
+    
+    .game-card:hover {
+        transform: none;
     }
 }

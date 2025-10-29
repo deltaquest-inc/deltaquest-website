@@ -10,6 +10,7 @@ export const createTailwindConfig = (options: {
     extend: {
       fontFamily: {
         sans: ['var(--font-space-grotesk)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        pixel: ['var(--font-press-start-2p)', 'monospace'],
       },
       colors: {
         primary: {

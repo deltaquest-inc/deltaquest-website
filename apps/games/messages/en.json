@@ -84,19 +84,19 @@
         "description": "Raised in a family of career politicians and foreign attachés, the Diplomat spent years working in embassies and international courts. Known for brokering peace between rival unions and leading panels at the UN, they've built their career on compromise, charm, and global prestige. Now they're stepping into domestic politics, promising to bring \"international standards\" to national governance — and to avoid conflict at all cost."
       },
       "character2": {
-        "name": "Secretary",
-        "role": "Secretary",
-        "description": "A crucial support role in political activities"
+        "name": "People's Flame",
+        "role": "PeoplesFlame",
+        "description": "Born during a national crisis and radicalized in the streets, the People's Flame is a self-declared voice of the forgotten. They've led protests, been arrested dozens of times, and have no party just followers. With slogans like \"Burn the old guard\" and \"Hope is a hammer,\" they attract both idealists and anarchists. Their campaign is less about winning, more about breaking the system. But what if they actually do win?"
       },
       "character3": {
         "name": "Green Architect",
         "role": "GreenArchitect",
-        "description": "An architect promoting sustainable urban planning"
+        "description": "Once an environmental engineer designing flood-resilient cities, she left her corporate job after witnessing the cost of greed on the planet. From restoring mangroves to leading student protests, she's spent years proving that progress and preservation can coexist. Now, she enters politics to rebuild not just the land but the system itself."
       },
       "character4": {
         "name": "Old Guard",
         "role": "OldGuard",
-        "description": "A political veteran with tradition and experience"
+        "description": "A war veteran turned conservative firebrand, the Old Guard believes the nation's best days are behind it and that's worth fighting for. With decades of service, both military and political, they've become a cultural icon for older generations. Critics call them a relic; supporters call them a savior. They're blunt, unapologetic, and dangerously persuasive. And they're not here to make friends just to \"fix what was broken.\""
       }
     },
     "team": {
