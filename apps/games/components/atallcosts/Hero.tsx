@@ -7,6 +7,7 @@ const Hero = () => {
   const t = useTranslations('atallcosts.hero')
   const [showNotification, setShowNotification] = useState(true)
   const [isExiting, setIsExiting] = useState(false)
+  const [useFallbackImage, setUseFallbackImage] = useState(false)
 
   const scrollToFeedback = () => {
     document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })
@@ -16,6 +17,10 @@ const Hero = () => {
     setIsExiting(true)
     // Délai avant de fermer la popup (réduit pour une animation plus rapide)
     setTimeout(() => setShowNotification(false), 2100)
+  }
+
+  const handleImageError = () => {
+    setUseFallbackImage(true)
   }
 
   // Position de l'explosion au centre du personnage
@@ -116,9 +121,13 @@ const Hero = () => {
                 <span className="text-white text-xs font-bold">1</span>
               </div>
               <img 
-                src="/images/atallcosts/character_02_Secretary.png"
+                src={useFallbackImage 
+                  ? "/images/atallcosts/character_02_Secretary.png" 
+                  : "/images/atallcosts/character_Secretary_Animated.gif"
+                }
                 alt="Secretary"
                 className="w-16 h-16 object-contain relative z-10"
+                onError={handleImageError}
               />
             </motion.div>
 
