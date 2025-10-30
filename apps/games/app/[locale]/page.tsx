@@ -2,39 +2,11 @@
 
 import React, { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ContactForm from '@/components/ContactForm'
 
 const MailtoButton = () => {
   const t = useTranslations('games.support')
-  const [isLoading, setIsLoading] = useState(false)
-  const [hasError, setHasError] = useState(false)
-
-  const handleEmailClick = async () => {
-    setIsLoading(true)
-    setHasError(false)
-
-    try {
-      const email = t('email')
-      const subject = 'Support Game Inquiry'
-      const body = `Hello DeltaQuest Team,
-
-I'm reaching out regarding your support game services.
-
-Best regards,
-[Your Name]`
-
-      const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-
-      window.location.href = mailtoUrl
-
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 2000)
-    } catch (error) {
-      console.error('Failed to open mail client:', error)
-      setHasError(true)
-      setIsLoading(false)
-    }
-  }
+  const [showForm, setShowForm] = useState(false)
 
   const handleFallbackClick = () => {
     // Fallback: copy email to clipboard
@@ -71,60 +43,27 @@ Best regards,
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            {/* Primary mailto button */}
+            {/* Primary contact button - now toggles form */}
             <button
-              onClick={handleEmailClick}
-              disabled={isLoading}
-              className={`inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium transition-all duration-200 ${
-                isLoading
-                  ? 'cursor-not-allowed bg-gray-400'
-                  : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800'
-              } transform text-white shadow-lg hover:-translate-y-0.5 hover:shadow-xl focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:transform-none disabled:shadow-lg`}
-              aria-label="Open email client to contact support"
+              onClick={() => setShowForm(!showForm)}
+              className="inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium transition-all duration-200 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transform text-white shadow-lg hover:-translate-y-0.5 hover:shadow-xl focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+              aria-label="Toggle contact form"
             >
-              {isLoading ? (
-                <>
-                  <svg
-                    className="mr-3 -ml-1 h-5 w-5 animate-spin text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                  Opening...
-                </>
-              ) : (
-                <>
-                  <svg
-                    className="mr-2 h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  {t('contactButton')}
-                </>
-              )}
+              <svg
+                className="mr-2 h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              {showForm ? t('hideFormButton') : t('contactButton')}
             </button>
 
             {/* Fallback button */}
@@ -151,27 +90,6 @@ Best regards,
             </button>
           </div>
 
-          {/* Error message */}
-          {hasError && (
-            <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
-              <div className="flex">
-                <svg className="mr-2 h-5 w-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <p className="text-sm text-red-800">
-                    Unable to open email client. Please use the "Copy Email" button above or
-                    manually send an email to{' '}
-                    <span className="font-mono font-medium">apps@deltaquest.co.jp</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
 
           {/* Additional contact info */}
           <div className="mt-6 text-center text-sm text-gray-500">
@@ -179,6 +97,21 @@ Best regards,
             <p className="mt-1 font-mono font-medium text-gray-700">{t('email')}</p>
           </div>
         </div>
+      </div>
+
+      {/* Contact Form - inline */}
+      {showForm && (
+        <div className="mt-8 w-full">
+          <div className="rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
+            <h3 className="text-xl font-bold mb-4">Formulaire de contact</h3>
+            <ContactForm />
+          </div>
+        </div>
+      )}
+      
+      {/* Debug info */}
+      <div className="mt-4 text-sm text-gray-500">
+        Debug: showForm = {showForm ? 'true' : 'false'}
       </div>
     </div>
   )
