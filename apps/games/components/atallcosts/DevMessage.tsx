@@ -52,7 +52,7 @@ const DevMessage = () => {
           >
             <div className="relative inline-block">
               <Image 
-                src="/images/atallcosts/team_photo.jpg" 
+                src="/images/atallcosts/team_photo.JPG" 
                 alt="開発チームの写真" 
                 width={160}
                 height={160}
