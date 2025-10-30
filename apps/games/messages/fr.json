@@ -16,25 +16,25 @@
   },
   "atallcosts": {
     "hero": {
-      "title": "Aidez-nous à faire grandir ce jeu encore en développement avec votre voix.",
-      "subtitle": "Vos mots façonneront l'avenir de ce jeu.",
+      "title": "Aidez-nous à améliorer ce jeu encore en développement avec votre voix.",
+      "subtitle": "Vos feedbacks façonneront l'avenir de ce jeu.",
       "ctaButton": "Rejoindre le développement",
       "notificationMessage": "Commençons la campagne et gagnons ces élections !"
     },
     "devMessage": {
-      "title": "Message de l'équipe de développement",
+      "title": "Le mot de l'équipe de développement",
       "message1": "Votre voix rendra ce jeu plus intéressant.",
       "message2": "Nous collectons maintenant les retours de tous pour améliorer ce jeu.",
       "message3": "Il y a encore des parties incomplètes, mais les vraies opinions sont ce qui mène à l'étape suivante.",
       "message4": "Ce n'est pas le stade de la publicité ou de la promotion, mais le stade de 'jouer et obtenir des opinions'.",
       "message5": "Rapports de bugs, idées, impressions - tout est bienvenu. Chaque petite voix est un indice important pour l'équipe de développement.",
       "message6": "Veuillez nous prêter un peu de force.",
-      "signature": "De Kevin"
+      "signature": "Kevin"
     },
     "cta": {
-      "title": "Rejoignez maintenant",
-      "primaryButton": "Rejoindre le développement",
-      "note": "Ceci est une version de test encore en développement. Après avoir joué, partagez vos pensées."
+      "title": "Aidez-nous dès maintenant",
+      "primaryButton": "Donner votre avis",
+      "note": "Ceci est une version de test encore en développement. Après avoir joué, donnez-nous vos suggestions."
     },
     "feedback": {
       "title": "Envoyer des commentaires",
@@ -50,14 +50,14 @@
         "tooltip": "Partager vos impressions avec des hashtags"
       },
       "form": {
-        "title": "Soumettre des commentaires structurés",
+        "title": "Répondre au formulaire de feedback",
         "button": "Répondre au sondage",
-        "tooltip": "Envoyer votre opinion au format sondage"
+        "tooltip": "Envoyer votre opinion via le formulaire"
       }
     },
     "gameIntro": {
       "title": "À propos du jeu",
-      "description": "Une nouvelle expérience RPG sur le thème de la politique et de la stratégie. Vos choix font avancer l'histoire.",
+      "description": "Une nouvelle expérience RPG sur le thème de la politique et de la stratégie. Vos choix font avancer votre personnage vers l'élection.",
       "charactersTitle": "Rencontrez les personnages",
       "character1": {
         "name": "Diplomate",
@@ -100,11 +100,11 @@
     },
     "finalNote": {
       "title": "Message final de l'équipe",
-      "message1": "Nous voulons compléter ce travail ensemble avec tous les joueurs.",
-      "message2": "Que ce soit des impressions ou des suggestions d'amélioration, vos mots feront avancer la prochaine mise à jour.",
-      "message3": "Nous nous lançons le défi d'un RPG politique de Sapporo.",
-      "message4": "Créer un jeu qui peut rivaliser mondialement depuis une ville locale.",
-      "message5": "Votre opinion devient le pouvoir qui fait bouger ce monde."
+      "message1": "Nous voulons faire de ce jeu un succès commun avec tous les joueurs.",
+      "message2": "Que ce soit des impressions ou des suggestions d'amélioration, vos retours feront évoluer la roadmap.",
+      "message3": "Nous nous lançons le défi d'un RPG politique made in Sapporo.",
+      "message4": "Créer un jeu qui peut rayonner mondialement depuis une ville locale.",
+      "message5": "Votre opinion est la force qui fait avancer ce jeu."
     }
   }
 }
