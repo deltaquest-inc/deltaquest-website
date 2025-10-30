@@ -582,3 +582,35 @@
         transform: none;
     }
 }
+
+/* Retro TV Effects */
+@keyframes scanlines {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.98; }
+}
+
+.retro-tv-scanlines-blue {
+    background: linear-gradient(
+        transparent 50%, 
+        rgba(59, 130, 246, 0.03) 50%
+    );
+    background-size: 100% 4px;
+    animation: scanlines 0.1s linear infinite;
+}
+
+.retro-tv-flicker {
+    animation: flicker 0.15s infinite linear;
+}
+
+.retro-tv-glow-blue {
+    box-shadow: 
+        0 0 5px #3b82f6,
+        0 0 10px #3b82f6,
+        0 0 15px #3b82f6,
+        0 0 20px #3b82f6;
+}
