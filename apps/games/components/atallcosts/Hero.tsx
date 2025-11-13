@@ -1,13 +1,16 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const Hero = () => {
   const t = useTranslations('atallcosts.hero')
-  const [showNotification, setShowNotification] = useState(true)
+  const [showNotification, setShowNotification] = useState(false)
   const [isExiting, setIsExiting] = useState(false)
   const [useFallbackImage, setUseFallbackImage] = useState(false)
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
+  const [isPageLoaded, setIsPageLoaded] = useState(false)
 
   const scrollToFeedback = () => {
     document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })
@@ -21,7 +24,66 @@ const Hero = () => {
 
   const handleImageError = () => {
     setUseFallbackImage(true)
+    setIsImageLoaded(true) // Consider loaded even if error (fallback will be used)
   }
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true)
+  }
+
+  // Preload the secretary image
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    
+    const img = document.createElement('img')
+    img.onload = () => {
+      setIsImageLoaded(true)
+    }
+    img.onerror = () => {
+      // Try fallback image
+      const fallbackImg = document.createElement('img')
+      fallbackImg.onload = () => {
+        setUseFallbackImage(true)
+        setIsImageLoaded(true)
+      }
+      fallbackImg.onerror = () => {
+        // Even if both fail, consider loaded to show popup
+        setUseFallbackImage(true)
+        setIsImageLoaded(true)
+      }
+      fallbackImg.src = "/images/atallcosts/character_02_Secretary.png"
+    }
+    img.src = "/images/atallcosts/character_Secretary_Animated.gif"
+  }, [])
+
+  // Wait for page to be fully loaded before showing notification
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleLoad = () => {
+        setIsPageLoaded(true)
+      }
+      
+      if (document.readyState === 'complete') {
+        setIsPageLoaded(true)
+      } else {
+        window.addEventListener('load', handleLoad)
+        return () => {
+          window.removeEventListener('load', handleLoad)
+        }
+      }
+    }
+  }, [])
+
+  // Show notification only when both page and image are loaded
+  useEffect(() => {
+    if (isPageLoaded && isImageLoaded) {
+      // Small delay to ensure smooth appearance
+      const timer = setTimeout(() => {
+        setShowNotification(true)
+      }, 300)
+      return () => clearTimeout(timer)
+    }
+  }, [isPageLoaded, isImageLoaded])
 
   // Position de l'explosion au centre du personnage
 
@@ -32,13 +94,18 @@ const Hero = () => {
         className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-blue-700/20 to-blue-900/40"
       />
       
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{
-          backgroundImage: 'url(/images/atallcosts/hero_main.png)',
-        }}
-      />
+      {/* Background Image - Optimized for LCP */}
+      <div className="absolute inset-0 opacity-40">
+        <Image
+          src="/images/atallcosts/hero_main.png"
+          alt="Hero background"
+          fill
+          priority
+          fetchPriority="high"
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
 
       {/* Confetti Animation (AINNA Design 1) */}
       <div className="absolute inset-0 pointer-events-none">
@@ -127,7 +194,9 @@ const Hero = () => {
                 }
                 alt="Secretary"
                 className="w-16 h-16 object-contain relative z-10"
+                onLoad={handleImageLoad}
                 onError={handleImageError}
+                loading="lazy"
               />
             </motion.div>
 
