@@ -6,7 +6,7 @@ export const ATC_CONFIG = {
   discordUrl: process.env.NEXT_PUBLIC_ATC_DISCORD_URL ?? 'https://discord.com',
   xHashtag: process.env.NEXT_PUBLIC_ATC_X_HASHTAG ?? 'AtAllCosts',
   xIntentBase: 'https://twitter.com/intent/tweet',
-  googleFormUrl: process.env.NEXT_PUBLIC_ATC_GOOGLE_FORM_URL ?? 'https://forms.gle/your-form',
+  googleFormUrl: process.env.NEXT_PUBLIC_ATC_GOOGLE_FORM_URL ?? 'https://docs.google.com/forms/d/e/1FAIpQLSe2xE93P2VFDB0ptpjfioR2MVcFZn_JWFs-lDFiippBvjV-KQ/viewform',
   
   // Toggles
   showGameIntro: true,

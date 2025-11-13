@@ -84,18 +84,18 @@
       "title": "Rencontrez l'équipe",
       "member1": {
         "name": "Kevin",
-        "role": "Lead Developer",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "role": "Lead Développeur",
+        "bio": "Kevin veille au bon déroulement de l'ensemble du projet. Il répond aux questions, corrige les bugs et trouve toujours de nouvelles idées pour améliorer le jeu."
       },
       "member2": {
         "name": "Charles",
-        "role": "Game Designer",
-        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "role": "Développeur & Game Designer",
+        "bio": "Charles a co-créé le concept derrière At All Costs et a conçu le style artistique et les environnements avec Diego. Il donne vie à l'univers du jeu et veille à l'aspect et au ressenti de chaque choix."
       },
       "member3": {
         "name": "Diego",
-        "role": "Community Manager",
-        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "role": "Développeur",
+        "bio": "Diego a co-créé le concept derrière At All Costs et a conçu le gameplay avec Charles. Il s'attache à faire en sorte que tout fonctionne correctement et à ajouter de nombreuses nouvelles fonctionnalités."
       }
     },
     "finalNote": {

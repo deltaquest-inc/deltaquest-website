@@ -104,17 +104,17 @@
       "member1": {
         "name": "Kevin",
         "role": "Lead Developer",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "bio": "Kevin keeps the whole project running smoothly. He answers questions, fixes broken code, and somehow always has a new idea to push the game in a better direction."
       },
       "member2": {
         "name": "Charles",
-        "role": "Game Designer",
-        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "role": "Developer & Game Designer",
+        "bio": "Charles co-created the concept behind At All Costs and designed the art style and environments with Diego. He brings the game world to life and ensures that every choice looks and feels right."
       },
       "member3": {
         "name": "Diego",
-        "role": "Community Manager",
-        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "role": "Developer",
+        "bio": "Diego co-created the idea behind At All Costs and designed the gameplay alongside Charles. He focuses on making things works as well as adding a lot of new features."
       }
     },
     "finalNote": {
