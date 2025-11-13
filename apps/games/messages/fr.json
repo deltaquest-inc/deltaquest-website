@@ -23,13 +23,16 @@
     },
     "devMessage": {
       "title": "Message de l'équipe de développement",
+      "tvTitle": "MESSAGE DE L'ÉQUIPE DE DÉVELOPPEMENT",
       "message1": "Votre voix rendra ce jeu plus intéressant.",
       "message2": "Nous collectons maintenant les retours de tous pour améliorer ce jeu.",
       "message3": "Il y a encore des parties incomplètes, mais les vraies opinions sont ce qui mène à l'étape suivante.",
       "message4": "Ce n'est pas le stade de la publicité ou de la promotion, mais le stade de 'jouer et obtenir des opinions'.",
       "message5": "Rapports de bugs, idées, impressions - tout est bienvenu. Chaque petite voix est un indice important pour l'équipe de développement.",
       "message6": "Veuillez nous prêter un peu de force.",
-      "signature": "De Kevin"
+      "signature": "De Kevin",
+      "tvOff": "TV ÉTEINTE",
+      "tvOffMessage": "Appuyez sur le bouton d'alimentation"
     },
     "cta": {
       "title": "Rejoignez maintenant",

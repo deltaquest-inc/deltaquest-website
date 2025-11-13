@@ -161,7 +161,7 @@ const DevMessage = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="text-center text-lg font-bold text-yellow-300 mb-6"
                       >
-                        📺 MESSAGE DE L'ÉQUIPE DE DÉVELOPPEMENT 📺
+                        📺 {t('tvTitle')} 📺
                       </motion.p>
                       
                       <motion.div
@@ -225,8 +225,8 @@ const DevMessage = () => {
                   <div className="flex items-center justify-center h-64">
                     <div className="text-center text-gray-500 font-mono">
                       <div className="text-6xl mb-4">📺</div>
-                      <p className="text-lg">TV ÉTEINTE</p>
-                      <p className="text-sm mt-2">Appuyez sur le bouton d'alimentation</p>
+                      <p className="text-lg">{t('tvOff')}</p>
+                      <p className="text-sm mt-2">{t('tvOffMessage')}</p>
                     </div>
                   </div>
                 )}

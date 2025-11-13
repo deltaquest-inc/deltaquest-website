@@ -42,13 +42,16 @@
     },
     "devMessage": {
       "title": "Message from the Development Team",
+      "tvTitle": "MESSAGE FROM THE DEVELOPMENT TEAM",
       "message1": "Your voice will make this game more interesting.",
       "message2": "We are now collecting feedback from everyone to make this game better.",
       "message3": "There are still incomplete parts, but real opinions are what lead to the next step.",
       "message4": "This is not the stage of advertising or promotion, but the stage of 'playing and getting opinions'.",
       "message5": "Bug reports, ideas, impressions - everything is welcome. Every small voice is an important hint for the development team.",
       "message6": "Please lend us a little strength.",
-      "signature": "From Kevin"
+      "signature": "From Kevin",
+      "tvOff": "TV OFF",
+      "tvOffMessage": "Press the power button"
     },
     "cta": {
       "title": "Join Now",
