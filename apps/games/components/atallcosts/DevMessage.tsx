@@ -195,7 +195,7 @@ const DevMessage = () => {
                       >
                         <div className="relative">
                           <img
-                            src="/images/atallcosts/team_photo.jpg"
+                            src="/images/atallcosts/team_photo.png"
                             alt="Équipe de développement"
                             className="w-20 h-20 rounded-full object-cover border-2 border-blue-400/50 shadow-lg"
                             onError={(e) => {
