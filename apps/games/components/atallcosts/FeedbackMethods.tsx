@@ -82,7 +82,7 @@ const FeedbackMethods = () => {
               </h3>
               <motion.button
                 onClick={method.onClick}
-                className="w-full px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel mt-auto"
+                className="w-full px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel mt-auto cursor-pointer"
                 style={{ backgroundColor: '#1E90FF' }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { ATC_CONFIG } from '@/lib/atallcosts/config'
 
 const Hero = () => {
   const t = useTranslations('atallcosts.hero')
@@ -12,8 +13,8 @@ const Hero = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
   const [isPageLoaded, setIsPageLoaded] = useState(false)
 
-  const scrollToFeedback = () => {
-    document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })
+  const handleDiscordClick = () => {
+    window.open(ATC_CONFIG.discordUrl, '_blank', 'noopener,noreferrer')
   }
 
   const handleClose = () => {
@@ -145,10 +146,16 @@ const Hero = () => {
           }}
           className="fixed bottom-6 right-6 z-50 max-w-sm"
         >
-          <div className="relative bg-white rounded-2xl shadow-2xl border-4 border-red-500 p-4 flex items-start gap-3">
+          <div 
+            onClick={handleDiscordClick}
+            className="relative bg-white rounded-2xl shadow-2xl border-4 border-red-500 p-4 flex items-start gap-3 cursor-pointer hover:shadow-3xl transition-shadow"
+          >
             {/* Close Button */}
             <button
-              onClick={handleClose}
+              onClick={(e) => {
+                e.stopPropagation()
+                handleClose()
+              }}
               className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-red-500 text-white font-bold text-lg flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer"
               aria-label="Close"
             >
@@ -230,8 +237,8 @@ const Hero = () => {
           </p>
           
           <motion.button
-            onClick={scrollToFeedback}
-            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg"
+            onClick={handleDiscordClick}
+            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg cursor-pointer"
             style={{ backgroundColor: '#1E90FF' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -1,12 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import { ATC_CONFIG } from '@/lib/atallcosts/config'
 
 const CTA = () => {
   const t = useTranslations('atallcosts.cta')
 
-  const scrollToFeedback = () => {
-    document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })
+  const handleDiscordClick = () => {
+    window.open(ATC_CONFIG.discordUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -33,8 +34,8 @@ const CTA = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              onClick={scrollToFeedback}
-              className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg"
+              onClick={handleDiscordClick}
+              className="inline-flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg cursor-pointer"
               style={{ backgroundColor: '#1E90FF' }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
