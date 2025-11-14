@@ -71,6 +71,7 @@ export default function RootLayout({
         <link rel="manifest" href="/static/favicons/site.webmanifest" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.bunny.net" crossOrigin="" />
         <link rel="dns-prefetch" href="//fonts.bunny.net" />
         <link
           href="https://fonts.bunny.net/css?family=Inter:400,500,600,700&family=Noto+Sans+JP:400,500,600,700&display=swap"

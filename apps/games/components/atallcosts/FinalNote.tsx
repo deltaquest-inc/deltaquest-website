@@ -11,7 +11,7 @@ const FinalNote = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
-          backgroundImage: 'url(/images/atallcosts/final_bg.png)',
+          backgroundImage: 'url(/images/atallcosts/final_bg.webp)',
         }}
       />
       

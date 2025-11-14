@@ -9,6 +9,6 @@ export default createMiddleware({
 export const config = {
   matcher: [
     // Skip all internal paths (_next), API routes, static files, and images
-    '/((?!_next|api|favicon.ico|static|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.svg|.*\\.ico).*)',
+    '/((?!_next|api|favicon.ico|static|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.gif|.*\\.svg|.*\\.ico|.*\\.webp).*)',
   ]
 }

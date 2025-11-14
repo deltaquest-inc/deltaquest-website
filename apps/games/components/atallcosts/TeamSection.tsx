@@ -31,7 +31,7 @@ const TeamSection = () => {
       <div 
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: 'url(/images/atallcosts/world_preview.png)',
+          backgroundImage: 'url(/images/atallcosts/world_preview.webp)',
           backgroundSize: '100% auto',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
