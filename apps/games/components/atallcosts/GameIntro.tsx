@@ -141,7 +141,7 @@ const GameIntro = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
         style={{
-          backgroundImage: 'url(/images/atallcosts/character_grid_bg.png)',
+          backgroundImage: 'url(/images/atallcosts/character_grid_bg.webp)',
         }}
       />
       
@@ -161,14 +161,11 @@ const GameIntro = () => {
           </p>
           
           <div className="max-w-4xl mx-auto">
-            <Image 
-              src="/images/atallcosts/world_preview.png" 
+            <img 
+              src="/images/atallcosts/world_preview.webp" 
               alt="Game World Preview" 
-              width={800}
-              height={450}
               className="w-full h-auto rounded-lg shadow-2xl"
               loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
             />
           </div>
         </motion.div>
