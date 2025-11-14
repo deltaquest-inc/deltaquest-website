@@ -42,12 +42,12 @@ const DevMessage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-blue-900/40 via-indigo-900/30 to-blue-800/40 backdrop-blur-xl rounded-3xl p-8 md:p-12 border-4 border-white/30 shadow-2xl"
+          className="bg-gradient-to-br from-blue-900/40 via-indigo-900/30 to-blue-800/40 backdrop-blur-xl rounded-3xl p-6 md:p-12 border-4 border-white/30 shadow-2xl"
         >
           {/* Header with pixel font and neon effect */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-4 md:mb-8">
             <motion.h2 
-              className="text-4xl md:text-5xl font-bold text-white font-pixel text-neon-white-static mb-4"
+              className="text-3xl md:text-5xl font-bold text-white font-pixel text-neon-white-static mb-4 md:mb-4"
               initial={{ scale: 0.8 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.6, type: 'spring' }}
@@ -80,10 +80,10 @@ const DevMessage = () => {
               <div className={`absolute inset-0 transition-opacity duration-1000 ${isTvOn ? 'opacity-20 retro-tv-scanlines-blue' : 'opacity-0'}`}></div>
               
               {/* TV Screen Content */}
-              <div className={`relative z-10 rounded-lg p-8 border-2 transition-all duration-1000 ${isTvOn ? 'bg-black/80 border-blue-400/30 retro-tv-glow-blue retro-tv-flicker' : 'bg-gray-900 border-gray-600'}`}>
+              <div className={`relative z-10 rounded-lg p-6 md:p-8 border-2 transition-all duration-1000 ${isTvOn ? 'bg-black/80 border-blue-400/30 retro-tv-glow-blue retro-tv-flicker' : 'bg-gray-900 border-gray-600'}`}>
                 {/* Retro TV Header */}
                 {isTvOn && (
-                  <div className="flex items-center justify-between mb-6 border-b border-blue-400/30 pb-4">
+                  <div className="flex items-center justify-between mb-4 md:mb-6 border-b border-blue-400/30 pb-3 md:pb-4">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -153,13 +153,13 @@ const DevMessage = () => {
                       </motion.div>
                     </div>
                   ) : (
-                    // Contenu normal
-                    <div className="space-y-4 text-blue-300 font-mono text-sm leading-relaxed">
+                    // Contenu normal avec scroll sur mobile
+                    <div className="max-h-[70vh] md:max-h-none overflow-y-auto retro-tv-scrollbar space-y-2 md:space-y-4 text-blue-300 font-mono text-xs md:text-sm leading-normal md:leading-relaxed pr-2">
                       <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-center text-lg font-bold text-yellow-300 mb-6"
+                        className="text-center text-sm md:text-lg font-bold text-yellow-300 mb-3 md:mb-6"
                       >
                         📺 {t('tvTitle')} 📺
                       </motion.p>
@@ -168,7 +168,7 @@ const DevMessage = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="space-y-3"
+                        className="space-y-2 md:space-y-3"
                       >
                         <p className="text-center">"{t('message1')}"</p>
                         <p className="text-center">"{t('message2')}"</p>
@@ -179,7 +179,7 @@ const DevMessage = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
-                        className="space-y-3 mt-6"
+                        className="space-y-2 md:space-y-3 mt-4 md:mt-6"
                       >
                         <p className="text-center">"{t('message4')}"</p>
                         <p className="text-center">"{t('message5')}"</p>
@@ -191,13 +191,13 @@ const DevMessage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        className="flex justify-center mt-8"
+                        className="flex justify-center mt-5 md:mt-8"
                       >
                         <div className="relative">
                           <img
                             src="/images/atallcosts/team_photo.png"
                             alt="Équipe de développement"
-                            className="w-20 h-20 rounded-full object-cover border-2 border-blue-400/50 shadow-lg"
+                            className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-blue-400/50 shadow-lg"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
                               console.log('Image failed to load:', target.src);
@@ -210,12 +210,12 @@ const DevMessage = () => {
                         </div>
                       </motion.div>
                       
-                      {/* Retro Cursor Blink */}
+                      {/* Retro Cursor Blink - Hidden on mobile */}
                       <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.8 }}
-                        className="text-center mt-6"
+                        className="hidden md:block text-center mt-4 md:mt-6"
                       >
                         <span className="inline-block w-2 h-4 bg-blue-400 animate-pulse">_</span>
                       </motion.div>
