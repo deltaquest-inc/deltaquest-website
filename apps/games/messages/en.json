@@ -38,17 +38,20 @@
       "title": "Help us grow this still-in-development game with your voice.",
       "subtitle": "Your words will shape the future of this game.",
       "ctaButton": "Join the Development",
-      "notificationMessage": "Let's start the campaign and win these elections!"
+      "notificationMessage": "Join the Discord community and share your suggestions to improve the game together!"
     },
     "devMessage": {
       "title": "Message from the Development Team",
+      "tvTitle": "MESSAGE FROM THE DEVELOPMENT TEAM",
       "message1": "Your voice will make this game more interesting.",
       "message2": "We are now collecting feedback from everyone to make this game better.",
       "message3": "There are still incomplete parts, but real opinions are what lead to the next step.",
       "message4": "This is not the stage of advertising or promotion, but the stage of 'playing and getting opinions'.",
       "message5": "Bug reports, ideas, impressions - everything is welcome. Every small voice is an important hint for the development team.",
       "message6": "Please lend us a little strength.",
-      "signature": "Kevin"
+      "signature": "Kevin",
+      "tvOff": "TV OFF",
+      "tvOffMessage": "Press the power button"
     },
     "cta": {
       "title": "Join Now",
@@ -104,17 +107,17 @@
       "member1": {
         "name": "Kevin",
         "role": "Lead Developer",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "bio": "Kevin keeps the whole project running smoothly. He answers questions, fixes broken code, and somehow always has a new idea to push the game in a better direction."
       },
       "member2": {
         "name": "Charles",
-        "role": "Game Designer",
-        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "role": "Developer & Game Designer",
+        "bio": "Charles co-created the concept behind At All Costs and designed the art style and environments with Diego. He brings the game world to life and ensures that every choice looks and feels right."
       },
       "member3": {
         "name": "Diego",
-        "role": "Community Manager",
-        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "role": "Developer",
+        "bio": "Diego co-created the idea behind At All Costs and designed the gameplay alongside Charles. He focuses on making things works as well as adding a lot of new features."
       }
     },
     "finalNote": {

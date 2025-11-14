@@ -85,7 +85,7 @@ const TeamSection = () => {
                             transform: 'translate(60px, 0px)',
                           }}
                         >
-                          🏛️
+                          🚀
                         </motion.div>
                         <motion.div
                           className="absolute text-lg"
@@ -103,7 +103,7 @@ const TeamSection = () => {
                             transform: 'translate(45px, 0px)',
                           }}
                         >
-                          👑
+                          🧑‍💻
                         </motion.div>
                       </>
                     )}
@@ -126,7 +126,7 @@ const TeamSection = () => {
                             transform: 'translate(60px, 0px)',
                           }}
                         >
-                          💻
+                          🎨
                         </motion.div>
                         <motion.div
                           className="absolute text-lg"
@@ -167,7 +167,7 @@ const TeamSection = () => {
                             transform: 'translate(60px, 0px)',
                           }}
                         >
-                          🎯
+                          🌐
                         </motion.div>
                         <motion.div
                           className="absolute text-lg"
@@ -185,7 +185,7 @@ const TeamSection = () => {
                             transform: 'translate(45px, 0px)',
                           }}
                         >
-                          🤝
+                          💻
                         </motion.div>
                       </>
                     )}

@@ -19,17 +19,20 @@
       "title": "Aidez-nous à améliorer ce jeu encore en développement avec votre voix.",
       "subtitle": "Vos feedbacks façonneront l'avenir de ce jeu.",
       "ctaButton": "Rejoindre le développement",
-      "notificationMessage": "Commençons la campagne et gagnons ces élections !"
+      "notificationMessage": "Rejoignez la communauté Discord et partagez vos suggestions pour améliorer le jeu ensemble !"
     },
     "devMessage": {
-      "title": "Le mot de l'équipe de développement",
+      "title": "Message de l'équipe de développement",
+      "tvTitle": "MESSAGE DE L'ÉQUIPE DE DÉVELOPPEMENT",
       "message1": "Votre voix rendra ce jeu plus intéressant.",
       "message2": "Nous collectons maintenant les retours de tous pour améliorer ce jeu.",
       "message3": "Il y a encore des parties incomplètes, mais les vraies opinions sont ce qui mène à l'étape suivante.",
       "message4": "Ce n'est pas le stade de la publicité ou de la promotion, mais le stade de 'jouer et obtenir des opinions'.",
       "message5": "Rapports de bugs, idées, impressions - tout est bienvenu. Chaque petite voix est un indice important pour l'équipe de développement.",
       "message6": "Veuillez nous prêter un peu de force.",
-      "signature": "Kevin"
+      "signature": "Kevin",
+      "tvOff": "TV ÉTEINTE",
+      "tvOffMessage": "Appuyez sur le bouton d'alimentation"
     },
     "cta": {
       "title": "Aidez-nous dès maintenant",
@@ -84,18 +87,18 @@
       "title": "Rencontrez l'équipe",
       "member1": {
         "name": "Kevin",
-        "role": "Lead Developer",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "role": "Lead Développeur",
+        "bio": "Kevin veille au bon déroulement de l'ensemble du projet. Il répond aux questions, corrige les bugs et trouve toujours de nouvelles idées pour améliorer le jeu."
       },
       "member2": {
         "name": "Charles",
-        "role": "Game Designer",
-        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "role": "Développeur & Game Designer",
+        "bio": "Charles a co-créé le concept derrière At All Costs et a conçu le style artistique et les environnements avec Diego. Il donne vie à l'univers du jeu et veille à l'aspect et au ressenti de chaque choix."
       },
       "member3": {
         "name": "Diego",
-        "role": "Community Manager",
-        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "role": "Développeur",
+        "bio": "Diego a co-créé le concept derrière At All Costs et a conçu le gameplay avec Charles. Il s'attache à faire en sorte que tout fonctionne correctement et à ajouter de nombreuses nouvelles fonctionnalités."
       }
     },
     "finalNote": {

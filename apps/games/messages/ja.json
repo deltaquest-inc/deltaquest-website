@@ -38,17 +38,20 @@
       "title": "まだ開発途中のこのゲームを、あなたの声で育ててください。",
       "subtitle": "あなたの一言が、このゲームの未来をつくります。",
       "ctaButton": "開発に参加する",
-      "notificationMessage": "キャンペーンを始めて、この選挙で勝利しましょう！"
+      "notificationMessage": "Discordコミュニティに参加して、ゲームをより良くするための提案を共有しましょう！"
     },
     "devMessage": {
       "title": "開発チームからのメッセージ",
+      "tvTitle": "開発チームからのメッセージ",
       "message1": "あなたの声が、このゲームをもっと面白くする。",
       "message2": "私たちは今、このゲームをより良くするために、みなさんのフィードバックを集めています。",
       "message3": "まだ完成していない部分もありますが、リアルな意見こそ、次の一歩につながります。",
       "message4": "今は広告や宣伝の段階ではなく、「プレイして、意見をもらう段階」です。",
       "message5": "バグ報告、アイデア、感想、なんでも歓迎です。どんな小さな声も、開発チームにとって大切なヒントになります。",
       "message6": "どうか、少しだけ力を貸してください。",
-      "signature": "ケヴィンより"
+      "signature": "ケヴィンより",
+      "tvOff": "TVオフ",
+      "tvOffMessage": "電源ボタンを押してください"
     },
     "cta": {
       "title": "今すぐ参加しよう",
@@ -104,17 +107,17 @@
       "member1": {
         "name": "Kevin",
         "role": "リードデベロッパー",
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "bio": "ケビンはプロジェクト全体を円滑に進めている。質問に答え、不具合のあるコードを修正し、そしてなぜか常に新しいアイデアを思いつき、ゲームをより良い方向へ導いている。"
       },
       "member2": {
         "name": "Charles",
-        "role": "ゲームデザイナー",
-        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "role": "開発者＆ゲームデザイナー",
+        "bio": "チャールズは『At All Costs』のコンセプトを共同で考案し、ディエゴとともにアートスタイルと環境デザインを担当しました。彼はゲームの世界観に命を吹き込み、各選択肢の見た目と感触を細部まで作り上げています。"
       },
       "member3": {
         "name": "Diego",
-        "role": "コミュニティマネージャー",
-        "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "role": "開発者",
+        "bio": "ディエゴは『At All Costs』のコンセプトを共同で考案し、チャールズと共にゲームプレイを設計しました。彼はシステムの安定稼働に注力するとともに、数多くの新機能を追加しています。"
       }
     },
     "finalNote": {

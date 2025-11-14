@@ -1,16 +1,20 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { ATC_CONFIG } from '@/lib/atallcosts/config'
 
 const Hero = () => {
   const t = useTranslations('atallcosts.hero')
-  const [showNotification, setShowNotification] = useState(true)
+  const [showNotification, setShowNotification] = useState(false)
   const [isExiting, setIsExiting] = useState(false)
+  const [useFallbackImage, setUseFallbackImage] = useState(false)
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
+  const [isPageLoaded, setIsPageLoaded] = useState(false)
 
-  const scrollToFeedback = () => {
-    document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })
+  const handleDiscordClick = () => {
+    window.open(ATC_CONFIG.discordUrl, '_blank', 'noopener,noreferrer')
   }
 
   const handleClose = () => {
@@ -18,6 +22,69 @@ const Hero = () => {
     // Délai avant de fermer la popup (réduit pour une animation plus rapide)
     setTimeout(() => setShowNotification(false), 2100)
   }
+
+  const handleImageError = () => {
+    setUseFallbackImage(true)
+    setIsImageLoaded(true) // Consider loaded even if error (fallback will be used)
+  }
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true)
+  }
+
+  // Preload the secretary image
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    
+    const img = document.createElement('img')
+    img.onload = () => {
+      setIsImageLoaded(true)
+    }
+    img.onerror = () => {
+      // Try fallback image
+      const fallbackImg = document.createElement('img')
+      fallbackImg.onload = () => {
+        setUseFallbackImage(true)
+        setIsImageLoaded(true)
+      }
+      fallbackImg.onerror = () => {
+        // Even if both fail, consider loaded to show popup
+        setUseFallbackImage(true)
+        setIsImageLoaded(true)
+      }
+      fallbackImg.src = "/images/atallcosts/character_02_Secretary.png"
+    }
+    img.src = "/images/atallcosts/character_Secretary_Animated.gif"
+  }, [])
+
+  // Wait for page to be fully loaded before showing notification
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleLoad = () => {
+        setIsPageLoaded(true)
+      }
+      
+      if (document.readyState === 'complete') {
+        setIsPageLoaded(true)
+      } else {
+        window.addEventListener('load', handleLoad)
+        return () => {
+          window.removeEventListener('load', handleLoad)
+        }
+      }
+    }
+  }, [])
+
+  // Show notification only when both page and image are loaded
+  useEffect(() => {
+    if (isPageLoaded && isImageLoaded) {
+      // Small delay to ensure smooth appearance
+      const timer = setTimeout(() => {
+        setShowNotification(true)
+      }, 300)
+      return () => clearTimeout(timer)
+    }
+  }, [isPageLoaded, isImageLoaded])
 
   // Position de l'explosion au centre du personnage
 
@@ -28,21 +95,30 @@ const Hero = () => {
         className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-blue-700/20 to-blue-900/40"
       />
       
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{
-          backgroundImage: 'url(/images/atallcosts/hero_main.png)',
-        }}
-      />
+      {/* Background Image - Optimized for LCP */}
+      <div className="absolute inset-0 opacity-40">
+        <Image
+          src="/images/atallcosts/hero_main.png"
+          alt="Hero background"
+          fill
+          priority
+          fetchPriority="high"
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
 
-      {/* Confetti Animation (AINNA Design 1) - Optimized */}
+      {/* Confetti Animation (AINNA Design 1) */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-confetti-1"></div>
+        <div className="absolute top-0 left-1/3 w-1 h-1 bg-blue-400 rounded-full animate-confetti-2"></div>
         <div className="absolute top-0 left-1/2 w-1.5 h-1.5 bg-red-400 rounded-full animate-confetti-3"></div>
+        <div className="absolute top-0 left-2/3 w-1 h-1 bg-green-400 rounded-full animate-confetti-4"></div>
         <div className="absolute top-0 left-3/4 w-2 h-2 bg-purple-400 rounded-full animate-confetti-1"></div>
         <div className="absolute top-0 left-1/6 w-1 h-1 bg-pink-400 rounded-full animate-confetti-2"></div>
         <div className="absolute top-0 left-5/6 w-1.5 h-1.5 bg-orange-400 rounded-full animate-confetti-3"></div>
+        <div className="absolute top-0 left-1/12 w-1 h-1 bg-cyan-400 rounded-full animate-confetti-4"></div>
+        <div className="absolute top-0 left-11/12 w-2 h-2 bg-lime-400 rounded-full animate-confetti-1"></div>
       </div>
 
       {/* Secretary Notification Popup */}
@@ -70,10 +146,16 @@ const Hero = () => {
           }}
           className="fixed bottom-6 right-6 z-50 max-w-sm"
         >
-          <div className="relative bg-white rounded-2xl shadow-2xl border-4 border-red-500 p-4 flex items-start gap-3">
+          <div 
+            onClick={handleDiscordClick}
+            className="relative bg-white rounded-2xl shadow-2xl border-4 border-red-500 p-4 flex items-start gap-3 cursor-pointer hover:shadow-3xl transition-shadow"
+          >
             {/* Close Button */}
             <button
-              onClick={handleClose}
+              onClick={(e) => {
+                e.stopPropagation()
+                handleClose()
+              }}
               className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-red-500 text-white font-bold text-lg flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer"
               aria-label="Close"
             >
@@ -88,7 +170,9 @@ const Hero = () => {
             >
               {/* Single Explosion */}
               {isExiting && (
-                <motion.div
+                <motion.img
+                  src="/images/atallcosts/explosion.png"
+                  alt="Explosion"
                   className="absolute w-12 h-12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                   initial={{ 
                     opacity: 0, 
@@ -104,27 +188,22 @@ const Hero = () => {
                     duration: 0.6,
                     ease: "easeOut"
                   }}
-                >
-                  <Image
-                    src="/images/atallcosts/explosion.png"
-                    alt="Explosion"
-                    width={48}
-                    height={48}
-                    className="w-full h-full object-contain"
-                  />
-                </motion.div>
+                />
               )}
               
               <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center z-10">
                 <span className="text-white text-xs font-bold">1</span>
               </div>
-              <Image 
-                src="/images/atallcosts/character_02_Secretary.png"
+              <img 
+                src={useFallbackImage 
+                  ? "/images/atallcosts/character_02_Secretary.png" 
+                  : "/images/atallcosts/character_Secretary_Animated.gif"
+                }
                 alt="Secretary"
-                width={64}
-                height={64}
                 className="w-16 h-16 object-contain relative z-10"
-                priority={false}
+                onLoad={handleImageLoad}
+                onError={handleImageError}
+                loading="lazy"
               />
             </motion.div>
 
@@ -158,8 +237,8 @@ const Hero = () => {
           </p>
           
           <motion.button
-            onClick={scrollToFeedback}
-            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg"
+            onClick={handleDiscordClick}
+            className="inline-flex items-center px-8 py-4 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:ring-4 focus:ring-blue-300 focus:outline-none font-pixel text-lg cursor-pointer"
             style={{ backgroundColor: '#1E90FF' }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
