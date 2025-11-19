@@ -23,7 +23,7 @@ export const ATC_CONFIG: ATCConfig = {
   xIntentBase: 'https://twitter.com/intent/tweet',
   googleFormUrl: process.env.NEXT_PUBLIC_ATC_GOOGLE_FORM_URL ?? 'https://docs.google.com/forms/d/e/1FAIpQLSe2xE93P2VFDB0ptpjfioR2MVcFZn_JWFs-lDFiippBvjV-KQ/viewform',
   appStoreUrl: process.env.NEXT_PUBLIC_ATC_APP_STORE_URL ?? 'https://apps.apple.com/jp/app/at-all-costs/id6748663129',
-  playStoreUrl: process.env.NEXT_PUBLIC_ATC_PLAY_STORE_URL ?? 'https://play.google.com/store/apps/details?id=com.deltaquest.atallcosts',
+  playStoreUrl: process.env.NEXT_PUBLIC_ATC_PLAY_STORE_URL ?? 'https://play.google.com/store/apps/details?id=com.deltaquest.atallcosts&pcampaignid=web_lp_cta',
   
   // Toggles
   showGameIntro: true,
