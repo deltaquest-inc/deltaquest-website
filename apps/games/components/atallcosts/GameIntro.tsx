@@ -25,6 +25,12 @@ const GameIntro = () => {
     let isInteracting = false
 
     const handleMouseDown = (e: MouseEvent) => {
+      // Don't interfere with scrolling in description area
+      const target = e.target as HTMLElement
+      if (target.closest('.description-scroll')) {
+        return
+      }
+      
       if (e.button === 0) { // Left click only
         isInteracting = true
         card.classList.add('interacting')
@@ -40,6 +46,13 @@ const GameIntro = () => {
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isInteracting) return
+      
+      // Don't interfere with scrolling in description area
+      const target = e.target as HTMLElement
+      if (target.closest('.description-scroll')) {
+        return
+      }
+      
       e.preventDefault() // Prevent text selection during drag
 
       const rect = card.getBoundingClientRect()
@@ -69,6 +82,12 @@ const GameIntro = () => {
 
     // Touch events for mobile
     const handleTouchStart = (e: TouchEvent) => {
+      // Don't interfere with scrolling in description area
+      const target = e.target as HTMLElement
+      if (target.closest('.description-scroll')) {
+        return
+      }
+      
       e.preventDefault()
       isInteracting = true
       card.classList.add('interacting')
@@ -76,9 +95,22 @@ const GameIntro = () => {
 
     const handleTouchMove = (e: TouchEvent) => {
       if (!isInteracting) return
+      
+      const touch = e.touches[0]
+      if (!touch) return
+      
+      // Don't interfere with scrolling in description area
+      const elementAtPoint = document.elementFromPoint(touch.clientX, touch.clientY)
+      if (elementAtPoint?.closest('.description-scroll')) {
+        // Reset interaction state to allow native scrolling
+        isInteracting = false
+        card.classList.remove('interacting')
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)'
+        return
+      }
+      
       e.preventDefault()
 
-      const touch = e.touches[0]
       const rect = card.getBoundingClientRect()
       const centerX = rect.left + rect.width / 2
       const centerY = rect.top + rect.height / 2
@@ -320,7 +352,7 @@ const GameIntro = () => {
                 <p className="text-base md:text-lg font-semibold text-yellow-300 mb-3 md:mb-4 text-center font-pixel">
                   {characters[selectedCharacter].role}
                 </p>
-                <div className="description-scroll max-h-24 md:max-h-32 overflow-y-auto">
+                <div className="description-scroll max-h-24 md:max-h-32 overflow-y-auto overflow-x-hidden" style={{ WebkitOverflowScrolling: 'touch' }}>
                   <p className="text-sm md:text-base text-white/90 text-left leading-relaxed">
                     {characters[selectedCharacter].description}
                   </p>
