@@ -50,4 +50,4 @@ NEXT_PUBLIC_ATC_GOOGLE_FORM_URL="https://forms.gle/your-form"
 - `FeedbackMethods`: Discord, X (Twitter), Google Form integration
 - `GameIntro`: Optional game and character introduction
 - `FinalNote`: Closing message from team
-- `SnowOverlay`: Subtle winter animation
+- `SnowOverlay`: Subtle winter style animation
