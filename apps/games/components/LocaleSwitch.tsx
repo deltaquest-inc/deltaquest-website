@@ -49,18 +49,22 @@ export default function LocaleSwitch() {
   useEffect(() => {
     setMounted(true)
 
-    if (!pathLocale && storedLocale && pathname) {
+    if (pathLocale) {
+      setLocale(pathLocale)
+      localStorage.setItem('locale', pathLocale)
+    } else if (storedLocale && pathname && !pathLocale) {
       const segments = pathname.split('/')
       segments[1] = storedLocale
       router.replace(segments.join('/'))
-    } else if (pathLocale) {
-      setLocale(pathLocale)
-      localStorage.setItem('locale', pathLocale)
     }
   }, [pathname, router, storedLocale, pathLocale])
 
   function changeLocale(newLocale: string) {
     if (!pathname) return
+    
+    // Update state immediately to prevent flicker
+    setLocale(newLocale)
+    
     const segments = pathname.split('/')
     segments[1] = newLocale
     const newPath = segments.join('/')
@@ -69,15 +73,13 @@ export default function LocaleSwitch() {
     localStorage.setItem('locale', newLocale)
     localStorage.setItem('user-locale-preference', newLocale)
     
-    setLocale(newLocale)
     router.push(newPath)
   }
-
 
   return (
     <div className="flex items-center">
       <Menu as="div" className="relative inline-block text-left">
-        <div className="hover:text-blue-600 dark:hover:text-blue-400 flex items-center justify-center cursor-pointer group">
+        <div className="group flex cursor-pointer items-center justify-center hover:text-blue-600 dark:hover:text-blue-400">
           <MenuButton aria-label="Language switcher">
             {mounted ? <LanguageIcon /> : <Blank />}
           </MenuButton>
@@ -117,4 +119,3 @@ export default function LocaleSwitch() {
     </div>
   )
 }
-
